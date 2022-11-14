@@ -1,0 +1,27 @@
+.logo-list-section .logo-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo-list-section .logo-list .logo-list__logo {
+    width: 25%;
+}
+.logo-list-section .logo-list .logo-list__logo .logo-list__logo-image {
+    margin: 0 auto;
+}
+.logo-list-section {
+    padding: 80px 0;
+}
+.rimage-outer-wrapper img {
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width:750px){
+  .logo-list-section .logo-list .logo-list__logo {
+    width: 33.33%;
+}
+}
+@media screen and (max-width:479px){
+.logo-list-section .logo-list .logo-list__logo {
+    width: 50%;
+}
+}

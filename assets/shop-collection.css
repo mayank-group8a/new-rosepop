@@ -1,0 +1,20 @@
+.sub-collection-inner {
+    position: relative;
+    text-align: center;
+  }
+  .sub-collection-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .shop-collection slider-component {
+      display: flex;
+      width: 100%;
+  }
+  .shop-collection slider-component ul {
+      width: 60%;
+  }
+  .shop-collection slider-component .sub-collection-container {
+      width: 40%;
+  }

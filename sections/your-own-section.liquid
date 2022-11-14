@@ -1,0 +1,182 @@
+{{ 'your-own-section.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width section-{{ section.id }}-padding isolate">
+  <div class="your-own-section-container">
+    {% if section.settings.heading != blank %}
+          <h2 class="title {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
+          {% endif %}
+    <div class="your-own-section-inner">
+      <div class="your-own-left">
+        <div class="your-own-left-inner">
+          {% if section.settings.main_image != blank %}
+            <div class="your-own-main-image">
+              {{ section.settings.main_image | image_url: width: 1420 | image_tag:
+                      loading: 'lazy',
+                      widths: '275, 550, 710, 1420',
+                      class: 'multicolumn-card__image'
+                    }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="your-own-right">
+        <div class="your-own-right-inner">
+          {%- for block in section.blocks -%}
+            {% if block.settings.title != blank %}
+            <div class="your-own-block-container">
+              <div class="your-own-block-counter">
+                <div class="your-own-block-counter-circle" style="color: {{ section.settings.circle_color }};background-color: {{ section.settings.circle_background }};">{{ forloop.index }}</div>
+              </div>
+              <div class="your-own-block-text">
+                <div class="your-own-block-title"><h4 style="color: {{ section.settings.title_color }};">{{ block.settings.title | escape }}</h4></div>
+                <div class="your-own-block-description" style="color: {{ section.settings.description_color }};">{{ block.settings.description }}</div>
+              </div>
+            </div>
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    {% if section.settings.link != blank %}
+          <a href="{{ section.settings.link }}" class="your-own-btn">{{ section.settings.link_label }}</a>
+          {% endif %}
+  </div>
+
+</div>
+<style>
+  #shopify-section-{{ section.id }}{
+    background-color: {{ section.settings.color_background }}; 
+  }
+</style>
+{% schema %}
+  {
+    "name": "Your Own",
+    "settings": [
+	{
+        "type": "color",
+        "id": "color_background",
+        "label": "Section Background",
+        "default": "#FCF6F7"
+    },
+      {
+      "type": "text",
+      "id": "heading",
+      "default": "Design Your Own",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "default": "#000"
+      },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link URL"
+    }
+    ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Column",
+          "label": "Title"
+        },
+        {
+              "type": "color",
+              "id": "title_color",
+              "label": "Title color",
+              "default": "#000"
+          },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Description</p>"
+        },
+        {
+              "type": "color",
+              "id": "description_color",
+              "label": "Description color",
+              "default": "#000"
+          },
+          {
+            "type": "header",
+            "content": "Counter colors"
+          },
+          {
+                "type": "color",
+                "id": "circle_background",
+                "label": "Circle Background",
+                "default": "#c68792"
+            },
+            {
+                  "type": "color",
+                  "id": "circle_color",
+                  "label": "Circle Color",
+                  "default": "#000"
+              }
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Your Own",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

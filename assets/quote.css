@@ -1,0 +1,100 @@
+/*================ Quote slider ================*/
+.quote-icon {
+  display: block;
+  margin: 0 auto 20px; }
+
+.quotes-slider-wrapper {
+  overflow: hidden; }
+  .quotes-slider-wrapper.slick-initialized .quotes-slider {
+    touch-action: pan-y; }
+
+
+.quotes-slide {
+  width: 100%;
+  flex-shrink: 0; }
+  @media only screen and (min-width: 750px) {
+    .quotes-slide {
+      width: 33.33%; } }
+
+.quotes-slide--single {
+  width: 100%; }
+
+.quotes-slider__text {
+  font-size: calc(((15 + 1.75) / (15)) * 1em);
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 15px; }
+  .quotes-slider__text cite {
+    font-size: calc(((15) / (15 + 4)) * 1em);
+    font-style: normal; }
+  .quotes-slider__text p {
+    margin-bottom: 30px; }
+    .quotes-slider__text p + cite {
+      margin-top: 0; }
+
+.slick-dotted.quotes-slider.slick-initialized {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+span.quote-icon svg.icon.icon-quote {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+.quotes-slider__text .rte-setting.rte {
+    text-align: center;
+}
+blockquote.quotes-slider__text ul li {
+    display: inline-block;
+}
+blockquote.quotes-slider__text ul li svg {
+        display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+blockquote.quotes-slider__text.text-center {
+    text-align: center;
+    border-left: none;
+}
+blockquote.quotes-slider__text.text-center ul {
+    padding: 0;
+}
+.testimonials .section-header.text-center h2 {
+    text-align: center;
+    font-family: "IP-Script-Casual";
+}
+blockquote.quotes-slider__text.text-center {
+    color: white;
+}
+blockquote.quotes-slider__text.text-center p.quote-heading {
+    color: #000;
+}
+  .quotes-wrapper .slick-dots li button::before {
+    font-size: 16px;
+    color: transparent;}
+  .quotes-wrapper .slick-dots li.slick-active button::before {
+    opacity: 1; }
+
+@media only screen and (min-width: 750px) {
+  .quotes-wrapper .slick-dots--mobile-only {
+    display: none; } }
+
+.quotes-wrapper .slick-slide[tabindex="0"] {
+  outline: none; }
+
+.logo-bar {
+  list-style: none;
+  text-align: center;
+  margin-bottom: -35px;
+}
+.slick-dots li button {
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.quotes-slider .slick-dots li.slick-active button {
+    background: white;
+}
