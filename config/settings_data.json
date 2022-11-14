@@ -108,9 +108,9 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/therosepops\/",
     "social_pinterest_link": "",
-    "social_instagram_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/therosepops\/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
@@ -128,6 +128,7 @@
             "type": "announcement",
             "settings": {
               "text": "New Arrivals: Lorem ipsum dolor sit amet, consectetur adipiscing elit  <a href=\"#\">Shop Now<\/a>",
+              "mob_text": "Welcome to our store",
               "text_alignment": "center",
               "link": ""
             }
@@ -136,6 +137,7 @@
             "type": "announcement",
             "settings": {
               "text": "Welcome to our",
+              "mob_text": "Welcome to our store",
               "text_alignment": "center",
               "link": ""
             }
@@ -251,12 +253,43 @@
               "submenu_product_3": "the-four-get-me-not-custom-app",
               "submenu_product_4": "threes-a-charm"
             }
+          },
+          "47b1ad7a-2b9f-48e0-9063-945048ce784e": {
+            "type": "mega_menu",
+            "settings": {
+              "mega_menu": "About us",
+              "linksLimits": 6,
+              "submenu_1": true,
+              "submenu_title_1": "Test",
+              "submenu_link_1": "arosatherapy",
+              "submenu_2": false,
+              "submenu_title_2": "",
+              "submenu_link_2": "",
+              "submenu_3": false,
+              "submenu_title_3": "",
+              "submenu_link_3": "",
+              "submenu_4": false,
+              "submenu_title_4": "",
+              "submenu_link_4": "",
+              "bannerShow": true,
+              "banner_url": "",
+              "banner_image_Show1": true,
+              "banner_url_1": "",
+              "banner_image_Show2": true,
+              "banner_url_2": "",
+              "product_list_title": "",
+              "submenu_product_1": "",
+              "submenu_product_2": "",
+              "submenu_product_3": "",
+              "submenu_product_4": ""
+            }
           }
         },
         "block_order": [
           "8891445f-b51e-448c-b8ea-c6d16e3a3037",
           "6c5616eb-e92e-4846-a12c-4af0b39272c3",
-          "ddcbdebc-544d-473b-922a-d401e83d19c2"
+          "ddcbdebc-544d-473b-922a-d401e83d19c2",
+          "47b1ad7a-2b9f-48e0-9063-945048ce784e"
         ],
         "settings": {
           "color_scheme": "background-2",
@@ -279,38 +312,46 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Customer Service",
+              "menu": "footer-menu-new"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Collections",
+              "menu": "footer-collections"
             }
           },
-          "footer-2": {
-            "type": "text",
+          "c2b27d47-37fc-4608-9054-1f96e0a395cd": {
+            "type": "social_media",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "get social"
+            }
+          },
+          "9183adef-9700-4f73-8b51-863413162a19": {
+            "type": "newsletter",
+            "settings": {
+              "heading": "Join the List",
+              "newsletter_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
             }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2"
+          "c2b27d47-37fc-4608-9054-1f96e0a395cd",
+          "9183adef-9700-4f73-8b51-863413162a19"
         ],
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "accent-1",
+          "logo": "shopify:\/\/shop_images\/footerlogo.png",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
           "enable_country_selector": true,
           "enable_language_selector": true,
-          "payment_enable": true,
+          "payment_enable": false,
           "margin_top": 48,
           "padding_top": 36,
           "padding_bottom": 36

@@ -80,6 +80,9 @@
     </div>
   {% endif %}
 
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
 </div>
 </div>
 <style>
@@ -87,28 +90,6 @@
     background-color: {{ section.settings.color_background }}; 
   }
 </style>
-{% comment %} <script>
-  $('.quotes-slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  dots: true,
-  infinite: true,
-  arrows:false,
-  autoplaySpeed: 2000,
-  responsive: [
-  {
-    breakpoint: 750,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      dots: true
-    }
-  }
-]
-});
-</script> {% endcomment %}
 
 
 {% schema %}
