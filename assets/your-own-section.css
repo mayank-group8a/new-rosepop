@@ -72,7 +72,7 @@
 .your-own-block-description ul li {
     flex: 1 1 50%;
 }
-@media screen and (max-width:750px){
+@media screen and (max-width:991px){
   .your-own-section-inner {
     display: flex;
     flex-direction: column;
@@ -84,8 +84,19 @@
     margin-top: 30px;
 }
   a.your-own-btn {
-    display: block;
     width: max-content;
     margin: 0 auto;
+}
+.your-own-section-inner {
+    display: flex;
+    flex-direction: column;
+}
+.your-own-section-inner .your-own-left, .your-own-section-inner .your-own-right {
+    width: 100%;
+}
+}
+@media screen and (max-width:479px){
+.your-own-block-description ul li {
+    flex: 1 1 100%;
 }
 }

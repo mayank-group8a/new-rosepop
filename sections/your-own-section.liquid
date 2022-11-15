@@ -1,7 +1,7 @@
 {{ 'your-own-section.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width section-{{ section.id }}-padding isolate section-margin">
-  <div class="your-own-section-container">
+<div class="page-width section-{{ section.id }}-padding isolate">
+  <div class="your-own-section-container section-margin">
     {% if section.settings.heading != blank %}
           <h2 class="title {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
           {% endif %}
@@ -93,7 +93,8 @@
     {
       "type": "image_picker",
       "id": "main_image",
-      "label": "Image"
+      "label": "Image",
+      "info": "Image Size: 650x482"
     },
     {
       "type": "text",

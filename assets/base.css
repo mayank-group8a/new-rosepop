@@ -3254,23 +3254,79 @@ h3.title.h2 {
   width: 11px;
   height: 11px;
 }
-@media screen and (min-width: 1280px) and (max-width: 1600px) {
-h2.title.h1 {
-  font-size: 32px;
+
+
+@media screen and (min-width: 1920px)  {
+  h2.title.h1 {
+    font-size: 45px;
+  }
+  .shopify-section div p {
+    font-size: 18px;
+}
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  h2.title.h1 {
+    font-size: 32px;
+  }
+  h3.title.h2 {
+    font-size: 20px;
+}
+.shopify-section div p {
+  font-size: 16px;
+}
+.section-margin {
+  padding: 40px 0;
 }
 }
 @media screen and (max-width: 1279px) {
   h2.title.h1 {
-  font-size: 28px;
+    font-size: 28px;
   }
+  h3.title.h2 {
+    font-size: 20px;
 }
-@media screen and (max-width: 991px) { 
+.shopify-section div p {
+  font-size: 16px;
+}
+.section-margin {
+  padding: 40px 0;
+}
+}
+@media screen and (max-width: 992px) { 
   h2.title.h1 {
-  font-size: 26px;
+    font-size: 26px;
   }
+  h3.title.h2 {
+    font-size: 18px;
+}
+.shopify-section div p {
+  font-size: 16px;
+}
+.section-margin {
+  padding: 40px 0;
+}
+.footer-logo img.header__heading-logo {
+  margin-top: 30px;
+}
 }
 @media screen and (max-width: 767px) { 
   h2.title.h1 {
-  font-size: 18px;
+    font-size: 28px;
   }
+  h3.title.h2 {
+    font-size: 18px;
 }
+.shopify-section div p {
+  font-size: 16px;
+  text-align: center;
+}
+.shopify-section .your-own-block-description p{
+  text-align: left;
+}
+.section-margin {
+  padding: 40px 0;
+}
+
+}
+

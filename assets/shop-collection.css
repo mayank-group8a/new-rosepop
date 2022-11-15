@@ -18,3 +18,25 @@
   .shop-collection slider-component .sub-collection-container {
       width: 40%;
   }
+@media screen and (max-width:991px){
+        .shop-collection slider-component {
+        display: flex;
+        flex-direction: column;
+    }
+    .shop-collection slider-component ul, .shop-collection slider-component .sub-collection-container {
+        width: 100%;
+    }
+    .shop-collection slider-component .sub-collection-container {
+        order: -1;
+    }
+    a.sub-collection-btn {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:479px){
+.shop-collection slider-component ul .grid__item {
+    width: 100%;
+    max-width: 100%;
+}
+}

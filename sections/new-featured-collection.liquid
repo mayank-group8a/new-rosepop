@@ -23,7 +23,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-button.slick-prev.slick-arrow {
+.new-featured-collection button.slick-prev.slick-arrow {
   background-image: url({{ 'line-arrow.svg' | file_url }});
         background-color: #000;
     height: 40px;
@@ -35,7 +35,7 @@ button.slick-prev.slick-arrow {
         left: 5px;
     z-index: 2;
 }
-button.slick-next.slick-arrow {
+.new-featured-collection button.slick-next.slick-arrow {
     background-image: url({{ 'line-arrow.svg' | file_url }});
         background-color: #000;
     height: 40px;
@@ -43,7 +43,7 @@ button.slick-next.slick-arrow {
     background-repeat: no-repeat;
     background-size: 17px;
     background-position: center;
-transform: rotate(180deg);
+transform: translate(0,-50%) rotate(180deg);
     border-radius: 100%;
     right: 5px;
 }
@@ -206,7 +206,8 @@ transform: rotate(180deg);
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Image",
+      "info": "Image Size: 325x508"
     },
     {
       "type": "text",
