@@ -7,26 +7,72 @@
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
+h2.product-recommendations__heading {
+    font-family: IP-Script-Casual;
+    text-align: center;
+}
+#shopify-section-{{ section.id }}  { background-color: {{ section.settings.color_bg }}; }
+#shopify-section-{{ section.id }} .gradient { background: transparent; }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 767px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding: 30px 20px;
+    }
+  }
+  
+  
+  .product-recommendations button.slick-prev.slick-arrow {
+  background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    border-radius: 100%;
+        left: -15px;
+    z-index: 2;
+}
+.product-recommendations button.slick-next.slick-arrow {
+    background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+transform: translate(0,-50%) rotate(180deg);
+    border-radius: 100%;
+    right: -15px;
+}
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
-  <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+  <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate section-margin" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
-      <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+      <h2 class="product-recommendations__heading text-center title {{ section.settings.heading_size }}" style="color: {{ section.settings.text_color }};">{{ section.settings.heading | escape }}</h2>
+      <ul class="{% if section.settings.enable_desktop_slider_slick %}slick-slider-product-recommendations {% endif %} grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list" >
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
+            {% if section.settings.section_style == 'primary_section_style' %}
+            {% render 'new-card-product',
+              card_product: recommendation,
+              media_aspect_ratio: section.settings.image_ratio,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating
+            %}
+            {% else %}
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,
@@ -34,12 +80,50 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating
             %}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
     {% endif %}
   </product-recommendations>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  setInterval(function(){ 
+    $('.slick-slider-product-recommendations').slick({
+    autoplay: {{ section.settings.autoplay }},
+    autoplaySpeed: {{ section.settings.autorotate_speed | times: 1000 }},
+    pauseOnHover: {{ section.settings.pauseOnHover }},
+    arrows: {{ section.settings.desktopArrows }},
+    dots: {{ section.settings.desktopDots }},
+    infinite: {{ section.settings.sliderLoop }},
+    slidesToShow: {{ section.settings.desktopShow }},
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: {{ section.settings.tabShow }},
+          arrows: {{ section.settings.tabArrows }},
+          dots: {{ section.settings.tabDots }}
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: {{ section.settings.mobileShow }},
+          arrows: {{ section.settings.mobileArrows }},
+          dots: {{ section.settings.mobileDots }}
+        }
+      }
+    ]
+  });
+}, 1000); 
+</script>
+
 
 {% schema %}
 {
@@ -52,11 +136,23 @@
       "content": "t:sections.product-recommendations.settings.paragraph__1.content"
     },
     {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background color",
+      "default": "#FCF6F7"
+    },
+    {
       "type": "text",
       "id": "heading",
       "default": "You may also like",
       "label": "t:sections.product-recommendations.settings.heading.label"
     },
+    {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#e5e5e5"
+      },
     {
       "type": "select",
       "id": "heading_size",
@@ -78,6 +174,22 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "select",
+      "id": "section_style",
+      "options": [
+        {
+          "value": "primary_section_style",
+          "label": "Primary Design"
+        },
+        {
+          "value": "secondary_section_style",
+          "label": "Secondary Design"
+        }
+      ],
+      "default": "primary_section_style",
+      "label": "Select Thumbnail Style"
+    },
+    {
       "type": "range",
       "id": "products_to_show",
       "min": 2,
@@ -95,6 +207,119 @@
       "default": 4,
       "label": "t:sections.product-recommendations.settings.columns_desktop.label"
     },
+    {
+      "type": "checkbox",
+      "id": "enable_desktop_slider_slick",
+      "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+  },
+  {
+    "type": "checkbox",
+    "id": "autoplay",
+    "label": "Autoplay",
+    "default": true
+  },
+  {
+    "type": "range",
+    "id": "autorotate_speed",
+    "label": "Change slides every",
+    "max": 10,
+    "min": 1,
+    "step": 1,
+    "unit": " s",
+    "default": 3
+  },
+  {
+      "type": "checkbox",
+      "id": "sliderLoop",
+      "label": "Infinite loop sliding",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "pauseOnHover",
+      "label": "Pause on Hover",
+      "default": false
+  },
+  {
+      "type": "header",
+      "content": "Desktop Settings"
+  },
+  {
+      "type": "range",
+      "id": "desktopShow",
+      "label": "Show",
+      "default": 4,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "desktopArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "desktopDots",
+      "label": "Dots",
+      "default": true
+  },
+  {
+      "type": "header",
+      "content": "Tablet Settings"
+  },
+  {
+      "type": "range",
+      "id": "tabShow",
+      "label": "Show",
+      "default": 3,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "tabArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "tabDots",
+      "label": "Dots",
+      "default": true
+  },
+  {
+      "type": "header",
+      "content": "Mobile Settings"
+  },
+  {
+      "type": "range",
+      "id": "mobileShow",
+      "label": "Show",
+      "default": 2,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "mobileArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "mobileDots",
+      "label": "Dots",
+      "default": true
+  },
     {
       "type": "select",
       "id": "color_scheme",
