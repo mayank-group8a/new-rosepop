@@ -61,6 +61,7 @@ width: auto;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
 }
 
 .newsletter-form__button:focus-visible {

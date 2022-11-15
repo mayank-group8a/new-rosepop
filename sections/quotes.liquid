@@ -1,6 +1,14 @@
 {%- capture variable -%}{%- endcapture -%}
 {{ 'quote.css' | asset_url | stylesheet_tag }}
-<div class="testimonials" style="padding: 30px 0;">
+{% style %}
+  .testimonials {
+    background-image: url({{ 'testimonials-bg.png' | file_url }});
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto;
+}
+  {% endstyle %}
+<div class="testimonials section-margin">
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">

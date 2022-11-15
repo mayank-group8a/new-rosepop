@@ -1,6 +1,6 @@
 {{ 'your-own-section.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width section-{{ section.id }}-padding isolate">
+<div class="page-width section-{{ section.id }}-padding isolate section-margin">
   <div class="your-own-section-container">
     {% if section.settings.heading != blank %}
           <h2 class="title {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
@@ -25,11 +25,11 @@
             {% if block.settings.title != blank %}
             <div class="your-own-block-container">
               <div class="your-own-block-counter">
-                <div class="your-own-block-counter-circle" style="color: {{ section.settings.circle_color }};background-color: {{ section.settings.circle_background }};">{{ forloop.index }}</div>
+                <div class="your-own-block-counter-circle" style="color: {{ block.settings.circle_color }};background-color: {{ block.settings.circle_background }};">{{ forloop.index }}</div>
               </div>
               <div class="your-own-block-text">
-                <div class="your-own-block-title"><h4 style="color: {{ section.settings.title_color }};">{{ block.settings.title | escape }}</h4></div>
-                <div class="your-own-block-description" style="color: {{ section.settings.description_color }};">{{ block.settings.description }}</div>
+                <div class="your-own-block-title"><h4 style="color: {{ block.settings.title_color }};">{{ block.settings.title | escape }}</h4></div>
+                <div class="your-own-block-description rte" style="color: {{ block.settings.description_color }};">{{ block.settings.description }}</div>
               </div>
             </div>
             {% endif %}
@@ -38,7 +38,7 @@
       </div>
     </div>
     {% if section.settings.link != blank %}
-          <a href="{{ section.settings.link }}" class="your-own-btn">{{ section.settings.link_label }}</a>
+          <a href="{{ section.settings.link }}" class="your-own-btn button button--primary">{{ section.settings.link_label }}</a>
           {% endif %}
   </div>
 
@@ -125,10 +125,9 @@
               "default": "#000"
           },
         {
-          "type": "richtext",
+          "type": "textarea",
           "id": "description",
-          "label": "Description",
-          "default": "<p>Description</p>"
+          "label": "Description"
         },
         {
               "type": "color",

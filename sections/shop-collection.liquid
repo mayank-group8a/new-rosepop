@@ -97,13 +97,13 @@
           <img src="{{ section.settings.image | img_url: 'master' }}" style="width:100%;"/>
           <div class="sub-collection-centered">
               {%- if section.settings.title != blank -%}
-              <h3 class="title" style="color: {{ section.settings.text_color }};>{{ section.settings.title | escape }}</h3>
+              <h3 class="title h2" style="color: {{ section.settings.text_color }};">{{ section.settings.title | escape }}</h3>
               {%- endif -%}
               {%- if section.settings.shop_collection_description != blank -%}
-              <div class="sub-collection-description" style="color: {{ section.settings.text_color }};>{{ section.settings.shop_collection_description }}</div>
+              <div class="sub-collection-description" style="color: {{ section.settings.text_color }};">{{ section.settings.shop_collection_description }}</div>
               {% endif %}
               {% if section.settings.link != blank %}
-              <a href="{{ section.settings.link }}" class="sub-collection-btn">{{ section.settings.link_label }}</a>
+              <a href="{{ section.settings.link }}" class="sub-collection-btn button button--primary">{{ section.settings.link_label }}</a>
               {% endif %}
           </div>
           </div>

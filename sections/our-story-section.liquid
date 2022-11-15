@@ -1,7 +1,7 @@
 {{ 'our-story-section.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width section-{{ section.id }}-padding isolate">
-  <div class="our-story-section-container">
+  <div class="our-story-section-container section-margin">
     <div class="our-story-section-inner">
       <div class="our-story-left">
         <div class="our-story-left-inner">
@@ -12,7 +12,7 @@
           <div style="color: {{ section.settings.subheading_color }};">{{ section.settings.description }}</div>
           {% endif %}
           {% if section.settings.link != blank %}
-          <a href="{{ section.settings.link }}" class="our-story-btn">{{ section.settings.link_label }}</a>
+          <a href="{{ section.settings.link }}" class="our-story-btn line-btn">{{ section.settings.link_label }}</a>
           {% endif %}
         </div>
       </div>

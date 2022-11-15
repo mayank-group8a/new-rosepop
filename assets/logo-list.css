@@ -1,9 +1,11 @@
 .logo-list-section .logo-list {
     display: flex;
     flex-wrap: wrap;
+      align-items: center;
 }
 .logo-list-section .logo-list .logo-list__logo {
     width: 25%;
+  padding: 15px 15px;
 }
 .logo-list-section .logo-list .logo-list__logo .logo-list__logo-image {
     margin: 0 auto;

@@ -23,6 +23,32 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+button.slick-prev.slick-arrow {
+  background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    border-radius: 100%;
+        left: 5px;
+    z-index: 2;
+}
+button.slick-next.slick-arrow {
+    background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+transform: rotate(180deg);
+    border-radius: 100%;
+    right: 5px;
+}
+  
+  
 {%- endstyle -%}
 
 {%- liquid
@@ -45,7 +71,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient new-featured-collection ">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient new-featured-collection section-margin ">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
      
 

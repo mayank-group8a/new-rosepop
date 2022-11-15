@@ -45,6 +45,7 @@ span.quote-icon svg.icon.icon-quote {
 }
 .quotes-slider__text .rte-setting.rte {
     text-align: center;
+  font-size: 15px;
 }
 blockquote.quotes-slider__text ul li {
     display: inline-block;
@@ -71,7 +72,12 @@ blockquote.quotes-slider__text.text-center {
     color: white;
 }
 blockquote.quotes-slider__text.text-center p.quote-heading {
-    color: #000;
+    color: rgb(var(--color-heading-1-text));
+  font-family: Muli;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom:0;
 }
   .quotes-wrapper .slick-dots li button::before {
     font-size: 16px;
@@ -97,4 +103,7 @@ blockquote.quotes-slider__text.text-center p.quote-heading {
 }
 .quotes-slider .slick-dots li.slick-active button {
     background: white;
+}
+.quotes-slider__text svg path {
+    fill: #fff;
 }

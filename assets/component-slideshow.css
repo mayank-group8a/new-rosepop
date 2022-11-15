@@ -44,7 +44,6 @@ slideshow-component .slideshow.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 54.5rem;
 }
 
 .slideshow__text > * {
@@ -217,14 +216,34 @@ slideshow-component .slideshow__text.banner__box {
     background: none;
 }
 slideshow-component .slideshow__text.banner__box h2.banner__heading.h1 {
-    font-family: 'Muli-Bold';
+    font-family: 'Muli';
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
 }
 slideshow-component .slideshow__text.banner__box .banner__text {
-    font-family: "Proxima Nova";
     color: #444444;
+  font-size: 22px;
+      max-width: 80%;
 }
-slideshow-component .slideshow__text.banner__box .banner__buttons a.button.button--primary {
+/* slideshow-component .slideshow__text.banner__box .banner__buttons a.button.button--primary {
     background: #000;
     color: #fff;
     border: none;
+} */
+
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
+slideshow-component .slideshow__text.banner__box h2.banner__heading.h1 {
+  font-size: 36px;
+}
+}
+@media screen and (max-width: 1279px) {
+  slideshow-component .slideshow__text.banner__box h2.banner__heading.h1 {
+  font-size: 28px;
+  }
+}
+@media screen and (max-width: 767px) { 
+  slideshow-component .slideshow__text.banner__box h2.banner__heading.h1 {
+  font-size: 20px;
+  }
 }

@@ -6,11 +6,16 @@
         "template--14432441696336__01b022f5-7ca4-4abe-9591-d7509623f078-1668166728ed5abbff-0": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/flat-lay-composition-with-fresh-flowers-pink-background.png",
+            "enable_mobile_image": true,
+            "mobile_image": "shopify:\/\/shop_images\/template_2.png",
             "heading": "FIND YOUR OWN HAPPINESS",
+            "heading_color": "#221e1f",
             "heading_size": "h1",
             "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+            "subheading_color": "#444444",
             "button_label": "SHOP NOW",
-            "link": "",
+            "link": "#",
             "button_style_secondary": false,
             "box_align": "top-center",
             "show_text_box": true,
@@ -24,9 +29,12 @@
           "type": "slide",
           "disabled": true,
           "settings": {
+            "enable_mobile_image": false,
             "heading": "Image slide",
+            "heading_color": "#000000",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
+            "subheading_color": "#000000",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -60,28 +68,32 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/V4_-_Low_Maintenance160.png",
-            "title": "Low Maintenance- No water needed!"
+            "title": "Low Maintenance- No water needed!",
+            "title_color": "#000000"
           }
         },
         "9e5b62b8-29b1-476b-b964-64f4da8e5971": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/V4_-_Last_Up_to_a_Year_copy_3.png",
-            "title": "Flowers that Last Up to a Year"
+            "title": "Flowers that Last Up to a Year",
+            "title_color": "#000000"
           }
         },
         "cd7854a0-6397-435f-8546-2055641b83b3": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/V4_-_Shipping160.png",
-            "title": "Fast 2-Day Shipping"
+            "title": "Fast 2-Day Shipping",
+            "title_color": "#000000"
           }
         },
         "b9dcdaad-ac75-4326-a24f-efac8a1cdfd7": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/V4_-_Personalize160.png",
-            "title": "Personalize Your Pop"
+            "title": "Personalize Your Pop",
+            "title_color": "#000000"
           }
         }
       },
@@ -92,8 +104,12 @@
         "b9dcdaad-ac75-4326-a24f-efac8a1cdfd7"
       ],
       "settings": {
+        "color_background": "#ffffff",
         "heading": "Our Story",
+        "heading_size": "h1",
+        "heading_color": "#c68792",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.<br\/>.<\/p>",
+        "subheading_color": "#000000",
         "link_label": "LEARN MORE",
         "link": "#"
       }
@@ -179,6 +195,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -201,6 +218,51 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "1026e1d1-a1a8-4753-93a2-4ebf4f5dd114": {
+      "type": "new-featured-collection",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/template_1.png",
+        "title": "THE NOVEMBER PICKS",
+        "new_featured_collection_description": "<p>Lorem ipsum dolor sit amet,<br\/>consectetur adipiscing elit<\/p>",
+        "text_color": "#e5e5e5",
+        "link_label": "BEST SELLERS",
+        "link": "#",
+        "section_style": "primary_section_style",
+        "heading_size": "h2",
+        "collection": "2020-holiday-pops",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider_slick": true,
+        "autoplay": false,
+        "autorotate_speed": 3,
+        "sliderLoop": true,
+        "pauseOnHover": false,
+        "desktopInit": true,
+        "desktopShow": 3,
+        "desktopArrows": true,
+        "desktopDots": false,
+        "tabInit": true,
+        "tabShow": 2,
+        "tabArrows": true,
+        "tabDots": false,
+        "mobileInit": true,
+        "mobileShow": 1,
+        "mobileArrows": true,
+        "mobileDots": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -258,6 +320,58 @@
         "padding_bottom": 36
       }
     },
+    "fb29bd5e-787f-4da9-82f6-edcd50aa2b88": {
+      "type": "your-own-section",
+      "blocks": {
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-0": {
+          "type": "column",
+          "settings": {
+            "title": "SELECT YOUR SIZE",
+            "title_color": "#c68792",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description_color": "#444444",
+            "circle_background": "#f5dadf",
+            "circle_color": "#221e1f"
+          }
+        },
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-1": {
+          "type": "column",
+          "settings": {
+            "title": "SELECT YOUR ROSE",
+            "title_color": "#c68792",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description_color": "#444444",
+            "circle_background": "#f5dadf",
+            "circle_color": "#221e1f"
+          }
+        },
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-2": {
+          "type": "column",
+          "settings": {
+            "title": "SELECT YOUR UPGRADE",
+            "title_color": "#c68792",
+            "description": "<p>|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br><\/p>\n<ul>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<\/ul>",
+            "description_color": "#444444",
+            "circle_background": "#f5dadf",
+            "circle_color": "#221e1f"
+          }
+        }
+      },
+      "block_order": [
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-0",
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-1",
+        "template--14432441696336__fb29bd5e-787f-4da9-82f6-edcd50aa2b88-16684317718bb7d0c9-2"
+      ],
+      "settings": {
+        "color_background": "#fcf6f7",
+        "heading": "Design Your Own",
+        "heading_size": "h1",
+        "heading_color": "#000000",
+        "main_image": "shopify:\/\/shop_images\/template_2.png",
+        "link_label": "GET STARTED",
+        "link": "#"
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "disabled": true,
@@ -312,6 +426,34 @@
         "padding_bottom": 36
       }
     },
+    "f205ae78-5db3-4f64-a957-7db5201d3699": {
+      "type": "shop-collection",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/template.png",
+        "title": "BIRTHDAY VIBES",
+        "shop_collection_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<\/p>",
+        "text_color": "#444444",
+        "link_label": "SHOP COLLECTIONS",
+        "link": "#",
+        "heading_size": "h1",
+        "section_style": "secondary_section_style",
+        "collection": "2020-holiday-pops",
+        "products_to_show": 4,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "f34a72ae-2313-4d6b-8aab-25cf99ce3483": {
       "type": "quotes",
       "blocks": {
@@ -319,8 +461,11 @@
           "type": "quote",
           "settings": {
             "quote_heading": "AMAZING! I COULDN'T BE HAPPIER",
-            "quote": "<p>This was the best giftI ever got my Mom!I had it<br\/>customized to her from her grandkids! I ordered<br\/>and it literaly was at my door in 3 days and it turned<br\/>out exactly how I customized t!<\/p>",
-            "author": "John deo",
+            "title_color": "#000000",
+            "quote": "<p>This was the best giftI ever got my Mom!I had it customized to her from her grandkids! I ordered and it literaly was at my door in 3 days and it turned out exactly how I customized t!<\/p>",
+            "description_color": "#000000",
+            "author": "",
+            "author_color": "#000000",
             "review_star": 5
           }
         },
@@ -328,8 +473,11 @@
           "type": "quote",
           "settings": {
             "quote_heading": "LOVE IT!",
-            "quote": "<p>We ordered the heart shaped box with three roses<br\/>for Mother's Day and our Mom Just loves it! Very<br\/>unique gift and I love that it will last a long time.<\/p>",
-            "author": "Pamela H",
+            "title_color": "#000000",
+            "quote": "<p>We ordered the heart shaped box with three roses for Mother's Day and our Mom Just loves it! Very unique gift and I love that it will last a long time. <\/p>",
+            "description_color": "#000000",
+            "author": "",
+            "author_color": "#000000",
             "review_star": 5
           }
         },
@@ -337,8 +485,11 @@
           "type": "quote",
           "settings": {
             "quote_heading": "AN ABSOLUTELY STUNNING ROSES!",
-            "quote": "<p>Beautiful! Mother loved the personallization.<br\/>Smells wonderful! They were awesome she fell In<br\/>love with them awesome products thank you<\/p>",
-            "author": "JosephP",
+            "title_color": "#000000",
+            "quote": "<p>Beautiful! Mother loved the personallization. Smells wonderful! They were awesome she fell In love with them awesome products thank you<\/p>",
+            "description_color": "#000000",
+            "author": "",
+            "author_color": "#000000",
             "review_star": 5
           }
         },
@@ -346,8 +497,11 @@
           "type": "quote",
           "settings": {
             "quote_heading": "Quote Title",
+            "title_color": "#000000",
             "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-            "author": "Author's name",
+            "description_color": "#000000",
+            "author": "",
+            "author_color": "#000000",
             "review_star": 5
           }
         }
@@ -360,7 +514,25 @@
       ],
       "settings": {
         "title": "Customer Reviews",
-        "color_background": "#c68792"
+        "color_background": "#c68792",
+        "heading_size": "h1",
+        "heading_color": "#000000",
+        "autoplay": true,
+        "autorotate_speed": 3,
+        "sliderLoop": true,
+        "pauseOnHover": false,
+        "desktopInit": true,
+        "desktopShow": 3,
+        "desktopArrows": false,
+        "desktopDots": true,
+        "tabInit": true,
+        "tabShow": 2,
+        "tabArrows": false,
+        "tabDots": true,
+        "mobileInit": true,
+        "mobileShow": 1,
+        "mobileArrows": false,
+        "mobileDots": true
       }
     },
     "2204dc05-0b04-4756-9efb-30930bb28e24": {
@@ -369,7 +541,7 @@
         "template--14432441696336__2204dc05-0b04-4756-9efb-30930bb28e24-16681821959d8c5057-0": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Low_Maintenance160_65920579-74be-4378-980a-a723388141d0.png",
+            "image": "shopify:\/\/shop_images\/buzzfeed.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -379,7 +551,7 @@
         "template--14432441696336__2204dc05-0b04-4756-9efb-30930bb28e24-16681821959d8c5057-1": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Last_Up_to_a_Year_copy_3.png",
+            "image": "shopify:\/\/shop_images\/theknot.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -389,7 +561,7 @@
         "template--14432441696336__2204dc05-0b04-4756-9efb-30930bb28e24-16681821959d8c5057-2": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Shipping160.png",
+            "image": "shopify:\/\/shop_images\/byrdie.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -399,7 +571,7 @@
         "f75b4733-1abb-4753-915d-5522e16ba32f": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Personalize160.png",
+            "image": "shopify:\/\/shop_images\/elitedaily.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -409,7 +581,7 @@
         "aafedac8-853d-4b6d-995e-00c62eddc9ec": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Low_Maintenance160.png",
+            "image": "shopify:\/\/shop_images\/mens-journal.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -419,7 +591,7 @@
         "c664698a-bc21-4b22-9760-36755310a62b": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Last_Up_to_a_Year_copy_3.png",
+            "image": "shopify:\/\/shop_images\/UsWeekly.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -429,7 +601,7 @@
         "d004f796-4849-4aef-8484-04fbbe5e3134": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Shipping160.png",
+            "image": "shopify:\/\/shop_images\/scarymommy.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -439,7 +611,7 @@
         "c4693c7e-8beb-485f-b97e-d2777258f0b5": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/V4_-_Personalize160.png",
+            "image": "shopify:\/\/shop_images\/Huffpost.png",
             "image_width": 160,
             "link": "",
             "title": "",
@@ -461,31 +633,6 @@
         "title": "",
         "color_bg": "#ffffff"
       }
-    },
-    "f205ae78-5db3-4f64-a957-7db5201d3699": {
-      "type": "shop-collection",
-      "settings": {
-        "title": "Shop collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "2020-holiday-pops",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -494,11 +641,13 @@
     "image_banner",
     "rich_text",
     "featured_collection",
+    "1026e1d1-a1a8-4753-93a2-4ebf4f5dd114",
     "collage",
     "video",
+    "fb29bd5e-787f-4da9-82f6-edcd50aa2b88",
     "multicolumn",
+    "f205ae78-5db3-4f64-a957-7db5201d3699",
     "f34a72ae-2313-4d6b-8aab-25cf99ce3483",
-    "2204dc05-0b04-4756-9efb-30930bb28e24",
-    "f205ae78-5db3-4f64-a957-7db5201d3699"
+    "2204dc05-0b04-4756-9efb-30930bb28e24"
   ]
 }

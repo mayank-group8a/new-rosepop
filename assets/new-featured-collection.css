@@ -4,9 +4,10 @@
   }
   .new-featured-collection-centered {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
   }
   .new-featured-collection slider-component {
       display: flex;
@@ -15,7 +16,11 @@
   .new-featured-collection slider-component ul {
       width: 75%;
       padding: 0 20px;
+    margin-top: 0;
   }
   .new-featured-collection slider-component .new-featured-collection-container {
       width: 25%;
   }
+button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
+  content: "";
+}

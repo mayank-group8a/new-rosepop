@@ -1,3 +1,4 @@
+{% assign link_title = link.title | escape %}
 <header-menu>
     <details class="mega-nav">
       <summary class="header__menu-item list-menu__item link focus-inset">
@@ -8,9 +9,11 @@
           <div class="page-width">
           <div class="megamenu-container">
         {% for block in section.blocks %}
+          {% assign mega_menu = block.settings.mega_menu  %}
+          {% if link_title == mega_menu %}
         <div class="site-nav__childlist-grid">
         <!-- Block Link list -->
-      {%- for i in (1..4) -%}
+      {%- for i in (1..5) -%}
       {%- liquid
         assign menu = 'submenu_link_' | append : i
         assign title = 'submenu_title_' | append : i
@@ -40,7 +43,7 @@
         {%- assign menutitle = false -%}
         {%- capture productMenu -%}
             <ul class="menu list-menu product-list-grid">
-                {% for i in (1..4) %}
+                {% for i in (1..8) %}
                 {% assign product = 'submenu_product_' | append : i %}
                 {% if block.settings[product] != blank %}
                 {%- liquid
@@ -115,7 +118,37 @@
             loading="lazy"
             class="motion-reduce"
           >
+          <h3>{{ block.settings.banner_tile_1 }}</h3>
             </a>
+          <a href="{{ url }}" class="button button--primary">{{ block.settings.banner_button_label1 }}</a>
+        </div>
+        {% endif %}
+
+        {% if block.settings['banner1'] != blank and block.settings.bannerShow1 %}
+        <div class="site-nav__childlist-item site-nav__childlist-item-banner">
+        {%- liquid
+            assign image = block.settings['banner1']
+            assign url1 = block.settings['banner_url1']
+            -%}
+           <a href="{{ url1 }}" target="_self" class="">
+            <img
+            srcset="{%- if image.src.width >= 165 -%}{{ image.src | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if image.src.width >= 360 -%}{{ image.src | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if image.src.width >= 533 -%}{{ image.src | img_url: '533x' }} 533w,{%- endif -%}
+              {%- if image.src.width >= 720 -%}{{ image.src | img_url: '720x' }} 720w,{%- endif -%}
+              {%- if image.src.width >= 1000 -%}{{ image.src | img_url: '1000x' }} 1000w,{%- endif -%}
+              {%- if image.src.width >= 1500 -%}{{ image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
+            src="{{ image.src | img_url: '533x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ image.src.alt | escape }}"
+            width="{{ article.image.width }}"
+            height="{{ article.image.height }}"
+            loading="lazy"
+            class="motion-reduce"
+          >
+          <h3>{{ block.settings.banner_tile_2 }}</h3>
+            </a>
+          <a href="{{ url1 }}" class="button button--primary">{{ block.settings.banner_button_label2 }}</a>
         </div>
         {% endif %}
 
@@ -181,6 +214,7 @@
          {% endif %}
          </div>
      {% endif %}
+            {% endif %}
         {%- endfor -%}
       </div>
       </div>

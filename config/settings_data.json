@@ -119,7 +119,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true,
+    "currency_code_enabled": false,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -181,7 +181,13 @@
               "submenu_link_4": "arosatherapy",
               "bannerShow": true,
               "banner": "shopify:\/\/shop_images\/Component_4_1.png",
-              "banner_url": "#",
+              "banner_tile_1": "birthday pops",
+              "banner_button_label1": "Shop Now",
+              "banner_url": "shopify:\/\/products\/the-four-get-me-not-custom-app",
+              "bannerShow1": false,
+              "banner_tile_2": "",
+              "banner_button_label2": "",
+              "banner_url1": "",
               "banner_image_Show1": false,
               "banner_url_1": "",
               "banner_image_Show2": false,
@@ -190,7 +196,11 @@
               "submenu_product_1": "",
               "submenu_product_2": "",
               "submenu_product_3": "",
-              "submenu_product_4": ""
+              "submenu_product_4": "",
+              "submenu_product_5": "",
+              "submenu_product_6": "",
+              "submenu_product_7": "",
+              "submenu_product_8": ""
             }
           },
           "6c5616eb-e92e-4846-a12c-4af0b39272c3": {
@@ -212,7 +222,14 @@
               "submenu_link_4": "",
               "bannerShow": true,
               "banner": "shopify:\/\/shop_images\/Component_4_1.png",
-              "banner_url": "#",
+              "banner_tile_1": "Mom & POP IT",
+              "banner_button_label1": "Shop Now",
+              "banner_url": "shopify:\/\/products\/sweet-croc-pop-of-the-line",
+              "bannerShow1": true,
+              "banner1": "shopify:\/\/shop_images\/Component_4_1.png",
+              "banner_tile_2": "birthday pops",
+              "banner_button_label2": "Shop Now",
+              "banner_url1": "shopify:\/\/products\/tie-dye-four-get-me-not",
               "banner_image_Show1": false,
               "banner_url_1": "",
               "banner_image_Show2": false,
@@ -221,7 +238,11 @@
               "submenu_product_1": "",
               "submenu_product_2": "",
               "submenu_product_3": "",
-              "submenu_product_4": ""
+              "submenu_product_4": "",
+              "submenu_product_5": "",
+              "submenu_product_6": "",
+              "submenu_product_7": "",
+              "submenu_product_8": ""
             }
           },
           "ddcbdebc-544d-473b-922a-d401e83d19c2": {
@@ -242,7 +263,13 @@
               "submenu_title_4": "",
               "submenu_link_4": "",
               "bannerShow": true,
+              "banner_tile_1": "",
+              "banner_button_label1": "",
               "banner_url": "",
+              "bannerShow1": true,
+              "banner_tile_2": "",
+              "banner_button_label2": "",
+              "banner_url1": "",
               "banner_image_Show1": true,
               "banner_url_1": "",
               "banner_image_Show2": true,
@@ -251,17 +278,21 @@
               "submenu_product_1": "the-one-up-custom-app",
               "submenu_product_2": "the-threes-a-charm-custom-app",
               "submenu_product_3": "the-four-get-me-not-custom-app",
-              "submenu_product_4": "threes-a-charm"
+              "submenu_product_4": "threes-a-charm",
+              "submenu_product_5": "the-sixer-upper-custom-app",
+              "submenu_product_6": "the-keeper-by-the-dozen-custom-app",
+              "submenu_product_7": "the-lucky-13-custom-app",
+              "submenu_product_8": "the-pop-of-the-line"
             }
           },
           "47b1ad7a-2b9f-48e0-9063-945048ce784e": {
             "type": "mega_menu",
             "settings": {
-              "mega_menu": "About us",
+              "mega_menu": "ABOUT US",
               "linksLimits": 6,
               "submenu_1": true,
-              "submenu_title_1": "Test",
-              "submenu_link_1": "arosatherapy",
+              "submenu_title_1": "Occasion",
+              "submenu_link_1": "by-occasion",
               "submenu_2": false,
               "submenu_title_2": "",
               "submenu_link_2": "",
@@ -272,16 +303,27 @@
               "submenu_title_4": "",
               "submenu_link_4": "",
               "bannerShow": true,
-              "banner_url": "",
-              "banner_image_Show1": true,
+              "banner": "shopify:\/\/shop_images\/Component_4_1.png",
+              "banner_tile_1": "",
+              "banner_button_label1": "",
+              "banner_url": "shopify:\/\/products\/copy-of-the-i-love-you-beary-much",
+              "bannerShow1": false,
+              "banner_tile_2": "",
+              "banner_button_label2": "",
+              "banner_url1": "",
+              "banner_image_Show1": false,
               "banner_url_1": "",
-              "banner_image_Show2": true,
+              "banner_image_Show2": false,
               "banner_url_2": "",
               "product_list_title": "",
               "submenu_product_1": "",
               "submenu_product_2": "",
               "submenu_product_3": "",
-              "submenu_product_4": ""
+              "submenu_product_4": "",
+              "submenu_product_5": "",
+              "submenu_product_6": "",
+              "submenu_product_7": "",
+              "submenu_product_8": ""
             }
           }
         },
@@ -503,7 +545,6 @@
               "type": "announcement",
               "settings": {
                 "text": "Welcome to our store",
-                "color_scheme": "background-1",
                 "link": ""
               }
             }

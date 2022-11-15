@@ -412,7 +412,7 @@
 
       
         {%- if has_mega > 0 -%}
-          {%- render 'mega-nav', link: link -%}
+          {%- render 'mega-nav', link: link  -%}
         {%- else -%}
                 {%- if link.links != blank -%}
                   <header-menu>
@@ -1065,12 +1065,48 @@
               {
                   "type": "image_picker",
                   "id": "banner",
-                  "label": "Banner"
+                  "label": "Banner 1"
+              },
+              {
+                  "type": "text",
+                  "id": "banner_tile_1",
+                  "label": "Banner Title 1"
+              },
+              {
+                  "type": "text",
+                  "id": "banner_button_label1",
+                  "label": "Banner Button Label 1"
               },
               {
                   "type": "url",
                   "id": "banner_url",
-                  "label": "Banner url"
+                  "label": "Banner url 1"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "bannerShow1",
+                  "label": "Show",
+                  "default": true
+              },
+              {
+                  "type": "image_picker",
+                  "id": "banner1",
+                  "label": "Banner 2"
+              },
+              {
+                  "type": "text",
+                  "id": "banner_tile_2",
+                  "label": "Banner Title 2"
+              },
+            {
+                  "type": "text",
+                  "id": "banner_button_label2",
+                  "label": "Banner Button Label 2"
+              },
+              {
+                  "type": "url",
+                  "id": "banner_url1",
+                  "label": "Banner url 2"
               },
               {
                   "type": "header",
@@ -1146,6 +1182,26 @@
                   "type": "product",
                   "id": "submenu_product_4",
                   "label": "Product 4"
+              },
+              {
+                  "type": "product",
+                  "id": "submenu_product_5",
+                  "label": "Product 5"
+              },
+              {
+                  "type": "product",
+                  "id": "submenu_product_6",
+                  "label": "Product 6"
+              },
+              {
+                  "type": "product",
+                  "id": "submenu_product_7",
+                  "label": "Product 7"
+              },
+              {
+                  "type": "product",
+                  "id": "submenu_product_8",
+                  "label": "Product 8"
               }
           ]
       }
