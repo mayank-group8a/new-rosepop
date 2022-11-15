@@ -11,15 +11,25 @@
     margin: 0 auto;
 }
 .logo-list-section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 .rimage-outer-wrapper img {
     width: 100%;
     height: auto;
 }
-@media screen and (max-width:750px){
+.logo-list__logo-text {
+    max-width: 140px;
+    margin: 0 auto;
+    text-align: center;
+}
+@media screen and (max-width:767px){
   .logo-list-section .logo-list .logo-list__logo {
     width: 33.33%;
+}
+.logo-list-section .logo-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 }
 @media screen and (max-width:479px){

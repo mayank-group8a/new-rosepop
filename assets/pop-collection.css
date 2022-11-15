@@ -1,0 +1,88 @@
+.pop-collection-inner {
+    position: relative;
+    text-align: center;
+  }
+  .pop-collection-centered {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+  .pop-collection slider-component {
+      display: flex;
+      width: 100%;
+  }
+  .pop-collection slider-component .pop-collection-right {
+      width: 50%;
+      padding: 0 20px;
+    margin-top: 0;
+  }
+  .pop-collection slider-component ul {
+    width: 100%;
+}
+  .pop-collection slider-component .pop-collection-container {
+      width: 50%;
+  }
+button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
+  content: "";
+}
+.pop-collection slider-component .pop-collection-right h3.title.h2 {
+  margin-top: 0;
+}
+.pop-collection slider-component .pop-collection-right h3.title.h2 {
+  margin-top: 0;
+  margin-bottom: -5px;
+}
+.pop-collection-description p {
+  line-height: 1.6;
+}
+.pop-collection .old-card-products {
+  margin: 0 15px;
+}
+@media screen and (min-width:1200px) {
+  .pop-collection slider-component .pop-collection-right {
+    padding: 0 40px;
+  }
+  .pop-collection slider-component .pop-collection-container {
+    padding: 0 40px;
+}
+.pop-collection slider-component .pop-collection-right h3.title.h2, .pop-collection-description {
+  padding-left: 12px;
+}
+.pop-collection-inner, .pop-collection-inner img {
+  height: 100%;
+}
+}
+
+@media screen and (max-width:991px){
+  .pop-collection slider-component {
+  display: flex;
+  flex-direction: column;
+}
+.pop-collection slider-component .pop-collection-right, .pop-collection slider-component .pop-collection-container {
+  width: 100%;
+}
+.pop-collection slider-component .pop-collection-container {
+  order: -1;
+}
+a.pop-collection-btn {
+  width: max-content;
+  margin: 0 auto;
+}
+.pop-collection slider-component .pop-collection-right h3.title.h2, .shopify-section .pop-collection-description p{
+  text-align: center;
+}
+.pop-collection slider-component .pop-collection-right {
+  margin-top: 30px;
+}
+.pop-collection  slider-component.page-width {
+  padding: 0;
+}
+}
+@media screen and (max-width:479px){
+.pop-collection slider-component ul .grid__item {
+width: 100%;
+max-width: 100%;
+}
+}

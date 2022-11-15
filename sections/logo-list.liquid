@@ -1,7 +1,7 @@
 {{ 'logo-list.css' | asset_url | stylesheet_tag }}
 <div class=" relative container multi_logo container--no-mobile-padding section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="logo-list">
   {% style %} 
-    .section-{{ section.id }} .logo-list-section { background-color: {{ section.settings.color_bg }}; }
+    .section-{{ section.id }}  { background-color: {{ section.settings.color_bg }}; }
     .section-{{ section.id }} .logo-list__logo { color: {{ section.settings.color_text }}; } 
     .section-{{ section.id }} .logo-list__title { color: {{ section.settings.color_title }}; }
     .section-{{ section.id }} .logo-list__link .logo-list__logo-image { opacity: {{ section.settings.image_opacity }}%; }
