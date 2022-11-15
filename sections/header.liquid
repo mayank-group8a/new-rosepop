@@ -140,6 +140,21 @@
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
                     {%- for link in section.settings.menu.links -%}
                       <li>
+
+                        {% assign child_list_handle = link.title | handleize %}
+                        {% assign has_mega = 0 %}
+                        {% for block in section.blocks %}
+                          {% assign mega_menu = block.settings.mega_menu | handleize %}
+                          {% if child_list_handle == mega_menu %}
+                            {% assign has_mega = has_mega | plus : 1 %}
+                          {% endif %}
+                        {% endfor %}
+
+      
+                        {%- if has_mega > 0 -%}
+                          {%- render 'mega-nav', link: link  -%}
+                        {%- else -%}
+                     
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
@@ -195,6 +210,7 @@
                             {{ link.title | escape }}
                           </a>
                         {%- endif -%}
+                        {% endif %}
                       </li>
                     {%- endfor -%}
                   </ul>
@@ -1051,6 +1067,62 @@
                   "type": "link_list",
                   "id": "submenu_link_4",
                   "label": "Links"
+              },
+              {
+                  "type": "header",
+                  "content": "Content"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "contentShow1",
+                  "label": "Show",
+                  "default": false
+              },
+              {
+                  "type": "text",
+                  "id": "content_tile_1",
+                  "label": "Content Title 1"
+              },
+              {
+                  "type": "textarea",
+                  "id": "content1",
+                  "label": "Content 1"
+              },
+              {
+                  "type": "text",
+                  "id": "content_button_label1",
+                  "label": "Content Button Label 1"
+              },
+              {
+                  "type": "url",
+                  "id": "content_url1",
+                  "label": "Content url 1"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "contentShow2",
+                  "label": "Show",
+                  "default": false
+              },
+              {
+                  "type": "text",
+                  "id": "content_tile_2",
+                  "label": "Content Title 2"
+              },
+              {
+                  "type": "textarea",
+                  "id": "content2",
+                  "label": "Content 2"
+              },
+              {
+                  "type": "text",
+                  "id": "content_button_label2",
+                  "label": "Content Button Label 2"
+              },
+              {
+                  "type": "url",
+                  "id": "content_url2",
+                  "label": "Content url 2"
               },
               {
                   "type": "header",
