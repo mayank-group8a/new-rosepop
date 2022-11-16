@@ -6,6 +6,30 @@
     .section-{{ section.id }} .logo-list__title { color: {{ section.settings.color_title }}; }
     .section-{{ section.id }} .logo-list__link .logo-list__logo-image { opacity: {{ section.settings.image_opacity }}%; }
     .section-{{ section.id }} .logo-list__link:hover .logo-list__logo-image { opacity: 100%; } 
+    .multi_logo button.slick-prev.slick-arrow {
+  background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    border-radius: 100%;
+        left: 5px;
+    z-index: 2;
+}
+.multi_logo button.slick-next.slick-arrow {
+    background-image: url({{ 'line-arrow.svg' | file_url }});
+        background-color: #000;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+transform: translate(0,-50%) rotate(180deg);
+    border-radius: 100%;
+    right: 5px;
+}
     {%- for block in section.blocks -%} 
     .section-{{ section.id }} .logo-list__logo-{{ forloop.index }} .logo-list__logo-image { max-width: {{ block.settings.image_width }}px; }
     {%- endfor -%} 
@@ -18,7 +42,33 @@
         {% endif %} 
       </div>
     {% endif %} 
-    <div class="logo-list"> 
+    <div class="logo-list"
+      {% if section.settings.enable_desktop_slider_slick %}
+        data-slickslider="true"
+     data-slick-autoplay="{{ section.settings.autoplay }}"
+     data-slick-autoplayspeed="{{ section.settings.autorotate_speed | times: 1000 }}"
+     data-slick-infinite="{{ section.settings.sliderLoop }}"
+     data-slick-pauseonhover="{{ section.settings.pauseOnHover }}"
+   
+     data-slick-desktop-init="{{ section.settings.desktopInit }}"
+     data-slick-desktop-show="{{ section.settings.desktopShow }}"
+     data-slick-desktop-arrows="{{ section.settings.desktopArrows }}"
+     data-slick-desktop-dots="{{ section.settings.desktopDots }}"
+     data-slick-desktop-vertical="false"
+   
+     data-slick-tab-init="{{ section.settings.tabInit }}"
+     data-slick-tab-show="{{ section.settings.tabShow }}"
+     data-slick-tab-arrows="{{ section.settings.tabArrows }}"
+     data-slick-tab-dots="{{ section.settings.tabDots }}"
+     data-slick-tab-vertical="false"
+   
+     data-slick-mobile-init="{{ section.settings.mobileInit }}"
+     data-slick-mobile-show="{{ section.settings.mobileShow }}"
+     data-slick-mobile-arrows="{{ section.settings.mobileArrows }}"
+     data-slick-mobile-dots="{{ section.settings.mobileDots }}"
+     data-slick-mobile-vertical="false"
+     {% endif %}
+    > 
     {% for block in section.blocks %} 
       {%- if block.settings.link != blank -%}
         <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
@@ -78,7 +128,138 @@
       "id": "color_bg",
       "label": "Background color",
       "default": "#dae4e6"
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_desktop_slider_slick",
+      "label": "Enable Slider",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+  },
+  {
+    "type": "checkbox",
+    "id": "autoplay",
+    "label": "Autoplay",
+    "default": true
+  },
+  {
+    "type": "range",
+    "id": "autorotate_speed",
+    "label": "Change slides every",
+    "max": 10,
+    "min": 1,
+    "step": 1,
+    "unit": " s",
+    "default": 3
+  },
+  {
+      "type": "checkbox",
+      "id": "sliderLoop",
+      "label": "Infinite loop sliding",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "pauseOnHover",
+      "label": "Pause on Hover",
+      "default": false
+  },
+  {
+      "type": "header",
+      "content": "Desktop Settings"
+  },
+  {
+      "type": "checkbox",
+      "id": "desktopInit",
+      "label": "Enable Slider in Desktop",
+      "default": true
+  },
+  {
+      "type": "range",
+      "id": "desktopShow",
+      "label": "Show",
+      "default": 4,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "desktopArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "desktopDots",
+      "label": "Dots",
+      "default": true
+  },
+  {
+      "type": "header",
+      "content": "Tablet Settings"
+  },
+  {
+      "type": "checkbox",
+      "id": "tabInit",
+      "label": "Enable slider in tablet",
+      "default": true
+  },
+  {
+      "type": "range",
+      "id": "tabShow",
+      "label": "Show",
+      "default": 3,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "tabArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "tabDots",
+      "label": "Dots",
+      "default": true
+  },
+  {
+      "type": "header",
+      "content": "Mobile Settings"
+  },
+  {
+      "type": "checkbox",
+      "id": "mobileInit",
+      "label": "Enable slider in Mobile",
+      "default": true
+  },
+  {
+      "type": "range",
+      "id": "mobileShow",
+      "label": "Show",
+      "default": 2,
+      "max": 6,
+      "min": 1,
+      "step": 1
+  },
+  {
+      "type": "checkbox",
+      "id": "mobileArrows",
+      "label": "Arrows",
+      "default": true
+  },
+  {
+      "type": "checkbox",
+      "id": "mobileDots",
+      "label": "Dots",
+      "default": true
+  }
   ],
   "blocks": [
     {
