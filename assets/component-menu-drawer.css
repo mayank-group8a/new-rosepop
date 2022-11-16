@@ -218,9 +218,44 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 2rem;
-  background-color: rgba(var(--color-foreground), 0.03);
+  background-color: rgb(var(--color-heading-1-text));
 }
 
+.menu-drawer__utility-links svg path {
+  fill: rgb(var(--color-heading-2-text)) !important;
+}
+
+.menu-drawer__utility-links > a > svg {
+  margin-right: 5px;
+}
+
+.menu-drawer__menu header-menu>details.mega-nav .header__submenu {
+  border-bottom: 0 none;
+    border-right: 0 none;
+    border-left: 0 none;
+    border-top: 3px solid rgb(var(--color-heading-2-text));
+}
+
+.menu-drawer__utility-links .list-social__item span, .menu-drawer__utility-links a {
+  font-size: 16px;
+  font-family: Muli;
+  font-weight: 400;
+  color: #fff;
+
+}
+#menu-drawer .site-nav__childlist-item ul.product-list-grid .product-card.product-card--list {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.menu-drawer__utility-links .list-social__item span {
+  padding-left: 5px;
+}
+.menu-drawer .menu-drawer__utility-links .list-social {
+  margin-top: 0px;
+}
+.menu-drawer__utility-links .list-social__item a {
+  text-decoration: none;
+}
 .menu-drawer__account {
   display: inline-flex;
   align-items: center;

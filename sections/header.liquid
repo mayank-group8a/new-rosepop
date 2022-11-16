@@ -152,7 +152,7 @@
 
       
                         {%- if has_mega > 0 -%}
-                          {%- render 'mega-nav', link: link  -%}
+                          {%- render 'mega-nav-mobile', link: link  -%}
                         {%- else -%}
                      
                         {%- if link.links != blank -%}
@@ -218,7 +218,7 @@
                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
-                      {% render 'icon-account' %}
+                      {% render 'icon-user' %}
                       {%- liquid
                         if customer
                           echo 'customer.account_fallback' | t
@@ -240,7 +240,7 @@
                     {%- if settings.social_facebook_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
-                          {%- render 'icon-facebook' -%}
+                          {%- render 'icon-facebook-new' -%} <span>Facebook</span>
                           <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
                         </a>
                       </li>
@@ -256,7 +256,7 @@
                     {%- if settings.social_instagram_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-                          {%- render 'icon-instagram' -%}
+                          {%- render 'icon-instagram-new' -%} <span>Instagram</span>
                           <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                         </a>
                       </li>

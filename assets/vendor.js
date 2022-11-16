@@ -107,3 +107,31 @@ createSlick();
         console.log('shopify:section:load')
     });
 });
+
+$(document).ready(function() {
+    $(".mobile_nav_menu > .h4").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this)
+          .siblings(".menu")
+          .slideUp(200);
+        $(".mobile_nav_menu > .h4 svg")
+          .removeClass("arrow-down")
+          .addClass("arrow-up");
+      } else {
+        $(".mobile_nav_menu > .h4 svg")
+          .removeClass("arrow-up")
+          .addClass("arrow-down");
+        $(this)
+          .find("svg")
+          .removeClass("arrow-down")
+          .addClass("arrow-up");
+        $(".mobile_nav_menu > .h4").removeClass("active");
+        $(this).addClass("active");
+        $(".menu").slideUp(200);
+        $(this)
+          .siblings(".menu")
+          .slideDown(200);
+      }
+    });
+  });
