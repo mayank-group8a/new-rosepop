@@ -217,8 +217,9 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
-  padding: 2rem;
+  padding: 0rem 2rem;
   background-color: rgb(var(--color-heading-1-text));
+  display: flex;
 }
 
 .menu-drawer__utility-links svg path {
@@ -230,14 +231,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu header-menu>details.mega-nav .header__submenu {
-  border-bottom: 0 none;
-    border-right: 0 none;
-    border-left: 0 none;
-    border-top: 3px solid rgb(var(--color-heading-2-text));
+  border: 0 none;
 }
 
 .menu-drawer__utility-links .list-social__item span, .menu-drawer__utility-links a {
-  font-size: 16px;
+  font-size: 14px;
   font-family: Muli;
   font-weight: 400;
   color: #fff;
@@ -252,6 +250,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 .menu-drawer .menu-drawer__utility-links .list-social {
   margin-top: 0px;
+  flex-wrap: nowrap;
 }
 .menu-drawer__utility-links .list-social__item a {
   text-decoration: none;

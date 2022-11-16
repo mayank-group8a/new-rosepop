@@ -51,6 +51,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
 }
 .your-own-block-text {
     text-align: left;
@@ -93,6 +95,11 @@
 }
 .your-own-section-inner .your-own-left, .your-own-section-inner .your-own-right {
     width: 100%;
+}
+}
+@media screen and (max-width:767px){
+.your-own-block-text {
+  padding-left: 15px;
 }
 }
 @media screen and (max-width:479px){

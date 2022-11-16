@@ -1337,11 +1337,11 @@ button.shopify-payment-button__button--unbranded {
   font: inherit;
   font-size: 1.6rem;
   text-decoration: none;
-  color: rgb(var(--color-button-text));
+  color: rgb(var(--color-base-solid-button-labels));
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: rgb(var(--color-base-accent-1));
   font-weight: bold;
   border-radius: 5px;
   text-transform: uppercase;
@@ -2709,7 +2709,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__submenu.list-menu {
-  padding: 2.4rem 0;
+  padding: 1rem 0 2.4rem;
 }
 
 .header__submenu .header__submenu {
@@ -2993,18 +2993,29 @@ details-disclosure > details {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: auto;
-  margin:0 -0.95rem -15px; }
+  margin:0 -0.95rem -15px;
+justify-content: center; }
 
 .site-nav__childlist-item {
   flex: 1 1 1%;
   margin-bottom: 15px; 
   padding: 0.95rem;
 }
+.site-nav__childlist-item.site-nav__childlist-item-content {
+  max-width: 25%;
+}
+.site-nav__childlist-item-content h3 {
+  margin-top: 0;
+}
 .header__submenu .menu-item  .header__menu-item{
   padding-left: 0;
   padding-right: 0;
       font-size: 14px;
     font-weight: 400;
+    display: block;
+}
+.header__submenu .menu-item  .header__menu-item span {
+  font-weight: bold;
 }
 .header__submenu .menu-item a{
   padding:0.5rem 0;
@@ -3029,6 +3040,7 @@ details-disclosure > details {
   font-size: 18px;
     color: rgb(var(--color-heading-2-text));
     margin-bottom: 15px;
+    text-transform:uppercase;
 }
 .site-nav__childlist-item-content h3 {
     font-weight: 700;
@@ -3044,9 +3056,9 @@ details-disclosure > details {
     color: rgb(var(--color-heading-1-text));
   margin-bottom: 20px;
 }
-.site-nav__childlist-item ul.product-list-grid li{
+/* .site-nav__childlist-item ul.product-list-grid li{
   padding: 0.95rem 0;
-}
+} */
 .site-nav__childlist-item ul.product-list-grid li:nth-of-type(1n+2){
 /*   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2); */
 }
@@ -3068,6 +3080,8 @@ ul.menu.list-menu.product-list-grid {
     margin: 0 15px;
   text-align: center;
   max-width: 25%;
+  margin-top: 9px;
+  margin-bottom: 10px;
 }
 .site-nav__childlist-item ul.product-list-grid li a:hover{
   opacity: 0.8;
@@ -3151,7 +3165,7 @@ h1.header__heading {
     max-width: 170px;
     width: 170px;
     height: auto;
-  z-index: 2;
+  z-index: 3;
 }
 details>.header__submenu {
     opacity: 0;
@@ -3248,12 +3262,12 @@ position: relative;
   .menu-drawer__menu .header__submenu .site-nav__childlist-item.site-nav__childlist-item-banner a.button.button--primary {
     position: absolute;
     right: 0;
-    font-size: 12px;
-    padding: 1rem 1rem;
+    font-size: 10px;
+    padding: 0.5rem 0.5rem;
     bottom: 10px;
     right: 13%;
-    min-width: 100px;
-    min-height: 35px;
+    min-width: 90px;
+    min-height: 27px;
   }
   .menu-drawer__menu .header__menu-item:hover span {
     text-decoration: none;;
@@ -3280,6 +3294,48 @@ position: relative;
     padding: 1rem 1rem;
     min-width: 100px;
     min-height: 35px;
+}
+.menu-drawer__menu details[open]:hover > .header__menu-item {
+  color: rgb(var(--color-heading-2-text));
+}
+.menu-drawer__menu .header__submenu .h4.nav_menutitle {
+  color: rgb(var(--color-heading-1-text));
+  margin-bottom: 0;
+}
+.menu-drawer__menu .site-nav__childlist-grid {
+  padding-left: 10px;
+}
+.menu-drawer__menu .site-nav__childlist-item {
+  margin-bottom: 0;
+}
+.mobile_nav_menu .menu {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.nav_menutitle svg.arrow-up {
+  transform: rotate(180deg);
+}
+.menu-drawer__menu .header__submenu .h4.nav_menutitle.active {
+  color: rgb(var(--color-heading-2-text));
+  
+}
+.menu-drawer__menu .header__submenu .menu-item a:hover {
+  text-decoration: none;
+}
+.menu-drawer__menu .site-nav__childlist-item.site-nav__childlist-item-content {
+  max-width: 100%;
+}
+.menu-drawer__menu .site-nav__childlist-item-content h3 {
+  font-size: 14px;
+}
+.menu-drawer__menu .site-nav__childlist-item-content .rte {
+  font-size: 12px;
+}
+.mega-nav a.button {
+  font-size: 10px;
+  padding: 0.5rem 0.5rem;
+  min-width: 90px;
+  min-height: 27px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -3371,9 +3427,12 @@ h3.title.h2 {
   }
   h3.title.h2 {
     font-size: 20px;
+    margin-bottom: 2rem;  
+    margin-top: 0;
 }
 .shopify-section div p {
   font-size: 16px;
+  line-height: 24px;
 }
 .section-margin {
   padding: 40px 0;
