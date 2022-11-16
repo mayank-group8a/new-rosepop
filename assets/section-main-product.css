@@ -1415,3 +1415,155 @@ a.product__text {
 .product-media-container .media {
   padding-top: var(--ratio-percent);
 }
+
+.product__title h1 {
+  text-transform: uppercase;
+  color: rgb(var(--color-heading-1-text));
+}
+.product__info-wrapper .price {
+  color: rgb(var(--color-heading-1-text));
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  font-size: 20px;
+}
+.product-form__quantity .form__label {
+  color: rgb(var(--color-heading-1-text));
+  font-size: 16px;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+}
+.product-form__input.product-form__quantity {
+  display: flex;
+  align-items: center;
+}
+.product-form__input.product-form__quantity quantity-input.quantity {
+  width: max-content;
+  height: 35px;
+  min-height: 35px;
+}
+.product-form__input.product-form__quantity quantity-input.quantity button {
+  margin-left: 20px;
+  border: 1px solid rgb(var(--color-heading-2-text));
+}
+.product-form__input.product-form__quantity quantity-input.quantity input {
+  display: flex;
+  width: calc(4.5rem / var(--font-body-scale));
+  margin-left: 20px;
+  border: 1px solid rgb(var(--color-heading-2-text));
+}
+.product-form__input.product-form__quantity quantity-input.quantity::before, .product-form__input.product-form__quantity quantity-input.quantity::after{
+  display: none;
+}
+a#show_your_message {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.product-single .add-your-message-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.product__info-container .product-form form {
+  position: relative;
+}
+.add-your-message-content span.close {
+  font-family: 'Muli';
+  font-size: 32px;
+  color: #a0666f;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  margin: auto;
+  cursor: pointer;
+}
+.message-frame textarea {
+  width: 100%;
+  height: 100px;
+}
+.product-social-media .footer__list-social.list-social:only-child {
+  display: flex;
+  justify-content: flex-start;
+}
+.product-social-media .footer__list-social.list-social svg path {
+  fill: rgb(var(--color-heading-2-text)) !important;
+}
+button.product-form__submit.button {
+  background-color: #DF9CAC;
+  border-color: #DF9CAC;
+  color: rgb(var(--color-heading-1-text));
+}
+button.product-form__submit.button:hover {
+  background-color: rgba(var(--color-button),var(--alpha-button-background));
+  color: #fff;
+}
+.product__media-gallery.enable_thumbnail_slider {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_main_slider {
+  width: 85%;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider {
+  width: 15%;
+  padding:0;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
+  /* width: 100% !important; */
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li img {
+  width: 85px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider ul {
+  padding: 0;
+}
+@media screen and (min-width: 1024px)  {
+.product__media-gallery.enable_thumbnail_slider .product-media-container .media {
+  padding-top: 0;
+}
+.product__media-gallery.enable_thumbnail_slider .product-media-container .media img {
+  position: unset;
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+}
+}
+@media screen and (min-width: 1920px)  {
+  .product__title h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .product__title h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .product__title h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1024px) { 
+  .product__media-gallery.enable_thumbnail_slider {
+    display: flex;
+    flex-direction: column;
+}
+  .product__media-gallery.enable_thumbnail_slider .slick_main_slider, .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) { 
+  .product__title h1 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767px) { 
+  .product__title h1 {
+    font-size: 28px;
+  }
+}

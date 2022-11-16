@@ -22,6 +22,9 @@
     margin: 0 auto;
     text-align: center;
 }
+.logo-list-section .logo-list .rimage-outer-wrapper {
+    margin: 0 auto;
+}
 @media screen and (max-width:767px){
   .logo-list-section .logo-list .logo-list__logo {
     width: 33.33%;

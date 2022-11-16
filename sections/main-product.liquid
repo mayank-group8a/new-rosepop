@@ -57,7 +57,12 @@
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+    {% unless section.settings.gallery_layout == 'enable_thumbnail_slider' %}
       {% render 'product-media-gallery', variant_images: variant_images %}
+      {% endunless %}
+      {% if section.settings.gallery_layout == 'enable_thumbnail_slider' %}
+        {% render 'new-media-gallery', variant_images: variant_images %}
+      {% endif %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div
@@ -159,10 +164,90 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
+              {%- when 'social_media' -%}
+                <div class="product-social-media">
+          <ul class="footer__list-social list-unstyled list-social" role="list">
+            {%- if settings.social_twitter_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                  {%- render 'icon-twitter' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_facebook_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                  {%- render 'icon-facebook-new' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_pinterest_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                  {%- render 'icon-pinterest' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_instagram_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                  {%- render 'icon-instagram-new' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_tiktok_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                  {%- render 'icon-tiktok' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_tumblr_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                  {%- render 'icon-tumblr' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_snapchat_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                  {%- render 'icon-snapchat' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_youtube_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                  {%- render 'icon-youtube' -%}
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_vimeo_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                  {%- render 'icon-vimeo' -%}
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+                </div>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                  {{ product.description }}
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary>
+                      <div class="summary__title">
+                        <h2 class="h4 accordion__title">
+                          {{block.settings.description_heading}}
+                        </h2>
+                      </div>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                      {{ product.description }}
+                    </div>
+                  </details>
                 </div>
               {%- endif -%}
             {%- when 'sku' -%}
@@ -413,10 +498,13 @@
                       disabled
                     >
                     <div class="product-form__buttons">
+                      <a id="show_your_message" class="button">
+                        <span>Add your message</span>
+                      </a>
                       <button
                         type="submit"
                         name="add"
-                        class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                        class="product-form__submit button {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}
                           disabled
                         {% endif %}
@@ -444,6 +532,15 @@
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
+                    <div class="add-your-message-content" style="display: none;">
+                      <span class="close">X</span>
+                      <div class="message-frame wide_rectanglebox">
+                        <textarea maxlength="144" class="pplr_text pplr_monogram inputkeylayout" name="properties[Message]" id="LossWord1" data-gtm-form-interact-field-id="0"></textarea>
+                      </div>
+                      <div class="message-content">
+                      </div>
+                    </div>
+
                   {%- endform -%}
                 </product-form>
 
@@ -825,6 +922,110 @@
     }
   </script>
 </section>
+<style>
+  .product__media-gallery.enable_thumbnail_slider button.slick-prev.slick-arrow {
+    background-image: url({{ 'downward-arrow.svg' | asset_url }});
+      height: 40px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-size: 17px;
+      background-position: center;
+      border-radius: 100%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%,0) rotate(180deg);
+      top: -10px;
+  }
+  .product__media-gallery.enable_thumbnail_slider button.slick-next.slick-arrow {
+      background-image: url({{ 'downward-arrow.svg' | asset_url }});
+      height: 40px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-size: 17px;
+      background-position: center;
+      border-radius: 100%;
+      right: 5px;
+      left: 50%;
+      transform: translate(-50%,0);
+      top: unset;
+      bottom:-10px;
+  }
+@media screen and (max-width: 1024px) { 
+  .product__media-gallery.enable_thumbnail_slider button.slick-prev.slick-arrow {
+    left: 0;
+    z-index: 2;
+    transform: translate(-50%,-50%) rotate(90deg);
+    top: 50%;
+}
+  .product__media-gallery.enable_thumbnail_slider button.slick-next.slick-arrow {
+    right: unset;
+    left: 100%;
+    transform: translate(-50%,-50%) rotate(270deg);
+    top: 50%;
+    bottom: unset;
+  }
+}
+</style>
+
+
+  <script src="{{ 'jquery-min.js' | asset_url }}"></script>
+     <link rel="stylesheet" href="{{ 'slick-min.css' | asset_url }}"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="{{ 'slick-min.js' | asset_url }}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  jQuery("a#show_your_message").on("click", function(){
+    jQuery(".add-your-message-content").show();
+  });
+  jQuery(".add-your-message-content span.close").on("click", function(){
+    jQuery(".add-your-message-content").hide();
+  });
+</script>
+
+
+<script>
+  jQuery('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    responsive: [
+    {
+        breakpoint: 1024,
+        settings: {
+          adaptiveHeight: true
+        }
+    }
+  ]
+  });
+  jQuery('.slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    verticalSwiping:true,
+    arrows: true,
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+    {
+        breakpoint: 1024,
+        settings: {
+          vertical: false,
+        }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        vertical: false,
+        slidesToShow: 3,
+      }
+    }
+    ]
+  });
+</script>
 
 {% schema %}
 {
@@ -990,9 +1191,21 @@
       ]
     },
     {
+   "type": "social_media",
+   "name": "Social Media"
+ },
+    {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "description_heading",
+          "default": "PRODUCT DESCRIPTION",
+          "label": "Description Heading"
+        }
+      ]
     },
     {
       "type": "share",
@@ -2196,7 +2409,7 @@
           "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
         },
         {
-          "value": "thumbnail_slider",
+          "value": "enable_thumbnail_slider",
           "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
         }
       ],
