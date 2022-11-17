@@ -88,6 +88,12 @@
                           </a>
                         </li>
                       {%- endfor -%}
+                    {% if block.settings.email != blank %}
+                  <li class="footer-contact"><a href="mailto:{{ block.settings.email }}" class="link link--text list-menu__item list-menu__item--link">{% render 'icon-email' %} {{ block.settings.email }}</a></li>
+                  {% endif %}
+                  {% if block.settings.telephone != blank %}
+                  <li class="footer-contact"><a href="tel:{{ block.settings.telephone }}" class="link link--text list-menu__item list-menu__item--link">{% render 'icon-telephone' %} {{ block.settings.telephone }}</a></li>
+                  {% endif %}
                     </ul>
                   {%- endif -%}
                 {%- when 'newsletter' -%}
@@ -95,6 +101,8 @@
 
           <div class="footer-block__newsletter">
                   <p>{{ block.settings.newsletter_desc }}</p>
+                <div class="klaviyo-form-UyN4bZ"></div>
+                {% comment %}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
@@ -137,6 +145,7 @@
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
             {%- endform -%}
+            {% endcomment %}
           </div>
             </div>
                 {%- when 'social_media' -%}
@@ -430,6 +439,16 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email"
+        },
+        {
+          "type": "text",
+          "id": "telephone",
+          "label": "Phone Number"
         }
       ]
     },

@@ -395,14 +395,18 @@
             "type": "link_list",
             "settings": {
               "heading": "Customer Service",
-              "menu": "footer-menu-new"
+              "menu": "footer-menu-new",
+              "email": "customerservice@rosepops.com",
+              "telephone": "201-732-5180"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
               "heading": "Collections",
-              "menu": "footer-collections"
+              "menu": "footer-collections",
+              "email": "",
+              "telephone": ""
             }
           },
           "c2b27d47-37fc-4608-9054-1f96e0a395cd": {

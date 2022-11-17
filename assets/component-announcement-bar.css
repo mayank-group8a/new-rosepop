@@ -70,4 +70,16 @@
       right: 20% !important;
     }
   }
-  
+
+@media screen and (max-width:991px){
+#shopify-section-announcement-bar button.slick-arrow.slick-prev, #shopify-section-announcement-bar button.slick-arrow.slick-prev {
+  opacity: 1;
+  visibility: visible;
+  left: 10px;
+}
+  #shopify-section-announcement-bar button.slick-arrow.slick-next, #shopify-section-announcement-bar button.slick-arrow.slick-next {
+    right: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+}

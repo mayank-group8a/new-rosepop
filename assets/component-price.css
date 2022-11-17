@@ -53,6 +53,17 @@
 .price__regular {
   display: block;
 }
+.price__regular, .price__sale {
+  display: inline-block;
+  verticle-align: middle;
+}
+
+span.price-item.price-item--sale.price-item--last {
+    font-size: 22px;
+    color: rgb(var(--color-heading-2-text));
+    text-decoration: line-through;
+    font-weight: 400;
+}
 
 .price__sale,
 .price__availability,

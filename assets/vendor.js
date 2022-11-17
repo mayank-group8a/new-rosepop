@@ -50,6 +50,7 @@ var createSlick = () => {
         if (tabSlider !== undefined) {
             if (tabSlider == true) {
                 var tabSettings = {
+                    autoplay: $(this).data('slick-autoplay'),
                     slidesToShow: $(this).data('slick-tab-show'),
                     slidesToScroll: $(this).data('slick-tab-show'),
                     arrows: $(this).data('slick-tab-arrows'),
@@ -66,6 +67,7 @@ var createSlick = () => {
         if (mobileSlider !== undefined) {
             if (mobileSlider == true) {
                 var mobileSettings = {
+                    autoplay: $(this).data('slick-autoplay'),
                     slidesToShow: $(this).data('slick-mobile-show'),
                     slidesToScroll: $(this).data('slick-mobile-show'),
                     arrows: $(this).data('slick-mobile-arrows'),

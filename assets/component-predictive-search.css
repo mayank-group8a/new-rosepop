@@ -6,7 +6,7 @@
   border-width: var(--popup-border-width);
   border-style: solid;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-  background-color: rgb(var(--color-background));
+  background-color: #ffffff;
   z-index: 3;
   border-bottom-right-radius: var(--popup-corner-radius);
   border-bottom-left-radius: var(--popup-corner-radius);
@@ -102,6 +102,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search__list-item:hover .predictive-search__item-heading {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  text-decoration-color: rgb(var(--color-heading-2-text));
 }
 
 .predictive-search__item {
@@ -135,6 +136,14 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__item-heading {
   margin: 0;
+  font-family: Muli;
+    font-weight: 400;
+    color: rgb(var(--color-heading-1-text));
+    font-size: 14px;
+}
+.predictive-search__item-heading:hover {
+      text-decoration: underline;
+    text-decoration-color: rgb(var(--color-heading-2-text));
 }
 
 .predictive-search__item .price {

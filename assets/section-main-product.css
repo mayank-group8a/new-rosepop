@@ -314,7 +314,7 @@ fieldset.product-form__input .form__label {
 /* Product info */
 
 .product__info-container > * + * {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .product__info-container iframe {
@@ -342,7 +342,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .product__title > * {
@@ -1424,11 +1424,11 @@ a.product__text {
   color: rgb(var(--color-heading-1-text));
   font-family: var(--font-heading-family);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 26px;
 }
 .product-form__quantity .form__label {
   color: rgb(var(--color-heading-1-text));
-  font-size: 16px;
+  font-size: 18px;
   font-family: var(--font-heading-family);
   font-weight: 600;
 }
@@ -1535,17 +1535,23 @@ button.product-form__submit.button:hover {
 }
 @media screen and (min-width: 1920px)  {
   .product__title h1 {
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .product__title h1 {
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 1279px) {
   .product__title h1 {
     font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 1024px) { 
@@ -1566,4 +1572,11 @@ button.product-form__submit.button:hover {
   .product__title h1 {
     font-size: 28px;
   }
+}
+.product .price__container {
+  display: block;
+}
+form.installment {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

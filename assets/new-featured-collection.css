@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  width: auto !important;
+  width: 100% !important;
   height: auto;
   }
   .new-featured-collection-centered {
