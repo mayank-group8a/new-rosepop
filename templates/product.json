@@ -151,7 +151,7 @@
         "desktopShow": 4,
         "desktopArrows": true,
         "desktopDots": false,
-        "tabShow": 2,
+        "tabShow": 3,
         "tabArrows": true,
         "tabDots": false,
         "mobileShow": 1,
@@ -162,9 +162,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "columns_mobile": "2"
       }
     },
     "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
@@ -173,7 +171,7 @@
         "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
         "title": "POP CLASSICS",
         "text_color": "#c68792",
-        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound<br\/>to delight. Rich black boxes house our classic rose colors in<br\/>sophisticated style. Curated charms and custom monograms enhance<br\/>these perfect POPs.<\/p>",
+        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",
         "description_color": "#221e1f",
         "link_label": "SHOP COLLECTION",
         "link": "#",

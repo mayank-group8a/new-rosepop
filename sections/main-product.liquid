@@ -242,7 +242,7 @@
                           {{block.settings.description_heading}}
                         </h2>
                       </div>
-                      {% render 'icon-caret' %}
+                      {% render 'icon-downward-arrow' %}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                       {{ product.description }}
@@ -271,7 +271,7 @@
                         {{ block.settings.heading | default: block.settings.page.title }}
                       </h2>
                     </div>
-                    {% render 'icon-caret' %}
+                    {% render 'icon-downward-arrow' %}
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
@@ -534,11 +534,40 @@
                     </div>
                     <div class="add-your-message-content" style="display: none;">
                       <span class="close">X</span>
-                      <div class="message-frame wide_rectanglebox">
-                        <textarea maxlength="144" class="pplr_text pplr_monogram inputkeylayout" name="properties[Message]" id="LossWord1" data-gtm-form-interact-field-id="0"></textarea>
+                      <div class="message-frame {% for tag in product.tags %}{% if tag contains 'box' %}{{ tag }}{% endif %}{% endfor %}">
+                        <textarea maxlength="144" class="pplr_text pplr_monogram inputkeylayout" name="properties[Message]" id="LossWord1"></textarea>
                       </div>
                       <div class="message-content">
-                      </div>
+                    <div id="clear_img_c">Clear</div>
+                    <p class="key_layout_sub_custom">+ An Emoji (Optional)</p>
+                    <p>Max: 24 Characters per line, </p>
+					<p>6 Lines Total</p>
+                    <div class="key_layout_custom" style="font-family: OpenSans-Bold; display: none;">
+                      <span onclick="addthistoinput_custom('😁')" data-value="😁">😁</span>
+                      <span onclick="addthistoinput_custom('😄')" data-value="😄">😄</span>
+                      <span onclick="addthistoinput_custom('😅')" data-value="😅">😅</span>
+                      <span onclick="addthistoinput_custom('😂')" data-value="😂">😂</span>
+                      <span onclick="addthistoinput_custom('😌')" data-value="😌">😌</span>
+                      <span onclick="addthistoinput_custom('😊')" data-value="😊">😊</span>
+                      <span onclick="addthistoinput_custom('😇')" data-value="😇">😇</span>
+                      <span onclick="addthistoinput_custom('😋')" data-value="😋">😋</span>
+                      <span onclick="addthistoinput_custom('😜')" data-value="😜">😜</span>
+                      <span onclick="addthistoinput_custom('😝')" data-value="😝">😝</span>
+                      <span onclick="addthistoinput_custom('😛')" data-value="😛">😛</span>
+                      <span onclick="addthistoinput_custom('😎')" data-value="😎">😎</span>
+                      <span onclick="addthistoinput_custom('😏')" data-value="😏">😏</span>
+                      <span onclick="addthistoinput_custom('😕')" data-value="😕">😕</span>
+                      <span onclick="addthistoinput_custom('😠')" data-value="😠">😠</span>
+                      <span onclick="addthistoinput_custom('😡')" data-value="😡">😡</span>
+                      <span onclick="addthistoinput_custom('😶')" data-value="😶">😶</span>
+                      <span onclick="addthistoinput_custom('😐')" data-value="😐">😐</span>
+                      <span onclick="addthistoinput_custom('😑')" data-value="😑">😑</span>
+                      <span onclick="addthistoinput_custom('😮')" data-value="😮">😮</span>
+                  </div>
+                    <a id="submit_your_message" class="">
+                      <span>Submit</span>
+                    </a>
+                  </div>
                     </div>
 
                   {%- endform -%}

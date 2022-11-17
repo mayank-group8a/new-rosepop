@@ -13,6 +13,7 @@ h2.product-recommendations__heading {
 }
 #shopify-section-{{ section.id }}  { background-color: {{ section.settings.color_bg }}; }
 #shopify-section-{{ section.id }} .gradient { background: transparent; }
+  {% comment %}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -29,7 +30,7 @@ h2.product-recommendations__heading {
       padding: 30px 20px;
     }
   }
-  
+  {% endcomment %}
   
   .product-recommendations button.slick-prev.slick-arrow {
   background-image: url({{ 'line-arrow.svg' | file_url }});
@@ -55,6 +56,14 @@ transform: translate(0,-50%) rotate(180deg);
     border-radius: 100%;
     right: -15px;
 }
+   @media screen and (max-width: 767px) {
+  .product-recommendations button.slick-prev.slick-arrow {
+    left: 5px;
+  }
+  .product-recommendations button.slick-next.slick-arrow { 
+    right: 5px;
+  }
+   }
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
@@ -415,26 +424,6 @@ transform: translate(0,-50%) rotate(180deg);
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
     }
   ]
 }

@@ -40,6 +40,9 @@ button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
 .pop-collection .old-card-products {
   margin: 0 15px;
 }
+.pop-slider .card__heading {
+    font-size: 15px;
+}
 @media screen and (min-width:1200px) {
   .pop-collection slider-component .pop-collection-right {
     padding: 0 40px;
@@ -50,9 +53,9 @@ button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
 .pop-collection slider-component .pop-collection-right h3.title.h2, .pop-collection-description {
   padding-left: 12px;
 }
-.pop-collection-inner, .pop-collection-inner img {
+/* .pop-collection-inner, .pop-collection-inner img {
   height: 100%;
-}
+} */
 }
 
 @media screen and (max-width:991px){

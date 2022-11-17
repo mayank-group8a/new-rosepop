@@ -2024,8 +2024,8 @@ input[type='checkbox'] {
 .quantity__input {
   color: currentColor;
   font-size: 1.4rem;
-  font-weight: 500;
-  opacity: 0.85;
+  font-weight: 600;
+  opacity: 1;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -2059,8 +2059,12 @@ input[type='checkbox'] {
 }
 
 .quantity__button svg {
-  width: 1rem;
+  width: 1.4rem;
   pointer-events: none;
+}
+
+.quantity__button svg path {
+  fill: #707070;
 }
 
 .quantity__button:focus-visible,
@@ -3377,7 +3381,8 @@ h2.title.h1 {
   margin-top: 0;
 }
 .section-margin {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .line-btn {
   color: rgb(var(--color-heading-1-text));
@@ -3422,7 +3427,8 @@ h3.title.h2 {
   font-size: 16px;
 }
 .section-margin {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 }
 @media screen and (max-width: 1279px) {
@@ -3439,7 +3445,8 @@ h3.title.h2 {
   line-height: 24px;
 }
 .section-margin {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
    .list-menu li .header__menu-item {
     font-size: 14px;
@@ -3469,7 +3476,8 @@ h3.title.h2 {
   font-size: 16px;
 }
 .section-margin {
-  padding: 40px 0;
+    padding-top: 40px;
+  padding-bottom: 40px;
 }
 .footer-logo img.header__heading-logo {
   margin-top: 30px;
@@ -3490,7 +3498,8 @@ h3.title.h2 {
   text-align: left;
 }
 .section-margin {
-  padding: 40px 0;
+    padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 }
