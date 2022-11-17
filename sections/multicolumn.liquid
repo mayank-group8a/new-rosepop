@@ -7,7 +7,24 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .multicolumn.background-primary .multicolumn-card {
+    position: relative;
+}
+  .multicolumn.background-primary .multicolumn-card:after {
+    content: '';
+    display: block;
+    background-image: url({{ 'small-rose.svg' | asset_url }});
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: unset;
+    bottom: -20px;
+    z-index: 2;
+    position: absolute;
+}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -28,7 +45,7 @@
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title {{ section.settings.heading_size }}">
+        <h2 class="title {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">
           {{ section.settings.title | escape }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
@@ -78,10 +95,10 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
+                  <h4 style="color: {{ section.settings.title_color }};">{{ block.settings.title | escape }}</h4>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class="rte" style="color: {{ section.settings.description_color }};">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
@@ -127,6 +144,24 @@
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
     },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#444444"
+  },
+  {
+    "type": "color",
+    "id": "title_color",
+    "label": "Title color",
+    "default": "#c68792"
+},
+{
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#444444"
+  },
     {
       "type": "select",
       "id": "heading_size",

@@ -372,6 +372,119 @@
         "link": "#"
       }
     },
+    "923a3f87-fcf6-4e4c-8c77-8df9c1a3b019": {
+      "type": "brand-slider",
+      "blocks": {
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/buzzfeed.png",
+            "image_width": 100,
+            "link": "",
+            "title": "BYRDIE TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theknot.png",
+            "image_width": 100,
+            "link": "",
+            "title": "THE KNOT TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/byrdie.png",
+            "image_width": 100,
+            "link": "",
+            "title": "BYRDIE TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "4427cab1-104d-4226-93c7-78aa597b6559": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elitedaily.png",
+            "image_width": 100,
+            "link": "",
+            "title": "ELITE DAILY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "5e4095c6-69ec-452b-a169-21e5379385cd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-journal.png",
+            "image_width": 100,
+            "link": "",
+            "title": "MEN'S JOUORNAL TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "1f18147d-6cd2-479b-8fd1-9611700d18ae": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UsWeekly.png",
+            "image_width": 100,
+            "link": "",
+            "title": "US WEEKLY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "49443f6e-8dfa-40a1-b4c1-3d22349cb946": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scarymommy.png",
+            "image_width": 100,
+            "link": "",
+            "title": "SCARY MOMMY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "6aa1faa3-2433-4cfc-80a8-830aee66bf8f": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Huffpost.png",
+            "image_width": 100,
+            "link": "",
+            "title": "IHUFFPOSTI TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-0",
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-1",
+        "template--14432441696336__923a3f87-fcf6-4e4c-8c77-8df9c1a3b019-1668698956b389ca2d-2",
+        "4427cab1-104d-4226-93c7-78aa597b6559",
+        "5e4095c6-69ec-452b-a169-21e5379385cd",
+        "1f18147d-6cd2-479b-8fd1-9611700d18ae",
+        "49443f6e-8dfa-40a1-b4c1-3d22349cb946",
+        "6aa1faa3-2433-4cfc-80a8-830aee66bf8f"
+      ],
+      "settings": {
+        "color_bg": "#ffffff",
+        "title_color": "#c68792",
+        "description_color": "#444444",
+        "autoplay": true,
+        "autorotate_speed": 3,
+        "sliderLoop": true,
+        "pauseOnHover": false,
+        "desktopShow": 8,
+        "desktopArrows": true,
+        "desktopDots": false,
+        "tabShow": 4,
+        "tabArrows": true,
+        "tabDots": false,
+        "mobileShow": 1,
+        "mobileArrows": true,
+        "mobileDots": false
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "disabled": true,
@@ -424,34 +537,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "f205ae78-5db3-4f64-a957-7db5201d3699": {
-      "type": "shop-collection",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/template.png",
-        "title": "BIRTHDAY VIBES",
-        "shop_collection_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<\/p>",
-        "text_color": "#444444",
-        "link_label": "SHOP COLLECTIONS",
-        "link": "#",
-        "heading_size": "h1",
-        "section_style": "secondary_section_style",
-        "collection": "2020-holiday-pops",
-        "products_to_show": 4,
-        "columns_desktop": 2,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "f34a72ae-2313-4d6b-8aab-25cf99ce3483": {
@@ -535,8 +620,37 @@
         "mobileDots": true
       }
     },
+    "f205ae78-5db3-4f64-a957-7db5201d3699": {
+      "type": "shop-collection",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/template.png",
+        "title": "BIRTHDAY VIBES",
+        "shop_collection_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<\/p>",
+        "text_color": "#444444",
+        "link_label": "SHOP COLLECTIONS",
+        "link": "#",
+        "heading_size": "h1",
+        "section_style": "secondary_section_style",
+        "collection": "2020-holiday-pops",
+        "products_to_show": 4,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "2204dc05-0b04-4756-9efb-30930bb28e24": {
       "type": "logo-list",
+      "disabled": true,
       "blocks": {
         "template--14432441696336__2204dc05-0b04-4756-9efb-30930bb28e24-16681821959d8c5057-0": {
           "type": "logo",
@@ -631,7 +745,24 @@
       ],
       "settings": {
         "title": "",
-        "color_bg": "#ffffff"
+        "color_bg": "#ffffff",
+        "enable_desktop_slider_slick": false,
+        "autoplay": true,
+        "autorotate_speed": 3,
+        "sliderLoop": true,
+        "pauseOnHover": false,
+        "desktopInit": true,
+        "desktopShow": 4,
+        "desktopArrows": true,
+        "desktopDots": true,
+        "tabInit": true,
+        "tabShow": 3,
+        "tabArrows": true,
+        "tabDots": true,
+        "mobileInit": true,
+        "mobileShow": 2,
+        "mobileArrows": true,
+        "mobileDots": true
       }
     }
   },
@@ -645,9 +776,10 @@
     "collage",
     "video",
     "fb29bd5e-787f-4da9-82f6-edcd50aa2b88",
+    "923a3f87-fcf6-4e4c-8c77-8df9c1a3b019",
     "multicolumn",
-    "f205ae78-5db3-4f64-a957-7db5201d3699",
     "f34a72ae-2313-4d6b-8aab-25cf99ce3483",
+    "f205ae78-5db3-4f64-a957-7db5201d3699",
     "2204dc05-0b04-4756-9efb-30930bb28e24"
   ]
 }

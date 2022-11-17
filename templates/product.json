@@ -165,50 +165,117 @@
         "columns_mobile": "2"
       }
     },
-    "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
-      "type": "pop-collection",
+    "520f2c83-36c2-4e37-b1f6-73609ec90fad": {
+      "type": "brand-slider",
+      "blocks": {
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/buzzfeed.png",
+            "image_width": 100,
+            "link": "",
+            "title": "BYRDIE TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theknot.png",
+            "image_width": 100,
+            "link": "",
+            "title": "THE KNOT TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/byrdie.png",
+            "image_width": 100,
+            "link": "",
+            "title": "BYRDIE TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "8a96cf30-c006-49ab-9890-7e7217ce8c7a": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elitedaily.png",
+            "image_width": 100,
+            "link": "",
+            "title": "ELITE DAILY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "93f886be-c788-495c-90f9-99d965f154ae": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-journal.png",
+            "image_width": 100,
+            "link": "",
+            "title": "MEN'S JOUORNAL TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "24038979-8a40-45c7-af20-b7f4af34476d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UsWeekly.png",
+            "image_width": 100,
+            "link": "",
+            "title": "US WEEKLY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "112f037b-0d8e-4b9d-9d36-31d452fdcaaf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scarymommy.png",
+            "image_width": 100,
+            "link": "",
+            "title": "SCARY MOMMY TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "f5e7b4aa-289f-4b9e-8ee9-358e802aa7c9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Huffpost.png",
+            "image_width": 100,
+            "link": "",
+            "title": "IHUFFPOSTI TITLE HERE",
+            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0",
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1",
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-2",
+        "8a96cf30-c006-49ab-9890-7e7217ce8c7a",
+        "93f886be-c788-495c-90f9-99d965f154ae",
+        "24038979-8a40-45c7-af20-b7f4af34476d",
+        "112f037b-0d8e-4b9d-9d36-31d452fdcaaf",
+        "f5e7b4aa-289f-4b9e-8ee9-358e802aa7c9"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
-        "title": "POP CLASSICS",
-        "text_color": "#c68792",
-        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",
-        "description_color": "#221e1f",
-        "link_label": "SHOP COLLECTION",
-        "link": "#",
-        "section_style": "secondary_section_style",
-        "heading_size": "h2",
-        "collection": "2020-holiday-pops",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider_slick": true,
+        "color_bg": "#ffffff",
+        "title_color": "#c68792",
+        "description_color": "#444444",
         "autoplay": true,
         "autorotate_speed": 3,
         "sliderLoop": true,
         "pauseOnHover": false,
-        "desktopInit": true,
-        "desktopShow": 2,
+        "desktopShow": 8,
         "desktopArrows": true,
         "desktopDots": false,
-        "tabInit": true,
-        "tabShow": 2,
+        "tabShow": 4,
         "tabArrows": true,
         "tabDots": false,
-        "mobileInit": true,
         "mobileShow": 1,
         "mobileArrows": true,
-        "mobileDots": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "mobileDots": false
       }
     },
     "cf32aa72-c238-4eda-a048-2af78967df5c": {
@@ -231,6 +298,16 @@
             "image_width": 100,
             "link": "",
             "title": "Flowers that Last Up to a Year",
+            "Logo_list_heading": ""
+          }
+        },
+        "5a69ccb2-b515-4b1e-a758-f6ea1f2654d0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ROSEPOPS_POP_ANIMATION-9.gif",
+            "image_width": 100,
+            "link": "",
+            "title": "Flowers that POP!",
             "Logo_list_heading": ""
           }
         },
@@ -258,6 +335,7 @@
       "block_order": [
         "template--14432441663568__cf32aa72-c238-4eda-a048-2af78967df5c-16685314595701c4aa-0",
         "template--14432441663568__cf32aa72-c238-4eda-a048-2af78967df5c-16685314595701c4aa-1",
+        "5a69ccb2-b515-4b1e-a758-f6ea1f2654d0",
         "template--14432441663568__cf32aa72-c238-4eda-a048-2af78967df5c-16685314595701c4aa-2",
         "71ec772c-006f-4f80-8f62-98809e927607"
       ],
@@ -334,13 +412,60 @@
         "link_label": "GET STARTED",
         "link": "#"
       }
+    },
+    "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
+      "type": "pop-collection",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
+        "title": "POP CLASSICS",
+        "text_color": "#c68792",
+        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",
+        "description_color": "#221e1f",
+        "link_label": "SHOP COLLECTION",
+        "link": "#",
+        "section_style": "secondary_section_style",
+        "heading_size": "h2",
+        "collection": "2020-holiday-pops",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider_slick": true,
+        "autoplay": true,
+        "autorotate_speed": 3,
+        "sliderLoop": true,
+        "pauseOnHover": false,
+        "desktopInit": true,
+        "desktopShow": 2,
+        "desktopArrows": true,
+        "desktopDots": false,
+        "tabInit": true,
+        "tabShow": 2,
+        "tabArrows": true,
+        "tabDots": false,
+        "mobileInit": true,
+        "mobileShow": 1,
+        "mobileArrows": true,
+        "mobileDots": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "product-recommendations",
-    "441fd66c-5b0b-4b21-b103-4918960e0f5f",
+    "520f2c83-36c2-4e37-b1f6-73609ec90fad",
     "cf32aa72-c238-4eda-a048-2af78967df5c",
-    "804eb1d0-0a4a-450f-b9d4-b8f64d06b902"
+    "804eb1d0-0a4a-450f-b9d4-b8f64d06b902",
+    "441fd66c-5b0b-4b21-b103-4918960e0f5f"
   ]
 }

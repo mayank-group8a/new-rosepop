@@ -1,0 +1,77 @@
+{{ 'about-blocks.css' | asset_url | stylesheet_tag }}
+<h2 class="about-blocks-heading title h1" style="text-align: center;">{{ section.settings.title }}</h2>
+<div class="rose-about-section section-padding pt-0">
+  {% if section.settings.image != blank %}
+    <div class="rose-about-img fadeInLeft wow-box">
+      {{ section.settings.image | img_url: 'master' | img_tag: section.settings.image.alt }}                
+    </div>
+  {% endif %}  
+  {% if section.blocks.size > 0 %}
+    <div class="rose-about-info">
+      {% for block in section.blocks %}
+        <div class="rose-about-box fadeInRight wow-box">
+          {% if block.settings.title != blank %}
+          	<h4 style="color: {{ section.settings.title_color }};">{{ block.settings.title }}</h4>
+          {% endif %} 
+          {% if block.settings.text != blank %}
+          	<p style="color: {{ section.settings.description_color }};">{{ block.settings.text }}</p>
+          {% endif %} 
+        </div>
+      {% endfor %}      
+    </div>
+  {% endif %} 
+</div>
+
+{% schema %}
+  {
+    "name": "About Blocks",
+	"max_blocks": 10,
+    "settings": [
+		{
+          "type": "image_picker",
+          "id": "image",
+          "label":"Background image"
+		},
+        {
+            "type": "text",
+            "id": "title",
+            "label":"Title"
+          },
+          {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title color",
+            "default": "#c68792"
+        },
+        {
+              "type": "color",
+              "id": "description_color",
+              "label": "Description color",
+              "default": "#444444"
+          }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label":"Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "text",
+            "label":"Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Blocks"
+      }
+    ]
+  }
+{% endschema %}

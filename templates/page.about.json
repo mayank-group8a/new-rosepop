@@ -1,0 +1,213 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7516c49f-8709-4759-b63d-c4ef575a82aa": {
+      "type": "about-blocks",
+      "blocks": {
+        "fc062461-e24e-4c2b-a6b0-7537e73317d8": {
+          "type": "text",
+          "settings": {
+            "title": "Power of the Pop!",
+            "text": "At Rosepops, we dare you not to smile at our “out-of-the-box” approach (pun intended!) to preserved roses!"
+          }
+        },
+        "2b36a14e-526b-4661-88be-9cbf95bb6600": {
+          "type": "text",
+          "settings": {
+            "title": "POP ‘til you Drop!",
+            "text": "Rosepops are a breeze to ship! FREE standard shipping on all orders over $75 & affordable Rose options ensure that Rosepops can POPulate homes everywhere!"
+          }
+        },
+        "a987752e-7705-4808-96f1-22d17e5a6a12": {
+          "type": "text",
+          "settings": {
+            "title": "Pristine Preserved Roses!",
+            "text": "Rosepops works exclusively with Ecuadorian farms that offer only the finest in preserved petals! \n(Fun fact - Did you know that Ecuador gets its name from its proximity to the equator?  And being close to the equator ensures soil rich with minerals! This is why the most beautiful roses come from Ecuadorian growers!)"
+          }
+        },
+        "57c5d569-ac4c-4cec-b382-1ad2e9e5345d": {
+          "type": "text",
+          "settings": {
+            "title": "Perpetual Pleasure!",
+            "text": "You know that sinking feeling of throwing away wilted roses that cost you your hard earned money? Well forget that! Rosepops arrangements can remain robust for one year or longer!"
+          }
+        },
+        "32899a2e-2223-4c9c-abef-f155d4f9f3a1": {
+          "type": "text",
+          "settings": {
+            "title": "Let’s make this Personal!",
+            "text": "Generic is just not part of the Rosepops culture! Explore the many personal and custom touches you can add to any Rosepops arrangement!"
+          }
+        },
+        "cee0576a-fc45-4ae8-af34-1d52018c871d": {
+          "type": "text",
+          "settings": {
+            "title": "Add Some Prose to your Rose!",
+            "text": "Every Rosepop POP was artfully designed with room to send a personal message to your POP’ee.  We are talking next level treasured keepsake!"
+          }
+        },
+        "7e3592a8-8862-46cb-9e62-aad154d13df0": {
+          "type": "text",
+          "settings": {
+            "title": "It’s a POP Sensation!",
+            "text": "Sending and receiving a Rosepop ensures instant POP star status! Order now to see why Rospops is topping the POP charts in Preserved Roses!"
+          }
+        },
+        "07f2b216-06c5-4f61-bb26-c848b1b1664f": {
+          "type": "text",
+          "settings": {
+            "title": "Patent Pending",
+            "text": "Our POP up packaging was designed to ensure your roses live their longest and best lives possible. Rosepops' packaging trade secret is patent pending, ensuring that each POP is the cream of the crop!"
+          }
+        }
+      },
+      "block_order": [
+        "fc062461-e24e-4c2b-a6b0-7537e73317d8",
+        "2b36a14e-526b-4661-88be-9cbf95bb6600",
+        "a987752e-7705-4808-96f1-22d17e5a6a12",
+        "57c5d569-ac4c-4cec-b382-1ad2e9e5345d",
+        "32899a2e-2223-4c9c-abef-f155d4f9f3a1",
+        "cee0576a-fc45-4ae8-af34-1d52018c871d",
+        "7e3592a8-8862-46cb-9e62-aad154d13df0",
+        "07f2b216-06c5-4f61-bb26-c848b1b1664f"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/big-rose_c39300f4-174b-4a59-ae00-f649686b5420.webp",
+        "title": "Why Rosepops™?",
+        "title_color": "#c68792",
+        "description_color": "#444444"
+      }
+    },
+    "70a9c5ec-1c5c-4c1f-bc40-f65b0e464e08": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "fa98609a-9731-4491-b440-82ec2d18a591": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOHN DOE",
+            "heading_size": "h2"
+          }
+        },
+        "e85f5ea3-5517-43f9-adbc-a1b2ec873619": {
+          "type": "caption",
+          "settings": {
+            "caption": "Owner + Founder",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
+        "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br\/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br\/>mollit anim id est laborum.<\/p><p><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-0",
+        "e85f5ea3-5517-43f9-adbc-a1b2ec873619",
+        "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "3dd70039-a5d1-476d-81f7-ea34eeefb401": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Component_4_1.png",
+            "title": "POP CULTURE",
+            "text": "<p>Throwing away dying roses is about as<br\/>gratifying as throwing away a paycheck. And<br\/>while silk is lovely, it is best left for fashion and<br\/>not artificial flowers. The Rosepops mission was<br\/>to offer long-lasting roses and even longer<br\/>lasting memories, without the usual hefty<br\/>preserved petal price tags. Through our patent-<br\/>pending POP-up packaging, our premiere<br\/>Ecuadorian Roses can be shipped safely and<br\/>economically, never compromising on quality.<br\/>Our hand-crafted preserved roses arrangements<br\/>can be personalized, so there is a POP for every<br\/>occasion! And with free standard shipping within<br\/>the United States, your loved one can know just<br\/>how valued they are no matter where they are<br\/>located! We want to welcome you to the<br\/>Rosepops Family, where business is blooming<br\/>and Everything's Coming Up Roses... Literally<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Component_4_1.png",
+            "title": "OUR ROSES AND WHY THEYARE POP STARS",
+            "text": "<p>Our roses come from a beautiful and spacious<br\/>Ecuadorian garden, situated at high altitude,<br\/>with 20 hectares of gorgeous variety. Highly<br\/>specialized, all natural techniques are used by<br\/>our growers in taking care of the water,<br\/>observing the climate and knowing the ground.<br\/>These perfected practices result in uniquely<br\/>beautiful roses of the utmost quality. We are<br\/>proud to say that our Rose farms work<br\/>exclusively with non-toxic ingredients, ensuring<br\/>that our unique processes do not pose any<br\/>threat to humans or the environment.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Component_4_1.png",
+            "title": "A MOM-AND-POP APPROACHTO A GROWING POP SENSATION",
+            "text": "<p>At Rosepops, we delight in the details and are<br\/>always excited about the journey that lays<br\/>ahead. We want you to share our enthusiasm<br\/>and are therefore determined to make your<br\/>Rosepops experience one that will make you<br\/>want to keep on POP'ping. Whena new idea<br\/>pops up, we make it happen. We also welcome<br\/>POPulation explosions such as bulk custom<br\/>orders-- corporate, personal or matrimonial.<br\/>Just POP us an email to inquire.. Sign up for our<br\/>email list today and stay tuned for new product<br\/>lines, announcements and more!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-0",
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-1",
+        "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-2"
+      ],
+      "settings": {
+        "title": "The Quality Behind Every Rose",
+        "heading_color": "#444444",
+        "title_color": "#c68792",
+        "description_color": "#444444",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7516c49f-8709-4759-b63d-c4ef575a82aa",
+    "70a9c5ec-1c5c-4c1f-bc40-f65b0e464e08",
+    "fa98609a-9731-4491-b440-82ec2d18a591",
+    "3dd70039-a5d1-476d-81f7-ea34eeefb401"
+  ]
+}

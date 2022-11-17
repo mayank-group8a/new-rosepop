@@ -1,0 +1,118 @@
+.rose-about-img img{
+    vertical-align: top;
+    height: 1020px;
+  }
+  .rose-about-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    max-width: calc(100% - 570px);
+    width: 100%;
+    padding-right: 30px;
+  }
+  .rose-about-box:nth-of-type(1){
+    margin-left: -170px;
+  }
+  .rose-about-box:nth-of-type(2){
+    margin-left: -80px;
+  }
+  .rose-about-box:nth-of-type(3){
+      margin-left: -20px;
+  }
+  .rose-about-box:nth-of-type(4){
+      margin-left: 20px;
+  }
+  .rose-about-box:nth-of-type(5){
+      margin-left: 50px;
+  }
+  .rose-about-box:nth-of-type(6){
+      margin-left: 20px;
+  }
+  .rose-about-box:nth-of-type(7){
+      margin-left: -20px;
+  }
+  .rose-about-box:nth-of-type(8){
+      margin-left: -80px;
+  }
+  .rose-about-box:nth-of-type(9){
+      margin-left: -170px;
+  }
+  .rose-about-section{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .rose-about-img{
+      float: left;
+      max-width: 570px;
+      width: 100%;
+  }
+  .rose-about-box h4 {
+    margin: 0 0 5px;
+    font-family: Muli;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2.about-blocks-heading.title.h1 {
+    font-family: IP-Script-Casual;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:767px){
+.rose-about-img{
+    width: 100%;
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 320px;
+    }
+    .rose-about-img img{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    }
+    .rose-about-section{
+        display:inline-block;
+    }
+    .rose-about-box{
+        margin: 30px auto 0 !important;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid rgba(224, 115, 110, 0.27);
+        max-width: 400px;
+        width: 100%;
+    }
+    .rose-about-info{
+        padding: 0 15px;
+    }
+    .rose-about-img, .rose-about-info{
+        max-width: 100%;
+    }
+    .rose-about-img img{
+    max-width: 250px;
+    }
+    .rose-about-img{
+    height: 250px;
+    }
+}

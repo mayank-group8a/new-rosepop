@@ -220,7 +220,25 @@
   margin-left: 0.8rem;
   white-space: nowrap;
 }
-
+.multicolumn h2.title.h1 {
+  font-family: "IP-Script-Casual";
+  text-align: center;
+}
+.multicolumn .title-wrapper-with-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.multicolumn.background-primary .multicolumn-card {
+  background: #fff;
+  border: 1px solid #c68792;
+  border-radius: 5px;
+}
+.multicolumn-list h4{
+  font-family: Muli;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 @media screen and (min-width: 990px) {
   .multicolumn-list__item--empty {
     display: list-item;
