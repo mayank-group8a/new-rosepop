@@ -1,66 +1,89 @@
 .our-story-section-inner {
-    display: flex;
+  display: flex;
 }
 .our-story-block img {
-    max-width: 100px;
-    width: 100%;
-    height: auto;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
 }
 .our-story-section-inner .our-story-left {
-    width: 70%;
+  width: 70%;
 }
 .our-story-section-inner .our-story-right {
-    width: 30%;
+  width: 30%;
 }
 .our-story-right-inner {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .our-story-block {
-    width: 50%;
-    padding: 25px;
-    text-align: center;
+  width: 50%;
+  padding: 25px;
+  text-align: center;
 }
 .our-story-block p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.4;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
 }
 .our-story-left-inner h2 {
-    font-family: "IP-Script-Casual";
+  font-family: "IP-Script-Casual";
 }
 
 .our-story-block:nth-of-type(2n+1) {
-    border-right: 1px solid rgba(112,112,112,0.1);
+  border-right: 1px solid rgba(112,112,112,0.1);
 }
 .our-story-block:nth-of-type(1), .our-story-block:nth-of-type(2) {
-  border-bottom: 1px solid rgba(112,112,112,0.1);
+border-bottom: 1px solid rgba(112,112,112,0.1);
+}
+.our-story-gif-and-des {
+display: flex;
+width: 100%;
+align-items: center;
+margin-bottom: 20px;
+}
+.our-story-gif-and-des .our-story-gif {
+max-width: 150px;
+}
+.our-story-gif-and-des .our-story-gif img {
+width: 100%;
+height: auto;
+}
+a.our-story-btn.line-btn {
+margin-left: 20px;
 }
 @media screen and (max-width: 991px){
-  .our-story-section-inner {
-    display: flex;
-    flex-direction: column;
-}
-  .our-story-section-inner .our-story-left, .our-story-section-inner .our-story-right {
-    width: 100%;
-}
-  .our-story-section-inner .our-story-right {
-    margin-top: 30px;
-}
-  a.our-story-btn {
-    display: block;
-    width: max-content;
-    margin: 0 auto;
-}
-  .our-story-left-inner h2 {
-    text-align: center;
-}
 .our-story-section-inner {
   display: flex;
   flex-direction: column;
 }
 .our-story-section-inner .our-story-left, .our-story-section-inner .our-story-right {
   width: 100%;
+}
+.our-story-section-inner .our-story-right {
+  margin-top: 30px;
+}
+a.our-story-btn {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+.our-story-left-inner h2 {
+  text-align: center;
+}
+.our-story-section-inner {
+display: flex;
+flex-direction: column;
+}
+.our-story-section-inner .our-story-left, .our-story-section-inner .our-story-right {
+width: 100%;
+}
+.our-story-gif-and-des {
+display: flex;
+flex-direction: column;
+}
+a.our-story-btn.line-btn {
+margin-left: auto;
 }
 }

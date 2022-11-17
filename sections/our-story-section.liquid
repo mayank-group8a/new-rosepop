@@ -8,9 +8,20 @@
         {% if section.settings.heading != blank %}
           <h2 class="title {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
           {% endif %}
+          <div class="our-story-gif-and-des">
+            {% if section.settings.main_image != blank %}
+            <div class="our-story-gif">
+              {{ section.settings.main_image | image_url: width: 1420 | image_tag:
+                loading: 'lazy',
+                widths: '275, 550, 710, 1420',
+                class: 'our_story_gif__image'
+              }}
+            </div>
+            {% endif %}
           {% if section.settings.description != blank %}
           <div style="color: {{ section.settings.subheading_color }};">{{ section.settings.description }}</div>
           {% endif %}
+          </div>
           {% if section.settings.link != blank %}
           <a href="{{ section.settings.link }}" class="our-story-btn line-btn">{{ section.settings.link_label }}</a>
           {% endif %}
@@ -87,6 +98,12 @@
           "id": "heading_color",
           "label": "Heading color",
           "default": "#000"
+      },
+      {
+        "type": "image_picker",
+        "id": "main_image",
+        "label": "Image",
+        "info": "Image Size: 150x150"
       },
       {
       "type": "richtext",

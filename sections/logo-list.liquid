@@ -1,5 +1,5 @@
 {{ 'logo-list.css' | asset_url | stylesheet_tag }}
-<div class=" relative container multi_logo container--no-mobile-padding section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="logo-list">
+<div class="{% if template.name == 'product' %}product-template {% endif %}relative container multi_logo container--no-mobile-padding section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="logo-list">
   {% style %}
     .section-{{ section.id }}{
       background-color: {{ section.settings.color_bg }};
@@ -15,6 +15,12 @@
     }
     .section-{{ section.id }}.logo-list__link:hover .logo-list__logo-image {
       opacity: 100%;
+    }
+    .product-template .logo-list-section .logo-list .logo-list__logo {
+    width: 20%;
+    }
+    .product-template .logo-list-section .logo-list {
+        align-items: flex-start;
     }
     .multi_logo button.slick-prev.slick-arrow {
       background-image: url('{{ 'line-arrow.svg' | file_url }}');
@@ -40,6 +46,16 @@
       border-radius: 100%;
       right: 5px;
     }
+    @media screen and (max-width: 767px){
+        .product-template .logo-list-section .logo-list .logo-list__logo {
+        width: 33.33%;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .product-template .logo-list-section .logo-list .logo-list__logo {
+        width: 50%;
+    }
+  }
     {%- for block in section.blocks -%}
       .section-{{ section.id }}.logo-list__logo-{{ forloop.index }}.logo-list__logo-image {
         max-width: {{ block.settings.image_width }}px;
@@ -84,7 +100,7 @@
             {%- endif -%}
             <div class="logo-list__logo-image GM-logo-list__logo-image">
               {%- if block.settings.image != blank -%}
-                <div class="rimage-outer-wrapper" style="max-width: {{ block.settings.image.width }}px">
+                <div class="rimage-outer-wrapper" style="max-width: {{ block.settings.image_width }}px">
                   <div class="rimage-wrapper lazyload--placeholder">
                     {%- assign img_url = block.settings.image | img_url: 'master' -%}
                     <img class="rimage__image lazyload fade-in" src="{{ img_url }}" data-widths="[{{ block.settings.image_width }}, {{ block.settings.image_width | times: 2}}]" data-aspectratio="{{ block.settings.image.aspect_ratio }}" data-sizes="auto" alt="{{ block.settings.image.alt | escape }}">
