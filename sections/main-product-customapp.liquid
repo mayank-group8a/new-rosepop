@@ -57,15 +57,14 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  <div class="custom__app_header" >
+  <div class="custom__app_header_left">
   <div class="product-title">
     <div class="product__title" {{ block.shopify_attributes }}>
     <h1>{{ product.title | escape }}</h1>
-    <a href="{{ product.url }}" class="product__title">
-      <h2 class="h1">
-        {{ product.title | escape }}
-      </h2>
-    </a>
+    <div class="trustspot-inline-product" data-product-sku="{{ product.id }}" ></div
     </div>
+  </div>
   </div>
       <div class="custom_tool_top_steps_a">
       <div class="trust-next-prev">
@@ -85,6 +84,7 @@
       {% if collection.handle contains 'build-your-rosepop' %}
       <div class="mobile-custom-message">Include A Free Video Message and Receive Free Charms</div>
       {% endif %}
+    </div>
     </div>
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
 
@@ -1123,9 +1123,9 @@ $(document).ready(function(){
 // Next 
 $( ".next_pervious .next" ).click(function() {
 
-  $('html,body').animate({
+{% comment %}   $('html,body').animate({
     scrollTop: $(".product-single__custom_app").offset().top - 180
-  },800);
+  },800); {% endcomment %}
   
   var next_stp = $(".custom__app_header .next_pervious .next").attr("id");
   
