@@ -73,14 +73,14 @@
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 55%;
-    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__info-wrapper,
   .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 45%;
-    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
 
@@ -1527,23 +1527,30 @@ button.product-form__submit.button:hover {
   flex-direction: row-reverse;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_main_slider {
-  width: 85%;
+  width: 84%;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider {
-  width: 15%;
+  width: 16%;
   padding:0;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
   /* width: 100% !important; */
+  border: 1px solid rgb(var(--color-heading-1-text));
+  padding: 0;
+  margin-bottom: 10px;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li.slick-current {
+  border-color: rgb(var(--color-heading-2-text));
 }
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li img {
   width: 85px;
-  height: 120px;
+  height: 110px;
   object-fit: contain;
   margin: 0 auto;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider ul {
   padding: 0;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px)  {
 .product__media-gallery.enable_thumbnail_slider .product-media-container .media {
@@ -1600,7 +1607,10 @@ button.product-form__submit.button:hover {
 }
 @media screen and (max-width: 767px) { 
   .product__title h1 {
-    font-size: 28px;
+    font-size: 24px;
+  }
+  .product__info-wrapper .price {
+    font-size: 22px;
   }
   .product-form__input.product-form__quantity {
     justify-content: center;
@@ -1621,4 +1631,19 @@ form.installment {
 }
 .product-social-media .link.list-social__link {
     padding: 1.3rem 0.7rem;
+}
+@media screen and (max-width: 1024px) { 
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
+  margin-right: 10px;
+}
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider ul {
+  padding: 0;
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.slick_main_slider ul.slider-for {
+  padding-left: 0;
+}
+
 }

@@ -168,3 +168,449 @@ $(document).ready(function() {
     $('.new-featured-collection-container').responsiveEqualHeightGrid();
     $('.new-featured-slider').responsiveEqualHeightGrid();
    }
+
+   // Pre-Made Hide/Show
+$(document).ready(function(){
+    $(".add-your-message-content").hide();
+    $("#submit_your_message").click(function(){
+      $(".add-your-message-content").hide();
+      $("#show_your_message").removeClass("active");
+      var textboxvalue = $("#LossWord1").val();
+      if(textboxvalue != ""){
+        $("#show_your_message span").text("Edit your message");
+      }else{
+        $("#show_your_message span").text("Add your message");
+      }
+    });
+    $(".add-message span.close").click(function(){
+      $(".add-your-message-content").hide();
+      $("#show_your_message").removeClass("active");
+    });
+    $("#show_your_message").click(function(){
+      $(".add-your-message-content").show();
+      $("#show_your_message").addClass("active");
+    });
+  });
+
+  
+
+
+  $(document).ready(function(){
+  
+    $('#LossWord1').show();
+    
+    var isALARendered;
+    function ALAcheck() {
+      isALARendered = setInterval(function () {
+        customALA()
+      }, 200);
+    }
+  
+    ALAcheck();
+  
+    function customALA() {
+      
+      $(".pplr-upgrade-to-garden-roses a").hide();
+      $(".pplr-pick-your-rose a").hide();
+      
+     $(".pplr-pick-your-rose span").click(function(){
+        $(".pplr-upgrade-to-garden-roses a").trigger("click");
+     });
+      
+      $(".pplr-upgrade-to-garden-roses span").click(function(){
+        $(".pplr-pick-your-rose a").trigger("click");
+     });
+      
+      
+      // Add TO and From textbox
+      $( ".pplr_ins" ).first().after('<div id="to_box_section"><label for="to" class="to_text">TO</label><input  type="text" maxlength="150" class="to_input" name="properties[TO]" id="to" style="text-transform:inherit;font-family:OpenSans-Bold" ></div><div id="from_box_section"><label for="from" class="from_text">From</label><input type="text" maxlength="150" class="from_input" style="text-transform:inherit;font-family:OpenSans-Bold" name="properties[FROM]" id="from" ></div>');
+  
+      
+      /*$("a[name='properties[Pick Your Rose]").hide();
+      $("a[name='properties[Upgrade to Garden Roses: (+$5)]").hide();
+      $("a[name='properties[Upgrade to Garden Roses: (+$25)]").hide();
+      $("a[name='properties[Upgrade to Garden Roses: (+$50)]").hide();
+      
+      $("span[name='properties[Upgrade to Garden Roses: (+$5)]").click(function(){
+            console.log("Upgrade to Garden Roses: (+$5)---call");
+          $("a[name='properties[Pick Your Rose]").trigger("click");
+      });
+      
+      $("span[name='properties[Upgrade to Garden Roses: (+$25)]").click(function(){
+            console.log("Upgrade to Garden Roses: (+$25)---call");
+          $("a[name='properties[Pick Your Rose]").trigger("click");
+      });
+      
+      $("span[name='properties[Upgrade to Garden Roses: (+$50)]").click(function(){
+            console.log("Upgrade to Garden Roses: (+$50)---call");
+          $("a[name='properties[Pick Your Rose]").trigger("click");
+      });
+      
+      $("span[name='properties[Pick Your Rose]").click(function(){
+            console.log("Pick Your Rose---call");
+          $("a[name='properties[Upgrade to Garden Roses: (+$5)]").trigger("click");
+        $("a[name='properties[Upgrade to Garden Roses: (+$25)]").trigger("click");
+        $("a[name='properties[Upgrade to Garden Roses: (+$50)]").trigger("click");
+      });
+      */
+      
+      /*window.setInterval(function(){
+        var updatedprice = $(".product__price .price-item.price-item--regular").text();
+        updatedprice = updatedprice.replace("starting at", "");
+        console.log(updatedprice+"---updatedprice");
+         $(".product__price_updated").html(updatedprice);
+      }, 5000);
+      
+      $('.personalized-product-main .pplr-swatch-main').click(function(){
+         var updatedprice = $(".product__price .price-item.price-item--regular").text();
+        updatedprice = updatedprice.replace("starting at", "");
+        console.log(updatedprice+"---updatedprice");
+         $(".product__price_updated").html(updatedprice);
+      });
+      
+      $('.personalized-product-main .pplr_check').click(function(){
+        var updatedprice = $(".product__price .price-item.price-item--regular").text();
+        updatedprice = updatedprice.replace("starting at", "");
+         $(".product__price_updated").html(updatedprice);
+      }); */
+      
+      
+      
+      if($('.pplr-wrapper').length > 0) {
+        clearInterval(isALARendered);    
+        $('<div class="text-center loss-words">Not Sure What to Say? Click Here</div><div id="clear_img_c">Clear</div>').insertAfter('.pplr-add-your-message.p_c_c .pplrlabel');
+        $('.loss-words').click(function(){
+          $('.ddtest').trigger('click');
+        });
+        
+         $('#clear_img_c').on('click', function () {
+            $("#LossWord1_img").html("");
+            $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').val('').focus();
+            $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').show();
+          });
+        
+        $('.product-occation-tab .tab-btns .occation-submit').click(function(){
+          if($(".product-occation-tab .tabcontent li.active").length > 0 && $(".product-occation-tab .tabcontent li").filter(".active").text() != ''){
+            var textVal = $(".product-occation-tab .tabcontent li").filter(".active").text();
+            console.log("textVal--"+textVal);
+            $('#LossWord1_img').html(" ");
+            $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').val(textVal).trigger('change');
+            $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').val(textVal).focus();
+            
+            e = $.Event('keyup');
+            e.keyCode= 13; // enter
+            $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').trigger(e);
+       
+            $('.product-occation-tab .close-icon').trigger('click');    
+          }else if($(".product-occation-tab .tabcontent li.active img").length > 0){
+            var textVal = $(".product-occation-tab .tabcontent li.active img").attr("src");
+            if(textVal != ''){
+              $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').val(textVal).trigger('change');
+              $('.pplr-add-your-message.p_c_c textarea.pplr_monogram').val(textVal).focus();
+              
+              $('#LossWord1_img').remove();
+              $(".pplr-add-your-message.p_c_c textarea.pplr_monogram").after("<div id='LossWord1_img'></div>");
+              $('#LossWord1_img').html("<img src='"+textVal+"' alt='occation img'/>");
+            }
+            $('.product-occation-tab .close-icon').trigger('click');
+          }
+        });      
+        
+        $('.custom_trigger button.product-form__cart-submit').click(function(){ 
+          console.log("123");
+          $('form.product-form button.product-form__cart-submit').trigger('click');
+        });
+      }   
+    }        
+  });
+  
+    $( document ).ready(function() {
+      $(".pplr-add-your-message .pplr_ins").addClass("loss-words");
+      });
+  
+  // MKT added code for custom options 21-08-2019 Start
+  $('.flirtydozen').on('click', function () {
+    $.magnificPopup.open({
+      items: {
+        src: '#flirtydozen.product-occation',
+        type: 'inline'
+      }
+    });
+  });
+  $('#flirtydozen .product-occation-tab .tab-btns .occation-submit-custom').click(function(){
+    
+    console.log("Submit block call");
+    $("#LossWord1_img").html("");
+    $('#LossWord1').attr("style", "text-transform: inherit;font-family: OpenSans-Bold;");
+    
+    if($("#flirtydozen .product-occation-tab .tabcontent li.active").length > 0 && $("#flirtydozen .product-occation-tab .tabcontent li").filter(".active").text() != ''){
+        var textVal = $("#flirtydozen .product-occation-tab .tabcontent li").filter(".active").text();
+   
+      console.log("Text Block--- "+textVal);
+      
+      if(textVal != ''){
+          $('#LossWord1').val('');
+          $('#LossWord1').val(textVal).trigger('change');
+            $("#LossWord1_block").show();
+          $("#LossWord2_block").show();
+      }
+      
+      $('#flirtydozen .product-occation-tab .close-icon').trigger('click'); 
+    }else if($("#flirtydozen .product-occation-tab .tabcontent li.active img").length > 0){
+      
+      var textVal = $("#flirtydozen .product-occation-tab .tabcontent li.active img").attr("src");
+   
+        console.log("image block--- "+textVal);
+      
+      if(textVal != ''){
+          $('#LossWord1').val('');
+          $('#LossWord1').val(textVal).trigger('change');
+        
+            // img show temp
+            $("#LossWord1_img").html("");
+            $('#LossWord1').attr("style", "display: none !important;text-transform: inherit;font-family: OpenSans-Bold;");
+            $('#LossWord1_img').html("<img src='"+textVal+"' alt='occation img'/>");
+         
+        
+            $("#LossWord1_block").show();
+          $("#LossWord2_block").show();
+      }
+      
+      $('#flirtydozen .product-occation-tab .close-icon').trigger('click'); 
+    }
+  });
+  
+  $('#clear_img_c').on('click', function () {
+    $("#LossWord1_img").html("");
+    $('#LossWord1').val('');
+    $('#LossWord1').focus();
+    $('#LossWord1').show();
+    
+  });
+  
+  function addthistoinput_custom(himozin){
+   
+    var textareatext  = $('#LossWord1').val();
+    console.log(himozin);
+    $('#LossWord1').val(textareatext+himozin).change();
+    $(".key_layout_custom").slideToggle("slow");
+    $("#LossWord1_block").show();
+    $("#LossWord2_block").show();
+    $('#LossWord1').focus();
+  }
+  
+  function verifytext(val){
+    var len = val.value.length;
+    
+    if(len == 0){
+      $("#LossWord1_block").hide();
+      $("#LossWord2_block").hide();
+    }else{
+      $("#LossWord1_block").hide();
+      $("#LossWord2_block").hide();
+    }
+    //console.log(len);
+  }
+  
+  function textcount(val){
+    var len = val.value.length;
+    if(len == 0){
+      $(".custom-pplr-character-count").text("3 characters left");
+    }else{
+      var max = 3;
+      var leftchr = max - len;
+      $(".custom-pplr-character-count").text(""+leftchr+" characters left");
+    }
+  }
+  function valueChanged()
+  {
+    if($('#charm_option').is(":checked")){
+      $("#charm_section").show();
+    }else{
+      $("#charm_section").hide();
+    }
+  }
+  
+  
+  
+  $("#custom_option_submit").click(function() { 
+    
+    var charm_txt = $("#charm_txt").val();
+    var verify_c  = $('#charm_option').is(":checked");
+    var productname = $("#product_name").val();
+    
+    if(verify_c == true){
+      if(charm_txt != ''){
+        var data = {
+          "id":  29918558388288,
+          "quantity":  1,
+          "properties":{'Charm' : charm_txt,'Product Name' : productname }
+        };
+      }else{
+        var data = {
+          "id":  29918558388288,
+          "quantity":  1
+        };
+      }
+      $.ajax({
+        url: '/cart/add.js',
+        dataType: 'json',
+        cache: false,
+        type: 'post',
+        data: data ,
+        success: function(itemData) {
+          console.log('charm product add to cart successfully');
+          $(".product-form-product-template-flirtydozen").submit(); // Submit the form
+        },
+        error: function(XMLHttpRequest) {
+          console.log('error add to cart');
+        }
+     });
+    }else{
+      $(".product-form-product-template-flirtydozen").submit(); // Submit the form
+    }
+  }); 
+  
+  $('#flirtydozen .product-occation-tab .tabcontent li img').click(function(){
+    $('#flirtydozen .product-occation-tab .tabcontent li').removeClass('active');
+    $(this).addClass('active');
+    $('#flirtydozen .product-occation-tab .tabcontent li img').removeClass('active');
+    
+  });
+  
+  setTimeout(function() {
+    console.log("setTimeout");
+      
+  },2000);
+  $("#custom_add_to_cart").click(function(){
+     // alert('dd');
+   $(".btn.product-form__cart-submit.p_a_t_c").trigger("click");
+  });
+
+
+  $( ".custom_thumb_img li" ).click(function() {
+    $(this).addClass('slick-current').siblings('li').removeClass('slick-current');
+    $("#custom_image .feature-row__image_custom").show();
+    $("#custom_image #live_svg").hide();
+    var img_url = $(this).attr("data-src");
+    if(img_url != ''){
+        $("#custom_image .feature-row__image_custom").attr("src",img_url);
+    }
+    console.log(img_url);
+  });
+  
+  setTimeout(function(){
+     console.log("Description copy done");
+     $('.fragrance_description_block').appendTo('.fragrances_description');
+     $('.custom_tool_top_steps').prependTo('.custom_tool_top_steps_a');
+     $(".custom_tool_top_steps").show();
+  }, 2000);
+  /* MKT custom tool code */
+
+
+  $(document).ready(function(){
+    $(".image_with_text_arosatherapy .feature-row .feature-row").each(function(e) {
+        if (e != 0)
+            $(this).hide();
+      	if($(this).css('display')!='none'){
+        	$(this).addClass('active');
+        }
+    });
+  	
+    $("#prv_text_c").text("");
+    $("#next_text_c").text("");
+    var next_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").next("div").find(".title_of_slider").attr("data-title");
+    var prev_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").prev("div").find(".title_of_slider").attr("data-title");
+    
+     if(typeof next_title != 'undefined'){
+       $("#next_text_c").text(next_title);
+     }else{
+       $("button#next").hide();
+     }
+
+     if(typeof prev_title != 'undefined'){
+        $("#prv_text_c").text(prev_title);
+     }else{
+        $("button#prev").hide();
+     }
+  	
+      
+    $("#next").click(function(){
+      	 $("#prv_text_c").text("");
+    	 $("#next_text_c").text("");
+      	 $("button#next").show();
+         $("button#prev").show();
+      
+        if ($(".image_with_text_arosatherapy .feature-row .feature-row:visible").next().length != 0)
+            $(".image_with_text_arosatherapy .feature-row .feature-row:visible").next().show().prev().hide();
+      
+        else {
+            $(".image_with_text_arosatherapy .feature-row .feature-row:visible").hide();
+            $(".image_with_text_arosatherapy .feature-row .feature-row:first").show();
+        }
+      
+      	$(".image_with_text_arosatherapy .feature-row .feature-row").each(function(e) {
+        
+            if($(this).css('display')==='flex')
+              $(this).addClass('active');
+          	else
+              $(this).removeClass('active');
+   		});
+      
+      	var next_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").next("div").find(".title_of_slider").attr("data-title");
+        var prev_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").prev("div").find(".title_of_slider").attr("data-title");
+
+        if(typeof next_title != 'undefined'){
+          $("#next_text_c").text(next_title);
+        }else{
+          $("button#next").hide();
+        }
+
+        if(typeof prev_title != 'undefined'){
+          $("#prv_text_c").text(prev_title);
+        }else{
+          $("button#prev").hide();
+        }
+
+       
+        return false;
+    });
+
+    $("#prev").click(function(){
+        $("#prv_text_c").text("");
+        $("#next_text_c").text("");
+      	$("button#next").show();
+        $("button#prev").show();
+      
+        if ($(".image_with_text_arosatherapy .feature-row .feature-row:visible").prev().length != 0)
+            $(".image_with_text_arosatherapy .feature-row .feature-row:visible").prev().show().next().hide();
+        else {
+            $(".image_with_text_arosatherapy .feature-row .feature-row:visible").hide();
+            $(".image_with_text_arosatherapy .feature-row .feature-row:last").show();
+        }
+      
+        $(".image_with_text_arosatherapy .feature-row .feature-row").each(function(e) {
+                if($(this).css('display')==='flex')
+                  $(this).addClass('active');
+                else
+                  $(this).removeClass('active');
+        })
+                
+        var next_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").next("div").find(".title_of_slider").attr("data-title");
+        var prev_title = $(".image_with_text_arosatherapy .feature-row .feature-row.active").prev("div").find(".title_of_slider").attr("data-title");
+
+        if(typeof next_title != 'undefined'){
+          $("#next_text_c").text(next_title);
+        }else{
+          $("button#next").hide();
+        }
+
+        if(typeof prev_title != 'undefined'){
+          $("#prv_text_c").text(prev_title);
+        }else{
+          $("button#prev").hide();
+        }
+       
+        return false;
+    });
+});

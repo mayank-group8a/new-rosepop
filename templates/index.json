@@ -108,7 +108,8 @@
         "heading": "Our Story",
         "heading_size": "h1",
         "heading_color": "#c68792",
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.<br\/>.<\/p>",
+        "main_image": "shopify:\/\/shop_images\/ROSEPOPS_POP_ANIMATION-9.gif",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.<\/p>",
         "subheading_color": "#000000",
         "link_label": "LEARN MORE",
         "link": "#"
@@ -524,6 +525,9 @@
       ],
       "settings": {
         "title": "",
+        "heading_color": "#444444",
+        "title_color": "#c68792",
+        "description_color": "#444444",
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
