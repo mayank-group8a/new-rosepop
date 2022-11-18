@@ -1,0 +1,85 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+<section class="faq_outer page-width" style="background-color: {{ section.settings.bg_clr }}">
+    {% if section.settings.title != blank %}
+        <h2 class="title h1">{{ section.settings.title | escape }}</h2>
+      {% endif %}
+     <div class="faq_inner">
+         {% for block in section.blocks %}
+         <div class="que_and_ans">
+             <div class="accordion question">
+                {% if block.settings.ques != blank %}
+                    <h4 class="ques">{{ block.settings.ques }}</h4> 
+                {% endif %} 
+            </div> 
+            <div class="panel answer">
+                 {% if block.settings.ans != blank %}
+                     <p class="ans">{{ block.settings.ans }}</p>
+                 {% endif %}
+            </div>
+        </div>
+    {% endfor %} 
+</div>
+</section> 
+<script> 
+var acc = document.getElementsByClassName("accordion"); 
+var i; 
+for (i = 0; i < acc.length; i++) {
+     acc[i].addEventListener("click", function() {
+         this.classList.toggle("active"); 
+         var panel = this.nextElementSibling; 
+         if (panel.style.display === "block") {
+             panel.style.display = "none"; 
+         }
+         else {
+            panel.style.display = "block"; 
+        }
+     });
+     } 
+    </script>
+{% schema %}
+{
+    "name": "ACCORDION",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Your Questions Answered"
+          },
+      {
+        "type": "color",
+        "id": "bg_clr",
+        "label": "Section Background color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "quote",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "ques",
+            "label": "Questions"
+          },
+          {
+            "type": "richtext",
+            "id": "ans",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "ACCORDION",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "quote"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %} 
