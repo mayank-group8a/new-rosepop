@@ -8,15 +8,22 @@
     <div class="your-own-section-inner">
       <div class="your-own-left">
         <div class="your-own-left-inner">
-          {% if section.settings.main_image != blank %}
+          
             <div class="your-own-main-image">
-              {{ section.settings.main_image | image_url: width: 1420 | image_tag:
+              {%- for block in section.blocks -%}
+                {% if block.settings.main_image != blank %}
+              <div class="your-own-main-image-inner {% if forloop.first %}active {% endif %}" change-image="{{forloop.index}}">
+                
+              {{ block.settings.main_image | image_url: width: 1420 | image_tag:
                       loading: 'lazy',
                       widths: '275, 550, 710, 1420',
                       class: 'multicolumn-card__image'
                     }}
+                </div>
+                {% endif %}
+                {% endfor %}
+              
             </div>
-          {% endif %}
         </div>
       </div>
       <div class="your-own-right">
@@ -25,7 +32,7 @@
             {% if block.settings.title != blank %}
             <div class="your-own-block-container">
               <div class="your-own-block-counter">
-                <div class="your-own-block-counter-circle" style="color: {{ block.settings.circle_color }};background-color: {{ block.settings.circle_background }};">{{ forloop.index }}</div>
+                <div class="your-own-block-counter-circle {% if forloop.first %}active {% endif %}" circle="{{forloop.index}}" style="color: {{ block.settings.circle_color }};background-color: {{ block.settings.circle_background }};">{{ forloop.index }}</div>
               </div>
               <div class="your-own-block-text">
                 <div class="your-own-block-title"><h4 style="color: {{ block.settings.title_color }};">{{ block.settings.title | escape }}</h4></div>
@@ -48,6 +55,24 @@
     background-color: {{ section.settings.color_background }}; 
   }
 </style>
+
+<script>
+  jQuery(document).on("click", ".your-own-block-counter-circle", function(){
+    var currentval = jQuery(this).attr("circle");
+    jQuery(".your-own-block-counter-circle").removeClass("active");
+    jQuery(this).addClass("active");
+    jQuery(".your-own-main-image-inner").each(function(){
+      var change_img = jQuery(this).attr("change-image");
+      if(currentval == change_img){
+        jQuery(".your-own-main-image-inner").removeClass("active");
+        jQuery(this).addClass("active");
+      }
+    });
+  });
+</script>
+
+
+
 {% schema %}
   {
     "name": "Your Own",
@@ -91,12 +116,6 @@
           "default": "#000"
       },
     {
-      "type": "image_picker",
-      "id": "main_image",
-      "label": "Image",
-      "info": "Image Size: 650x482"
-    },
-    {
       "type": "text",
       "id": "link_label",
       "label": "Link label"
@@ -135,6 +154,12 @@
               "id": "description_color",
               "label": "Description color",
               "default": "#000"
+          },
+          {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Image",
+            "info": "Image Size: 650x482"
           },
           {
             "type": "header",

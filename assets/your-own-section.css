@@ -53,6 +53,7 @@
     margin-bottom: 20px;
     font-size: 22px;
     font-weight: bold;
+    cursor: pointer;
 }
 .your-own-block-text {
     text-align: left;
@@ -74,6 +75,16 @@
 .your-own-block-description ul li {
     flex: 1 1 50%;
 }
+.your-own-main-image-inner {
+    display: none;
+}
+.your-own-main-image-inner.active {
+    display: block;
+}
+.your-own-block-counter-circle.active {
+    color: #f5dadf !important;
+    background-color: #221e1f !important;
+  }
 @media screen and (max-width:991px){
   .your-own-section-inner {
     display: flex;

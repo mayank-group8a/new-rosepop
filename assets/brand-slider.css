@@ -55,9 +55,15 @@
     align-items: center;
     justify-content: center;
 }
+.brand-slider-sec-section .brand-slider-sec .brand-slider-sec__logo .brand-slider-sec__logo-image {
+    max-width: 80%;
+}
 }
 @media screen and (max-width:479px){
 .brand-slider-sec-section .brand-slider-sec .brand-slider-sec__logo {
     width: 50%;
+}
+.brand-slider-sec-section .brand-slider-sec .brand-slider-sec__logo .brand-slider-sec__logo-image {
+    max-width: 90%;
 }
 }
