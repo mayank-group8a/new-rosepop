@@ -389,9 +389,6 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
-  .product__info-container {
-    max-width: 60rem;
-  }
 
   .product__info-container .price--on-sale .price-item--regular {
     font-size: 1.6rem;
@@ -401,7 +398,11 @@ a.product__text {
     margin-top: 0;
   }
 }
-
+@media screen and (min-width: 992px) {
+  .product__info-container {
+    max-width: 60rem;
+  }
+}
 .product__description-title {
   font-weight: 600;
 }
@@ -1487,17 +1488,18 @@ a#show_your_message {
   position: relative;
 }
 .add-your-message-content span.close {
-  font-family: 'Muli';
-  font-size: 32px;
-  color: #a0666f;
-  font-weight: normal;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: auto;
-  bottom: auto;
-  margin: auto;
-  cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.add-your-message-content span.close svg path {
+    fill: rgb(var(--color-heading-2-text));
 }
 .message-frame textarea {
   width: 100%;
@@ -1570,18 +1572,20 @@ button.product-form__submit.button:hover {
     /* width: auto;*/
 }
 }
-@media screen and (min-width: 1920px)  {
   .product__title h1 {
     font-size: 28px;
     font-weight: 600;
     letter-spacing: 2px;
   }
-}
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
   .product__title h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: 2px;
+  }
+  .product__info-wrapper .price {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1279px) {
@@ -1604,6 +1608,10 @@ button.product-form__submit.button:hover {
   .product__title h1 {
     font-size: 26px;
   }
+    .product__info-wrapper.grid__item {
+    padding-left: 0;
+      padding-top: 30px;
+}
 }
 @media screen and (max-width: 767px) { 
   .product__title h1 {

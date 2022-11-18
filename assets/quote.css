@@ -103,6 +103,12 @@ blockquote.quotes-slider__text.text-center p.quote-heading {
 }
 .quotes-slider .slick-dots li.slick-active button {
     background: white;
+  width: 11px;
+  height: 11px;
+}
+.quotes-slider .slick-dots li button, .quotes-slider .slick-dots li  {
+    width: 11px;
+    height: 11px;
 }
 .quotes-slider__text svg path {
     fill: #fff;

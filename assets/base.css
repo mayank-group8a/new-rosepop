@@ -3416,7 +3416,7 @@ h3.title.h2 {
 }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
   h2.title.h1 {
     font-size: 32px;
   }
@@ -3430,6 +3430,28 @@ h3.title.h2 {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+  .list-menu li .header__menu-item {
+    font-size: 14px;
+  }
+  h2.footer-block__heading {
+    font-size: 16px;
+  }
+  .header__submenu .h4.nav_menutitle, .site-nav__childlist-item-content h3 {
+    font-size: 14px;
+  }
+  .site-nav__childlist-item-banner h3 {
+    font-size: 14px;
+  }
+  .header__submenu .site-nav__childlist-item.site-nav__childlist-item-banner a.button, .site-nav__childlist-item-content a.button {
+    font-size: 12px;
+    min-width: 100px;
+    padding: 0;
+    min-height: 35px;
+    line-height: normal;
+}
+  .product-list-grid span.product-card__title {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 1279px) {
   h2.title.h1 {

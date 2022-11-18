@@ -498,9 +498,7 @@
                       disabled
                     >
                     <div class="product-form__buttons">
-                      <a id="show_your_message" class="button">
-                        <span>Add your message</span>
-                      </a>
+
                       <button
                         type="submit"
                         name="add"
@@ -532,46 +530,6 @@
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
-                    <div class="add-your-message-content" style="display: none;">
-                      <span class="close">X</span>
-                      <div class="message-frame {% for tag in product.tags %}{% if tag contains 'box' %}{{ tag }}{% endif %}{% endfor %}">
-                        <textarea maxlength="144" class="pplr_text pplr_monogram inputkeylayout" name="properties[Message]" id="LossWord1"></textarea>
-                      </div>
-                      <div class="message-content">
-                    <div id="clear_img_c">Clear</div>
-                    {% comment %}
-                    <p class="key_layout_sub_custom">+ An Emoji (Optional)</p>
-                    {% endcomment %}
-                    <p>Max: 24 Characters per line, </p>
-					<p>6 Lines Total</p>
-                    <div class="key_layout_custom" style="font-family: OpenSans-Bold; display: none;">
-                      <span onclick="addthistoinput_custom('😁')" data-value="😁">😁</span>
-                      <span onclick="addthistoinput_custom('😄')" data-value="😄">😄</span>
-                      <span onclick="addthistoinput_custom('😅')" data-value="😅">😅</span>
-                      <span onclick="addthistoinput_custom('😂')" data-value="😂">😂</span>
-                      <span onclick="addthistoinput_custom('😌')" data-value="😌">😌</span>
-                      <span onclick="addthistoinput_custom('😊')" data-value="😊">😊</span>
-                      <span onclick="addthistoinput_custom('😇')" data-value="😇">😇</span>
-                      <span onclick="addthistoinput_custom('😋')" data-value="😋">😋</span>
-                      <span onclick="addthistoinput_custom('😜')" data-value="😜">😜</span>
-                      <span onclick="addthistoinput_custom('😝')" data-value="😝">😝</span>
-                      <span onclick="addthistoinput_custom('😛')" data-value="😛">😛</span>
-                      <span onclick="addthistoinput_custom('😎')" data-value="😎">😎</span>
-                      <span onclick="addthistoinput_custom('😏')" data-value="😏">😏</span>
-                      <span onclick="addthistoinput_custom('😕')" data-value="😕">😕</span>
-                      <span onclick="addthistoinput_custom('😠')" data-value="😠">😠</span>
-                      <span onclick="addthistoinput_custom('😡')" data-value="😡">😡</span>
-                      <span onclick="addthistoinput_custom('😶')" data-value="😶">😶</span>
-                      <span onclick="addthistoinput_custom('😐')" data-value="😐">😐</span>
-                      <span onclick="addthistoinput_custom('😑')" data-value="😑">😑</span>
-                      <span onclick="addthistoinput_custom('😮')" data-value="😮">😮</span>
-                  </div>
-                    <a id="submit_your_message" class="button button--primary">
-                      <span>Submit</span>
-                    </a>
-                  </div>
-                    </div>
-
                   {%- endform -%}
                 </product-form>
 
@@ -997,153 +955,6 @@
   }
 }
 
-
-/* Product Message Box */
-
-.add-your-message-content div.message-frame textarea:focus {
-  outline: none;
-}
-.add-your-message-content div.message-frame textarea:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-.add-your-message-content div.message-frame.squarebox {
-  height: 300px;
-  width: 300px !important;
-  background-image: url({{ 'xoxo-BTmessage_frame.png' | file_img_url: 'master' }});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  padding: 37px 35px;
-}
-.add-your-message-content div.message-frame.squarebox textarea {
-  min-height: 260px !important;
-  width: 100%;
-  background-color: transparent;
-  border: 0 none;
-  resize: none;
-}
-.add-your-message-content div.message-frame.roundbox {
-/*     width: 58%;
-  background-image: url({{ 'round-bg.png' | file_img_url: 'master' }});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  padding: 37px 35px; */
-  
-  height: 370px;
-  width: 370px !important;
-  border-radius: 0px;
-  background: url({{ 'round-bg.png' | file_img_url: 'master' }});
-  background-size: 100% 100%;
-  resize: none;
-  padding: 70px 60px !important;
-  border: none;
-  text-align: center;
-  display: inline-block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  line-height: 28px;
-  word-break: break-word;
-  overflow: hidden;
-  position: relative;
-  
-  
-}
-.add-your-message-content div.message-frame.roundbox textarea {
-/*     min-height: 300px !important;
-  width: 100%;
-  background-color: transparent;
-  border: 0 none;
-  resize: none; */
-  
-  
-  min-width: 220px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 210px;
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 18px;
-      border: 0;
-  animation: none;
-  
-  
-}
-.add-your-message-content div.message-frame.rectanglebox {
-  width: 58%;
-  background-image: url({{ 'perfectdozen-BTmessage_frame_1.png' | file_img_url: 'master' }});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  padding: 37px 35px;  
-}
-.add-your-message-content div.message-frame.rectanglebox textarea {
-  min-height: 220px !important;
-  width: 100%;
-  background-color: transparent;
-  border: 0 none;
-  resize: none;
-}
-.add-your-message-content div.message-frame.wide_rectanglebox {
-  width: 58%;
-  background-image: url({{ 'sixer_lid.png' | file_img_url: 'master' }});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  padding: 37px 35px;    
-}
-.add-your-message-content div.message-frame.wide_rectanglebox textarea {
-  min-height: 140px !important;
-  width: 100%;
-  background-color: transparent;
-  border: 0 none;
-  resize: none;
-}
-.add-your-message-content div {
-  width: 37%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.add-your-message-content div #clear_img_c {
-  position: absolute;
-  top: -60px;
-  bottom: auto;
-  margin: auto;
-  display: block;
-  left: 5px;
-  font-size: 24px;
-  color: #a0666f;
-  cursor: pointer;
-}
-.add-your-message-content div.message-content {
-  position: relative;
-}
-.message-content p {
-  margin: 0;
-}
-a#submit_your_message {
-  cursor: pointer;
-}
-.add-your-message-content {
-  margin-top: 30px;
-}
-@media screen and (max-width: 767px) { 
-.add-your-message-content div.message-content {
-  margin-top: 70px;
-    width: 100%;
-}
-.add-your-message-content div.message-frame {
-  width: 100% !important;
-}
-.add-your-message-content div #clear_img_c {
-  left: 0;
-  right: 0;
-}
-}
 </style>
 
 
