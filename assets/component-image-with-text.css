@@ -320,6 +320,33 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
+h2.image-with-text__heading.h2 {
+  font-family: Muli;
+  font-weight: 700;
+}
+.image-with-text .gradient {
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+h4.image-with-text__text.image-with-text__text--caption {
+  font-family: Muli;
+  margin-top: 10px;
+}
+.image-with-text__media-item .image-with-text__media.image-with-text__media--adapt {
+  border: 1px solid rgb(var(--color-heading-2-text));
+  border-radius: 5px;
+}
+@media screen and (max-width: 750px) {
+  .image-with-text .image-with-text__text-item .image-with-text__content {
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+}
+
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {

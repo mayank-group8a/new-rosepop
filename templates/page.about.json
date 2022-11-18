@@ -87,16 +87,18 @@
     },
     "70a9c5ec-1c5c-4c1f-bc40-f65b0e464e08": {
       "type": "video",
-      "disabled": true,
       "settings": {
-        "heading": "Video",
+        "video_style": "mp4",
+        "heading": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_file_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0227\/9384\/6848\/files\/Rosepops_video.mp4?v=1629281135",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=NWEkltg84GE&ab_channel=TheRosepops",
         "description": "",
+        "autoplay": false,
         "full_width": false,
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "fa98609a-9731-4491-b440-82ec2d18a591": {
@@ -106,6 +108,7 @@
           "type": "heading",
           "settings": {
             "heading": "JOHN DOE",
+            "title_color": "#c68792",
             "heading_size": "h2"
           }
         },
@@ -113,14 +116,16 @@
           "type": "caption",
           "settings": {
             "caption": "Owner + Founder",
+            "caption_color": "#444444",
             "text_style": "subtitle",
-            "text_size": "small"
+            "text_size": "large"
           }
         },
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1": {
           "type": "text",
           "settings": {
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br\/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br\/>mollit anim id est laborum.<\/p><p><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate.<\/p>",
+            "description_color": "#444444",
             "text_style": "body"
           }
         }
@@ -131,6 +136,7 @@
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1"
       ],
       "settings": {
+        "color_bg": "#fcf6f7",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -139,8 +145,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "3dd70039-a5d1-476d-81f7-ea34eeefb401": {
@@ -151,7 +157,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Component_4_1.png",
             "title": "POP CULTURE",
-            "text": "<p>Throwing away dying roses is about as<br\/>gratifying as throwing away a paycheck. And<br\/>while silk is lovely, it is best left for fashion and<br\/>not artificial flowers. The Rosepops mission was<br\/>to offer long-lasting roses and even longer<br\/>lasting memories, without the usual hefty<br\/>preserved petal price tags. Through our patent-<br\/>pending POP-up packaging, our premiere<br\/>Ecuadorian Roses can be shipped safely and<br\/>economically, never compromising on quality.<br\/>Our hand-crafted preserved roses arrangements<br\/>can be personalized, so there is a POP for every<br\/>occasion! And with free standard shipping within<br\/>the United States, your loved one can know just<br\/>how valued they are no matter where they are<br\/>located! We want to welcome you to the<br\/>Rosepops Family, where business is blooming<br\/>and Everything's Coming Up Roses... Literally<\/p>",
+            "text": "<p>Throwing away dying roses is about as gratifying as throwing away a paycheck. And while silk is lovely, it is best left for fashion and not artificial flowers. The Rosepops mission was to offer long-lasting roses and even longer lasting memories, without the usual hefty preserved petal price tags. Through our patent-<br\/>pending POP-up packaging, our premiere Ecuadorian Roses can be shipped safely and<br\/>economically, never compromising on quality. Our hand-crafted preserved roses arrangements can be personalized, so there is a POP for every occasion! And with free standard shipping within the United States, your loved one can know just how valued they are no matter where they are located! We want to welcome you to the<br\/>Rosepops Family, where business is blooming and Everything's Coming Up Roses... Literally<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -161,7 +167,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Component_4_1.png",
             "title": "OUR ROSES AND WHY THEYARE POP STARS",
-            "text": "<p>Our roses come from a beautiful and spacious<br\/>Ecuadorian garden, situated at high altitude,<br\/>with 20 hectares of gorgeous variety. Highly<br\/>specialized, all natural techniques are used by<br\/>our growers in taking care of the water,<br\/>observing the climate and knowing the ground.<br\/>These perfected practices result in uniquely<br\/>beautiful roses of the utmost quality. We are<br\/>proud to say that our Rose farms work<br\/>exclusively with non-toxic ingredients, ensuring<br\/>that our unique processes do not pose any<br\/>threat to humans or the environment.<\/p>",
+            "text": "<p>Our roses come from a beautiful and spacious Ecuadorian garden, situated at high altitude, with 20 hectares of gorgeous variety. Highly specialized, all natural techniques are used by our growers in taking care of the water, observing the climate and knowing the ground. These perfected practices result in uniquely beautiful roses of the utmost quality. We are proud to say that our Rose farms work exclusively with non-toxic ingredients, ensuring that our unique processes do not pose any threat to humans or the environment.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -171,7 +177,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Component_4_1.png",
             "title": "A MOM-AND-POP APPROACHTO A GROWING POP SENSATION",
-            "text": "<p>At Rosepops, we delight in the details and are<br\/>always excited about the journey that lays<br\/>ahead. We want you to share our enthusiasm<br\/>and are therefore determined to make your<br\/>Rosepops experience one that will make you<br\/>want to keep on POP'ping. Whena new idea<br\/>pops up, we make it happen. We also welcome<br\/>POPulation explosions such as bulk custom<br\/>orders-- corporate, personal or matrimonial.<br\/>Just POP us an email to inquire.. Sign up for our<br\/>email list today and stay tuned for new product<br\/>lines, announcements and more!<\/p>",
+            "text": "<p>At Rosepops, we delight in the details and are always excited about the journey that lays ahead. We want you to share our enthusiasm and are therefore determined to make your Rosepops experience one that will make you want to keep on POP'ping. Whena new idea pops up, we make it happen. We also welcome POPulation explosions such as bulk custom orders--corporate, personal or matrimonial. Just POP us an email to inquire.. Sign up for our email list today and stay tuned for new product lines, announcements and more!<\/p>",
             "link_label": "",
             "link": ""
           }

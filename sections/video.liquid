@@ -44,6 +44,7 @@
         </a>
       </div>
     </noscript>
+    {% if section.settings.video_style contains 'external-video' %}
     <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video_url.id }}"
       {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
     >
@@ -71,12 +72,25 @@
       </button>
       <template>
         {%- if section.settings.video_url.type == 'youtube' -%}
-          <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1{% if section.settings.autoplay %}&autoplay=1{% endif %}" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
         {%- else -%}
-          <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+          <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}{% if section.settings.autoplay %}&autoplay=1{% endif %}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
         {%- endif -%}
       </template>
     </deferred-media>
+  {% endif %}
+
+    {% if section.settings.video_style contains 'mp4' %}
+      <div class="Video">
+      <div class="mp4Video">
+        <video id="banner-video" class="video-section-wrapper--{{ section.settings.file_video_height }}
+                  video-section-wrapper--min-height" preload="auto" {% if section.settings.autoplay %}autoplay muted playsinline controls{% else %} controls{%endif%} loop width="100%">
+        <source src="{{ section.settings.video_file_link }}" type="video/mp4" id="{{ section.id }}">
+        </video>
+      </div>
+    </div>
+          {% endif %}
+
   </div>
 </div>
 
@@ -86,6 +100,22 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "video_style",
+      "label": "Video Type",
+      "default": "mp4",
+      "options": [
+        {
+          "label": "MP4",
+          "value": "mp4"
+        },
+        {
+          "label": "External Video",
+          "value": "external-video"
+        }
+      ]
+    },
     {
       "type": "text",
       "id": "heading",
@@ -118,6 +148,12 @@
       "label": "t:sections.video.settings.cover_image.label"
     },
     {
+      "type": "text",
+      "id": "video_file_link",
+      "label": "File Video URL",
+      "default": "https://cdn.shopify.com/s/files/1/2018/8867/files/ice.mp4"
+    },
+    {
       "type": "video_url",
       "id": "video_url",
       "accept": [
@@ -134,6 +170,12 @@
       "id": "description",
       "label": "t:sections.video.settings.description.label",
       "info": "t:sections.video.settings.description.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false
     },
     {
       "type": "checkbox",
