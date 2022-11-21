@@ -37,9 +37,10 @@ section.faq_outer.page-width h2.title.h1 {
 }
 .panel.answer p {
     margin-top: 0;
+    line-height: 1.5;
 }
 .que_and_ans {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #dfe3e8;
 }
 .panel.answer p a {
     color: #221e1f;

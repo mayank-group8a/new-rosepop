@@ -92,7 +92,7 @@
           "type": "quote",
           "settings": {
             "ques": "Does Rosepops accept returns?",
-            "ans": "<p>Rosepops does not, unfortunately, accept returns.  As each POP is assembled by hand and personalized with a printed message inside, we cannot accept any returns or exchanges. For extenuating circumstances, please email us at<a href=\"mailto:customerservice@rosepops.com\"><strong>customerservice@rosepops.com<\/strong><\/a>to bring to our attention any unusual experience you might be having with your POP.<\/p>"
+            "ans": "<p>Rosepops does not, unfortunately, accept returns.  As each POP is assembled by hand and personalized with a printed message inside, we cannot accept any returns or exchanges. For extenuating circumstances, please email us at <a href=\"mailto:customerservice@rosepops.com\"><strong>customerservice@rosepops.com <\/strong><\/a>to bring to our attention any unusual experience you might be having with your POP.<\/p>"
           }
         }
       },
