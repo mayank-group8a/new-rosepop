@@ -111,12 +111,56 @@
         "64ea5372-8a58-456b-90dc-49f003122cd3"
       ],
       "settings": {
-        "bg_clr": ""
+        "title": "Your Questions Answered",
+        "bg_clr": "",
+        "title_color": "#c68792",
+        "description_color": "#221e1f"
+      }
+    },
+    "f8b9fe9d-b275-45e6-bea4-0d321297862c": {
+      "type": "video-with-text",
+      "blocks": {
+        "template--14436127735888__f8b9fe9d-b275-45e6-bea4-0d321297862c-16690245109231528e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "ONCE POP'PED, CAN I PUT MY ROSES BACK DOWN IFI NEED TO?",
+            "title_color": "#c68792",
+            "heading_size": "h2"
+          }
+        },
+        "template--14436127735888__f8b9fe9d-b275-45e6-bea4-0d321297862c-16690245109231528e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Yes you can, although this takes a bit of care. So as not to crush your roses, gently slide fingers around the roses until you feel the foam beneath them.<\/p><p>Press down on the foam and your roses will settle back down. Pull ribbon and watch the magic happen all over again when your roses POP!<\/p>",
+            "description_color": "#444444",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14436127735888__f8b9fe9d-b275-45e6-bea4-0d321297862c-16690245109231528e-0",
+        "template--14436127735888__f8b9fe9d-b275-45e6-bea4-0d321297862c-16690245109231528e-1"
+      ],
+      "settings": {
+        "video_file_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0227\/9384\/6848\/files\/Rosepops_video.mp4?v=1629281135",
+        "autoplay": true,
+        "color_bg": "#fcf6f7",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
     "main",
-    "b5692f58-9759-4b83-9f0b-58b33a98c2c6"
+    "b5692f58-9759-4b83-9f0b-58b33a98c2c6",
+    "f8b9fe9d-b275-45e6-bea4-0d321297862c"
   ]
 }

@@ -11,3 +11,41 @@ section.faq_outer.page-width h2.title.h1 {
     font-family: IP-Script-Casual;
     text-align: center;
 }
+.accordion.question {
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.accordion.question svg {
+    max-width: 15px;
+    height: max-content;
+}
+.accordion.question svg:nth-child(2) {
+    display: none;
+}
+.accordion.question.active svg:nth-child(2) {
+    display: block;
+}
+.accordion.question.active svg:nth-child(1) {
+    display: none;
+}
+.accordion.question h4.ques {
+    margin-left: 20px;
+}
+.panel.answer {
+    margin-left: 35px;
+}
+.panel.answer p {
+    margin-top: 0;
+}
+.que_and_ans {
+    border-bottom: 1px solid #ccc;
+}
+.panel.answer p a {
+    color: #221e1f;
+}
+@media screen and (max-width: 767px){
+    .panel.answer p {
+        text-align: left;
+    }
+}

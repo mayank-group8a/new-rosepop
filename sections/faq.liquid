@@ -3,17 +3,19 @@
     {% if section.settings.title != blank %}
         <h2 class="title h1">{{ section.settings.title | escape }}</h2>
       {% endif %}
-     <div class="faq_inner">
+     <div class="faq_inner page-width">
          {% for block in section.blocks %}
          <div class="que_and_ans">
              <div class="accordion question">
+              {% render 'icon-plus' %}
+              {% render 'icon-minus' %}
                 {% if block.settings.ques != blank %}
-                    <h4 class="ques">{{ block.settings.ques }}</h4> 
+                    <h4 class="ques" style="color: {{ section.settings.title_color }};">{{ block.settings.ques }}</h4> 
                 {% endif %} 
             </div> 
             <div class="panel answer">
                  {% if block.settings.ans != blank %}
-                     <p class="ans">{{ block.settings.ans }}</p>
+                     <p class="ans" style="color: {{ section.settings.description_color }};">{{ block.settings.ans }}</p>
                  {% endif %}
             </div>
         </div>
@@ -50,7 +52,19 @@ for (i = 0; i < acc.length; i++) {
         "type": "color",
         "id": "bg_clr",
         "label": "Section Background color"
-      }
+      },
+      {
+            "type": "color",
+            "id": "title_color",
+            "label": "Questions color",
+            "default": "#000"
+        },
+        {
+              "type": "color",
+              "id": "description_color",
+              "label": "Answers color",
+              "default": "#000"
+          }
     ],
     "blocks": [
       {
@@ -82,4 +96,4 @@ for (i = 0; i < acc.length; i++) {
       }
     ]
   }
-{% endschema %} 
+{% endschema %}   
