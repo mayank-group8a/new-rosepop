@@ -1527,6 +1527,8 @@ button.product-form__submit.button:hover {
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
+  position: sticky;
+    top: 3rem;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_main_slider {
   width: 84%;

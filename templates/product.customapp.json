@@ -27,11 +27,13 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
           }
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
@@ -45,7 +47,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "description": {
@@ -137,6 +139,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image with text",
+            "title_color": "#000",
             "heading_size": "h1"
           }
         },
@@ -144,6 +147,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "description_color": "#000",
             "text_style": "body"
           }
         }
@@ -153,6 +157,7 @@
         "image-with-text-1"
       ],
       "settings": {
+        "color_bg": "#fcf6f7",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -408,7 +413,6 @@
         "heading": "Looking for more fun? Try our Custom Pop",
         "heading_size": "h1",
         "heading_color": "#000000",
-        "main_image": "shopify:\/\/shop_images\/template_2.png",
         "link_label": "GET STARTED",
         "link": "#"
       }

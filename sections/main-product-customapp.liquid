@@ -67,20 +67,7 @@
   </div>
   </div>
       <div class="custom_tool_top_steps_a">
-      <div class="trust-next-prev">
-        <div class="step_title" style="display:none">Step <span id="step_count">1</span>: <span id="step_text">Select Your Box</span></div>
-        <div class="next_pervious{% if soldout == true %} soldout{% endif %}">
-          {% comment %}
-          {% if collection.handle contains 'build-your-rosepop' %}
-          <div class="custom-message">Include A Free Video Message and Receive Free Charms</div>
-          {% endif %}
-          {% endcomment %}
-          <div class="soldout">Sold Out</div>
-          <div class="back" style="display:none"><img src="{{ 'custom-prev-btn.png' | file_img_url: 'x20' }}"> Back</div>
-          <div class="next">Next <img src="{{ 'custom-next-btn.png' | file_img_url: 'x20' }}"></div>
-          <div class="addtocart" id="custom_addtocart" style="display:none">Add to cart</div>
-        </div>
-      </div>
+      
       {% if collection.handle contains 'build-your-rosepop' %}
       <div class="mobile-custom-message">Include A Free Video Message and Receive Free Charms</div>
       {% endif %}
@@ -508,6 +495,23 @@
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
+<div class="custom__app_header">
+                    <div class="trust-next-prev">
+        <div class="step_title" style="display:none">Step <span id="step_count">1</span>: <span id="step_text">Select Your Box</span></div>
+        <div class="next_pervious{% if soldout == true %} soldout{% endif %}">
+          {% comment %}
+          {% if collection.handle contains 'build-your-rosepop' %}
+          <div class="custom-message">Include A Free Video Message and Receive Free Charms</div>
+          {% endif %}
+          {% endcomment %}
+          <div class="soldout">Sold Out</div>
+          <div class="back btn_back" style="display:none">{% comment %}<img src="{{ 'custom-prev-btn.png' | file_img_url: 'x20' }}">{% endcomment %} Back</div>
+          <div class="next btn_next">Next {% comment %}<img src="{{ 'custom-next-btn.png' | file_img_url: 'x20' }}">{% endcomment %}</div>
+          <div class="addtocart" id="custom_addtocart" style="display:none">Add to cart</div>
+        </div>
+      </div>
+</div>
+                    
                   {%- endform -%}
                 </product-form>
 
