@@ -3,6 +3,7 @@
     text-align: center;
     background-color: #C68792;
     height: 100%;
+  overflow: hidden;
   }
   .new-featured-collection-inner img {
   position: absolute;

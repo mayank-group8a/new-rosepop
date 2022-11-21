@@ -42,7 +42,7 @@
   assign media_ratio = 1 | divided_by: media.aspect_ratio | times: 100
 
   if media.media_type == 'image'
-    assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+    assign image_class = 'feature-row__image_custom image-magnify-' | append: section.settings.image_zoom
   endif
 -%}
 
@@ -93,7 +93,7 @@
         endcase
       -%}
     </span>
-    <div class="product__media media media--transparent">
+    <div id="custom_image" class="product__media media media--transparent">
       {{ media.preview_image | image_url: width: 1946 | image_tag:
         class: image_class,
         loading: lazy,
@@ -101,6 +101,9 @@
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
         alt: media.preview_image.alt | escape
       }}
+      <div id="live_svg" style="display:none">
+                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"></svg>
+               </div>
     </div>
     <button class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
       <span class="visually-hidden">

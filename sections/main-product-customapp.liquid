@@ -772,7 +772,28 @@
 
   </div>
 
-
+<input type="hidden" name="product_price" id="product_price" value="{{ product.variants[0].price | money_without_currency}}"/>
+<div class="sticky_cart">
+  <div class="summary" style="display:none">
+    <ul class="summary_list">
+      
+    </ul>
+  </div>
+  <div class="next_pervious{% if soldout == true %} soldout{% endif %}">
+  <div class="back btn_back" style="display:none;">{% comment %}<img src="{{ 'custom-prev-btn.png' | file_img_url: 'x20' }}">{% endcomment %} Back</div>
+  </div>
+  <div class="sticky_price">
+    Total: <span class="currency">$</span><span class="f_price">{{ product.variants[0].price | money_without_currency}}</span>
+  </div>
+  <div class="next_pervious{% if soldout == true %} soldout{% endif %}">
+      <div class="soldout">Sold Out</div>
+      <div id="mobile_price_c" style="display:none">Total: <span class="currency">$</span><span>{{ product.variants[0].price | money_without_currency}}</span></div>
+      <div class="next btn_next">Next {% comment %}<img src="{{ 'custom-next-btn.png' | file_img_url: 'x20' }}">{% endcomment %}</div>
+      <div class="addtocart" id="custom_addtocart" style="display:none">Add to cart</div>
+  </div>
+  
+</div>
+<canvas width="500" height="500" style="display:none"></canvas>
   
   {% render 'product-media-modal' variant_images: variant_images %}
 
@@ -989,7 +1010,6 @@
 </script>
 
 
-<canvas width="500" height="500" style="display:none"></canvas>
   
 <script>
 // Load custom option data
