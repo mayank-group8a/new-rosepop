@@ -139,7 +139,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image with text",
-            "title_color": "#000",
+            "title_color": "#000000",
             "heading_size": "h1"
           }
         },
@@ -147,7 +147,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "description_color": "#000",
+            "description_color": "#000000",
             "text_style": "body"
           }
         }
