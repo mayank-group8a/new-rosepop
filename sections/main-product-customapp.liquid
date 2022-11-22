@@ -1386,10 +1386,10 @@ $( ".next_pervious .back" ).click(function() {
   $("#custom_image .feature-row__image_custom").hide();
   $("#custom_image #live_svg").show();
   
-  //$("html, body").animate({ scrollTop: "300" }, 2000);
+{% comment %}   //$("html, body").animate({ scrollTop: "300" }, 2000);
   $('html,body').animate({
     scrollTop: $(".product-single__custom_app").offset().top - 100
-  },800);
+  },800); {% endcomment %}
   
   
   var prv_stp = $(".custom__app_header .next_pervious .back").attr("id");
