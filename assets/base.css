@@ -3164,6 +3164,7 @@ header-menu>details.mega-nav {
     background-color: #FCF6F7;
     border-radius: 100%;
     padding: 0 20px;
+    z-index: 9;
 }
 h1.header__heading {
     max-width: 170px;
@@ -3344,6 +3345,12 @@ position: relative;
   .mobile_nav_menu .h4.nav_menutitle {
     display: flex;
     justify-content: space-between;
+}
+  .header > .header__heading-link {
+  position: relative;
+      max-width: 140px;
+    width: 140px;
+    height: auto;
 }
 }
 @media screen and (max-width: 767px) {

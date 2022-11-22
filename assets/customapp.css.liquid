@@ -3,6 +3,7 @@ ul.all_steps {
     justify-content: space-between;
     list-style: none;
     border-bottom: 1px solid rgba(112,112,112,0.2);
+  flex-wrap: wrap;
 }
 .product-title {
   text-align: center;
@@ -376,4 +377,34 @@ span.box_sub_title p {
   overflow: hidden; 
   width: calc(100% - 40px); 
   height: calc(100% - 40px); 
+}
+
+.fragrance_cover li {
+    flex: 1 1 calc(25% - 20px);
+    margin: 7.5px 7.5px;
+    padding: 20px 10px;
+    border: 1px solid;
+  border-radius: 5px;
+  list-style: none;
+  text-align: center;
+}
+.fragrance_cover li .title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.fragrance_cover li .content {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(var(--color-heading-1-text));
+}
+ul.fragrance_cover {
+    display: flex;
+    flex-wrap: wrap;
+}
+.fragrances_description {
+    max-width: 100%;
+    width: 100%;
 }
