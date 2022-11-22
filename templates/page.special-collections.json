@@ -8,13 +8,19 @@
         "padding_bottom": 28
       }
     },
+    "82f00bd9-0e3b-468c-a091-036bb9c486cb": {
+      "type": "breadcrumbs",
+      "settings": {
+        "color_bg": "#df9cac"
+      }
+    },
     "4ab69c49-9b87-4e0d-b93d-e39455127458": {
       "type": "special-collections",
       "blocks": {
         "template--14437061230672__4ab69c49-9b87-4e0d-b93d-e39455127458-16690397246adf45cd-0": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Sweet_as_Sugar_Collection_720x_a111249e-89fe-4b8f-9963-92cf31f642e3.jpg",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_18.png",
             "layout": "image_first",
             "collection": "mom-and-pop",
             "heading": "",
@@ -30,7 +36,7 @@
         "ad55a24d-6a74-423c-b5a1-12a6d27e056f": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Anniversary_Collection_720x_59196d85-b617-4258-b6e3-63aa15451207.webp",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_15.png",
             "layout": "text_first",
             "collection": "very-valentine",
             "heading": "",
@@ -46,7 +52,7 @@
         "5f98e563-8de8-44f5-aa09-58a9273042a4": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Birthday_Collection_720x_46c674d1-53f9-4bb9-b735-b46e08e81f3a.webp",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_16.png",
             "layout": "image_first",
             "collection": "the-birthday-collection",
             "heading": "BIRTHDAY POPS",
@@ -62,7 +68,7 @@
         "fa22f0c2-5650-496a-8c9d-b31d594324b1": {
           "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_3472_720x_845f4e0f-9410-44df-bedc-151659a8029c.webp",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_17.png",
             "layout": "text_first",
             "collection": "the-anniversary-collection",
             "heading": "ANNIVERSARY POPS",
@@ -213,7 +219,7 @@
             "title_color": "#c68792",
             "heading_size": "h2",
             "text": "<p>These Half-Hearted POPs will be wholeheartedly adored!  Complementary hues fill out our generous heart POPs which can be further embellished with custom monograms and curated charms.<\/p>",
-            "description_color": "#000",
+            "description_color": "#000000",
             "text_style": "body",
             "button_label": "SHOP HALF-HEARTED",
             "button_link": ""
@@ -229,7 +235,7 @@
             "title_color": "#c68792",
             "heading_size": "h2",
             "text": "<p>Embodying the ethereal glow of the moon, Silvery Grey blooms are easy and elegant in white boxes of all sizes. A moon and stars monogram and crescent moon charms will have you gazing at the moonlight, day or night…<\/p>",
-            "description_color": "#000",
+            "description_color": "#000000",
             "text_style": "body",
             "button_label": "Explore Over the Moon",
             "button_link": ""
@@ -268,6 +274,7 @@
   },
   "order": [
     "main",
+    "82f00bd9-0e3b-468c-a091-036bb9c486cb",
     "4ab69c49-9b87-4e0d-b93d-e39455127458"
   ]
 }

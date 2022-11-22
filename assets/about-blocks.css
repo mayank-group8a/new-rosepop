@@ -69,13 +69,13 @@ h2.about-blocks-heading.title.h1 {
 
 @media screen and (min-width: 992px) and (max-width: 1400px){
 .rose-about-img {
-    max-width: 490px;
+    max-width: 450px;
 }
 .rose-about-img img {
-    height: 860px;
+    height: 800px;
 }
 .rose-about-info {
-    max-width: calc(100% - 490px);
+    max-width: calc(100% - 450px);
 }
 }
 @media screen and (max-width:991px){

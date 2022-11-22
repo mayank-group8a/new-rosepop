@@ -22,6 +22,25 @@
 .special-collections.image-with-text .image-with-text__grid.grid {
     margin-top: 60px;
 }
+a.load-more.button {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-family: 'Muli';
+}
+.special-collections.image-with-text .image-with-text__content .image-with-text__text+.button {
+    font-family: 'Muli';
+}
+.special-collections .image-with-text__grid.grid{
+  display:none;
+}
+body .special-collections .image-with-text__grid.grid.df{
+  display: flex !important;
+}
+.special-collections.image-with-text .image-with-text__grid.grid h2.image-with-text__heading.h2 {
+    text-transform: uppercase;
+}
 #shopify-section-{{ section.id }}{
       background-color: {{ section.settings.color_bg }};
     }
@@ -29,7 +48,14 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  @media screen and (max-width: 767px) {
+      .special-collections.image-with-text .image-with-text__grid.grid:first-child {
+        margin-top: 30px;
+    }
+    a.load-more.button {
+      margin-bottom: 20px;
+    }
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -83,7 +109,21 @@
     </div>
   </div>
 {%- endfor -%}
-</div>  
+<a href="" class="load-more button">Load More</a>
+</div>
+<script>
+  $(".image-with-text__grid").slice(0, 4).show().addClass("df");
+		$("body").on('click touchstart', '.load-more', function (e) {
+			e.preventDefault();
+			$(".image-with-text__grid:hidden").slice(0, 4).slideDown().addClass("df");
+			if ($(".image-with-text__grid:hidden").length == 0) {
+				$(".load-more").css('visibility', 'hidden');
+			}
+			$('html,body').animate({
+				scrollTop: $(this).offset().top
+			}, 1000);
+		});
+</script>
 
 {% schema %}
 {
