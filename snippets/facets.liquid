@@ -41,6 +41,30 @@
             {%- endif -%}
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
+              <div class="product-count light" role="status">
+                <h2 class="product-count__text text-body">
+                  <span id="ProductCountDesktop">
+                    {%- if results.results_count -%}
+                      {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+                    {%- elsif results.products_count == results.all_products_count -%}
+                      {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+                    {%- else -%}
+                      {{ 'products.facets.product_count' | t: product_count: results.products_count, count: results.all_products_count }}
+                    {%- endif -%}
+                  </span>
+                </h2>
+                <div class="loading-overlay__spinner">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="spinner"
+                    viewBox="0 0 66 66"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+              </div>
               <div class="active-facets active-facets-desktop">
                 <div class="active-facets-vertical-filter">
                   {%- unless results.filters == empty -%}
@@ -48,7 +72,7 @@
                   {%- endunless -%}
                   <facet-remove class="active-facets__button-wrapper">
                     <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-                      <span>{{ 'products.facets.clear_all' | t }}</span>
+                      <span>Clear</span>
                     </a>
                   </facet-remove>
                 </div>
@@ -91,7 +115,8 @@
                   <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
                     <div>
                       <span>{{ filter.label | escape }}{%- if filter_type == 'vertical' -%}<span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}"> ({{ filter.active_values.size }})</span>{% endif %}</span>
-                      {% render 'icon-caret' %}
+                      {% render 'icon-plus' %}
+                      {% render 'icon-minus' %}
                     </div>
                   </summary>
                   <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
@@ -219,7 +244,8 @@
                   <summary class="facets__summary caption-large focus-offset">
                     <div>
                       <span>{{ filter.label | escape }}</span>
-                      {% render 'icon-caret' %}
+                      {% render 'icon-plus' %}
+                      {% render 'icon-minus' %}
                     </div>
                   </summary>
                   <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
@@ -250,9 +276,7 @@
                         >
                         <label class="field__label" for="Filter-{{ filter.label | escape }}-GTE">{{ 'products.facets.from' | t }}</label>
                       </div>
-                      {%- if filter_type != 'vertical' -%}
                         <span class="field-currency">{{ cart.currency.symbol }}</span>
-                      {%- endif -%}
                       <div class="field">
                         <input class="field__input"
                           name="{{ filter.max_value.param_name }}"
@@ -311,7 +335,7 @@
               {%- endfor -%}
               <facet-remove class="active-facets__button-wrapper">
                 <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-                  <span>{{ 'products.facets.clear_all' | t }}</span>
+                  <span>Clear</span>
                 </a>
               </facet-remove>
             </div>
@@ -337,7 +361,8 @@
                       <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-caret' %}
+                  {% render 'icon-plus' %}
+                  {% render 'icon-minus' %}
                 </div>
               </div>
 
@@ -389,7 +414,8 @@
                     <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                   {%- endfor -%}
                 </select>
-                {% render 'icon-caret' %}
+                {% render 'icon-plus' %}
+                {% render 'icon-minus' %}
               </div>
             </div>
 
@@ -473,7 +499,8 @@
                         <div>
                           <span>{{ filter.label | escape }}</span>
                           <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                          <noscript>{% render 'icon-caret' %}</noscript>
+                          <noscript>{% render 'icon-plus' %}
+                          {% render 'icon-minus' %}</noscript>
                         </div>
                       </summary>
                       <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
@@ -536,7 +563,8 @@
                         <div>
                           <span>{{ filter.label | escape }}</span>
                           <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                          <noscript>{% render 'icon-caret' %}</noscript>
+                          <noscript>{% render 'icon-plus' %}
+                          {% render 'icon-minus' %}</noscript>
                         </div>
                       </summary>
                       <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
@@ -612,7 +640,8 @@
                             <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                           {%- endfor -%}
                         </select>
-                        {% render 'icon-caret' %}
+                        {% render 'icon-plus' %}
+                {% render 'icon-minus' %}
                       </div>
                     </div>
                   </div>
@@ -672,7 +701,7 @@
     {%- endfor -%}
     <facet-remove class="active-facets__button-wrapper">
       <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-        <span>{{ 'products.facets.clear_all' | t }}</span>
+        <span>Clear</span>
       </a>
     </facet-remove>
   </div>
@@ -692,7 +721,8 @@
                   <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                 {%- endfor -%}
               </select>
-              {% render 'icon-caret' %}
+              {% render 'icon-plus' %}
+                {% render 'icon-minus' %}
             </div>
           </div>
 
@@ -769,7 +799,7 @@
           {%- endfor -%}
           <facet-remove class="active-facets__button-wrapper">
             <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-              <span>{{ 'products.facets.clear_all' | t }}</span>
+              <span>Clear</span>
             </a>
           </facet-remove>
         </div>

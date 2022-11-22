@@ -1,108 +1,114 @@
 <div class="breadcrumb-section" >
-    <h2 class="breadcrumb-title h2" style="color: {{ section.settings.title_color }};">{{page.title}}</h2>
+  <h2 class="breadcrumb-title h2" style="color: {{ section.settings.title_color }};">
+    {% if page.title != blank %}
+    {{page.title}}
+    {% else %}
+    {{collection.title}}
+    {% endif %}
+  </h2>
 {% if template != 'index' %}
-    <div id="breadcrumb" class="desktop-12 page-width" style="color: {{ section.settings.title_color }};">
-      <a href="/" class="homepage-link" title="Back to the frontpage" style="color: {{ section  .settings.title_color }};">Home</a>
-      {% if template contains "product" %}
-        {% if collection %}  
-          <span class="separator">{% render 'left-arrow' %}</span>
-          {% if collection.handle %}
-            {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
-            {{ collection.title | link_to: url }}
-          {% elsif collection.all_products_count > 0 and collection.products.first.type == collection.title %}
-            {{ collection.title | link_to_type }}
-          {% elsif collection.all_products_count > 0 and collection.products.first.vendor == collection.title %}
-            {{ collection.title | link_to_vendor }}
-          {% endif %}
-        {% else %}
-          <span class="separator">{% render 'left-arrow' %}</span>
-          {{ product.type | link_to_type }}
+  <div id="breadcrumb" class="desktop-12 page-width" style="color: {{ section.settings.title_color }};">
+    <a href="/" class="homepage-link" title="Back to the frontpage" style="color: {{ section  .settings.title_color }};">Home</a>
+    {% if template contains "product" %}
+      {% if collection %}  
+        <span class="separator">{% render 'left-arrow' %}</span>
+        {% if collection.handle %}
+          {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+          {{ collection.title | link_to: url }}
+        {% elsif collection.all_products_count > 0 and collection.products.first.type == collection.title %}
+          {{ collection.title | link_to_type }}
+        {% elsif collection.all_products_count > 0 and collection.products.first.vendor == collection.title %}
+          {{ collection.title | link_to_vendor }}
         {% endif %}
+      {% else %}
+        <span class="separator">{% render 'left-arrow' %}</span>
+        {{ product.type | link_to_type }}
+      {% endif %}
+    <span class="separator">{% render 'left-arrow' %}</span>
+    <span class="page-title">{{ page_title }}</span>
+    {% elsif template == "article" %}
+      <span class="separator">{% render 'left-arrow' %}</span>
+      {{ blog.title | link_to: blog.url }}
       <span class="separator">{% render 'left-arrow' %}</span>
       <span class="page-title">{{ page_title }}</span>
-      {% elsif template == "article" %}
+    {% elsif template contains "collection" %}
+      {% if current_tags.size > 0 %}
         <span class="separator">{% render 'left-arrow' %}</span>
-        {{ blog.title | link_to: blog.url }}
+        {{ collection.title | link_to: collection.url }}
         <span class="separator">{% render 'left-arrow' %}</span>
-        <span class="page-title">{{ page_title }}</span>
-      {% elsif template contains "collection" %}
-        {% if current_tags.size > 0 %}
-          <span class="separator">{% render 'left-arrow' %}</span>
-          {{ collection.title | link_to: collection.url }}
-          <span class="separator">{% render 'left-arrow' %}</span>
-          <span class="page-title">{{ current_tags.first }}</span>
-        {% else %}
-          <span class="separator">{% render 'left-arrow' %}</span>
-          <span class="page-title">{{ page_title }}</span>
-        {% endif %}
+        <span class="page-title">{{ current_tags.first }}</span>
       {% else %}
         <span class="separator">{% render 'left-arrow' %}</span>
         <span class="page-title">{{ page_title }}</span>
       {% endif %}
-    </div>
-  {% endif %}
+    {% else %}
+      <span class="separator">{% render 'left-arrow' %}</span>
+      <span class="page-title">{{ page_title }}</span>
+    {% endif %}
+  </div>
+{% endif %}
 </div>
-  <style>
-    div#breadcrumb {
-      font-size: 14px;
-      text-align: center;
-      padding-bottom: 15px;
-      font-family: 'Muli';
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-    #breadcrumb a {
-      padding: 0.2rem;
-      text-decoration: none;
-      color: rgba(18,18,18,.75);
-  }
-  #breadcrumb a:hover {
-    color: rgba(18,18,18);
-    text-decoration: underline;
+<style>
+  div#breadcrumb {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: 'Muli';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  #breadcrumb a {
+    padding: 0.2rem;
+    text-decoration: none;
+    color: rgba(18,18,18,.75);
+}
+#breadcrumb a:hover {
+  color: rgba(18,18,18);
+  text-decoration: underline;
 }
 #shopify-section-{{ section.id }}{
-    background-color: {{ section.settings.color_bg }};
-  }
-  h2.breadcrumb-title.h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: "IP-Script-Casual";
-    padding-top: 30px;
+  background-color: {{ section.settings.color_bg }};
+}
+h2.breadcrumb-title.h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "IP-Script-Casual";
+  padding-top: 30px;
 }
 span.page-title {
-    text-decoration: underline;
-    margin-left: 6px;
+  text-decoration: underline;
+  margin-left: 6px;
 }
 span.separator {
-    margin-left: 6px;
+  margin-left: 6px;
 }
-  </style>
- 
-    {% schema %}
-    {
-      "name": "Breadcrumbs",
-      "tag": "section",
-      "class": "section",
-      "settings": [
+</style>
+
+  {% schema %}
+  {
+    "name": "Breadcrumbs",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Background color",
+          "default": "#fcf6f7"
+        },
         {
-            "type": "color",
-            "id": "color_bg",
-            "label": "Background color",
-            "default": "#fcf6f7"
-          },
-          {
-                "type": "color",
-                "id": "title_color",
-                "label": "Title color",
-                "default": "#000"
-            }
-      ],
-      "presets": [
-        {
-          "name": "Breadcrumbs"
-        }
-      ]
-    }
-    {% endschema %}
+              "type": "color",
+              "id": "title_color",
+              "label": "Title color",
+              "default": "#000"
+          }
+    ],
+    "presets": [
+      {
+        "name": "Breadcrumbs"
+      }
+    ]
+  }
+  {% endschema %}

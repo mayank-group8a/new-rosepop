@@ -5,6 +5,10 @@
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
+<div class="my_pagination_code">
+  <script src="{{ 'collection-load-more.js' | asset_url }}" defer="defer"></script>
+  </div>
+
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
@@ -89,6 +93,7 @@
     {%- endif -%}
 
     <div class="product-grid-container" id="ProductGridContainer">
+      <h4 class="collection_title h4">{{collection.title}}</h4>
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
@@ -104,16 +109,63 @@
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
     
-            <ul id="product-grid" data-id="{{ section.id }}" class="
+            {% if  section.settings.pagination_type == "load_more_btn" %}
+            <ul id="product-grid" data-id="{{ section.id }}" class="products-on-page
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-              grid--{{ section.settings.columns_desktop }}-col-desktop">
+              grid--{{ section.settings.columns_desktop }}-col-desktop" data-next-url="{{paginate.next.url}}">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li class="grid__item">
-                  {% render 'card-product',
+                  {% if section.settings.section_style == 'primary_section_style' %}
+                    {% render 'new-card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+                    %}
+                    {% else %}
+        {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+                    %}
+                    {% endif %}
+                </li>
+              {%- endfor -%}
+            </ul>
+            <div class="load-more">
+              <a class="load-more_btn text-center mt-12 button button--primary">Load More</a>
+              <div class="load-more_spinner hidden w-8 h-8 ml-auto mr-auto border-4 border-solid border-black border-t-gray-200 rounded-full animate-spin"></div>
+            </div>
+            {% comment %} <div id="Huratips-Pagination">
+              {% if paginate.next %}
+              <a href="{{ paginate.next.url }}">Loading More</a>
+              {% endif %}  
+          </div> {% endcomment %}
+           {% elsif section.settings.pagination_type == "scroll" %}
+           <ul id="product-grid" data-id="{{ section.id }}" class="products-on-page
+            grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+            grid--{{ section.settings.columns_desktop }}-col-desktop" data-next-url="{{paginate.next.url}}">
+            {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+              <li class="grid__item">
+                {% if section.settings.section_style == 'primary_section_style' %}
+                  {% render 'new-card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
@@ -122,15 +174,66 @@
                     lazy_load: lazy_load,
                     show_quick_add: section.settings.enable_quick_add,
                     section_id: section.id
-
                   %}
-                </li>
-              {%- endfor -%}
-            </ul>
-    
-            {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
-            {%- endif -%}
+                  {% else %}
+      {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
+                  %}
+                  {% endif %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div class="load-more">
+            <a class="load-more_btn text-center mt-12 button button--primary" style>Loading</a>
+            <div class="load-more_spinner hidden w-8 h-8 ml-auto mr-auto border-4 border-solid border-black border-t-gray-200 rounded-full animate-spin"></div>
+          </div>
+          {% else %}
+          <ul id="product-grid" data-id="{{ section.id }}" class="
+            grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+            grid--{{ section.settings.columns_desktop }}-col-desktop">
+            {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+              <li class="grid__item">
+                {% if section.settings.section_style == 'primary_section_style' %}
+                  {% render 'new-card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
+                  %}
+                  {% else %}
+      {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
+                  %}
+                  {% endif %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          {%- if paginate.pages > 1 -%}
+            {% render 'pagination', paginate: paginate, anchor: '' %}
+          {%- endif -%}
+        {% endif %}
           </div>
         {%- endif -%}
       {%- endpaginate -%}
@@ -139,6 +242,62 @@
 </div>
 
 
+<script>
+  $(document).ready(function(){
+    $(document).on("click", "a.load-more_btn", function(){
+      loadMoreProducts();
+    });
+  });
+  </script>
+  
+  
+  <style>
+    .load-more{text-align:center;margin-top:45px;}
+  .load-more_spinner{
+      display: none;
+    width: 35px;
+    height: 35px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3a3a3a;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: 2s spin linear infinite;
+  }
+  @keyframes spin{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+  }
+  </style>
+  
+  {% if section.settings.pagination_type == "scroll" %}
+  <script>
+    var kk=0;
+    $(window).scroll(function(e) {
+  
+  var styling = $('a.load-more_btn').attr("style");
+  var strr2 = "none";
+  if(styling.indexOf(strr2) != -1){
+  }
+  else{
+    var hT = $('a.load-more_btn').offset().top - 500;
+      
+       if($(window).scrollTop() > hT){
+        if(kk==0){
+         e.stopPropagation();
+          e.preventDefault();
+          kk=1;
+          $('a.load-more_btn').click();
+          setTimeout(function(){ 
+            kk=0;
+            }, 2000);
+        }
+         }
+  }
+        });
+       </script>
+  
+      {% endif %}
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
@@ -161,6 +320,22 @@
       "step": 1,
       "default": 4,
       "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "section_style",
+      "options": [
+        {
+          "value": "primary_section_style",
+          "label": "Primary Design"
+        },
+        {
+          "value": "secondary_section_style",
+          "label": "Secondary Design"
+        }
+      ],
+      "default": "primary_section_style",
+      "label": "Select Thumbnail Style"
     },
     {
       "type": "header",
@@ -292,7 +467,18 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type":      "select",
+      "id":        "pagination_type",
+      "label":     "Pagination Type",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "scroll", "label": "Scroll" },
+        { "value": "load_more_btn", "label": "Load More Button" }
+      ],
+      "default":   "default"
+   }
   ]
 }
 {% endschema %}
