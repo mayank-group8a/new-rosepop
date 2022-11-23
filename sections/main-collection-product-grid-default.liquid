@@ -2,7 +2,7 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
+{% assign view_product = true %}
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <div class="my_pagination_code">
@@ -122,6 +122,7 @@
                   {% if section.settings.section_style == 'primary_section_style' %}
                     {% render 'new-card-product',
                       card_product: product,
+                      view_product: view_product,
                       media_aspect_ratio: section.settings.image_ratio,
                       show_secondary_image: section.settings.show_secondary_image,
                       show_vendor: section.settings.show_vendor,
@@ -133,6 +134,7 @@
                     {% else %}
         {% render 'card-product',
                       card_product: product,
+                      view_product: view_product,
                       media_aspect_ratio: section.settings.image_ratio,
                       show_secondary_image: section.settings.show_secondary_image,
                       show_vendor: section.settings.show_vendor,
@@ -167,6 +169,7 @@
                 {% if section.settings.section_style == 'primary_section_style' %}
                   {% render 'new-card-product',
                     card_product: product,
+                    view_product: view_product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
@@ -178,6 +181,7 @@
                   {% else %}
       {% render 'card-product',
                     card_product: product,
+                    view_product: view_product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
@@ -207,6 +211,7 @@
                 {% if section.settings.section_style == 'primary_section_style' %}
                   {% render 'new-card-product',
                     card_product: product,
+                    view_product: view_product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
@@ -218,6 +223,7 @@
                   {% else %}
       {% render 'card-product',
                     card_product: product,
+                    view_product: view_product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
@@ -300,7 +306,7 @@
       {% endif %}
 {% schema %}
 {
-  "name": "t:sections.main-collection-product-grid.name",
+  "name": "Product grid default",
   "class": "section",
   "settings": [
     {
