@@ -119,7 +119,7 @@
                       {% render 'icon-minus' %}
                     </div>
                   </summary>
-                  <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
+                  <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %} {{ filter.label }}">
                     {%- if filter_type != 'vertical' -%}
                       <div class="facets__header">
                         <span class="facets__selected no-js-hidden">{{ 'products.facets.filters_selected' | t: count: filter.active_values.size }}</span>
@@ -361,8 +361,7 @@
                       <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-plus' %}
-                  {% render 'icon-minus' %}
+                  {% render 'icon-arrow' %}
                 </div>
               </div>
 
@@ -414,8 +413,7 @@
                     <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                   {%- endfor -%}
                 </select>
-                {% render 'icon-plus' %}
-                {% render 'icon-minus' %}
+                {% render 'icon-arrow' %}
               </div>
             </div>
 
@@ -503,7 +501,7 @@
                           {% render 'icon-minus' %}</noscript>
                         </div>
                       </summary>
-                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
+                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient  {{ filter.label | escape }}">
                         <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
                           {% render 'icon-arrow' %}
                           {{ filter.label | escape }}
@@ -721,8 +719,7 @@
                   <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                 {%- endfor -%}
               </select>
-              {% render 'icon-plus' %}
-                {% render 'icon-minus' %}
+              {% render 'icon-arrow' %}
             </div>
           </div>
 
