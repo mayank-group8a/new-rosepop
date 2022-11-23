@@ -426,7 +426,7 @@
                   {%- form 'product',
                     product,
                     id: product_form_id,
-                    class: 'form',
+                    class: 'form product-form product-form-product-customapp-template',
                     novalidate: 'novalidate',
                     data-type: 'add-to-cart-form'
                   -%}
@@ -2647,6 +2647,8 @@ d3.select("#custom_addtocart").on("click", function(){
       var customize_with_product_price = $(".sticky_cart .sticky_price .f_price").text();
       var customize_final_price        = parseFloat(customize_with_product_price) - parseFloat(product_basic_price);
       var product_id = $(".product-form.product-form-product-customapp-template .product_id").val();
+      console.log(product_id);
+      console.log(customize_with_product_price);
       {{ customize_final_price }}
       if(customize_final_price != 0 || customize_final_price != ''){
         
@@ -2665,7 +2667,7 @@ d3.select("#custom_addtocart").on("click", function(){
 
               console.log("Variant ID:---"+returnval.id);
                 if(returnval.id != ''){
-                  $(".product-form.product-form-product-customapp-template .variant_id_c").val(returnval.id);
+                  $(".product-form.product-form-product-customapp-template.variant_id_c").val(returnval.id);
                   console.log('Variant successfully created!!!');
                                   
                   // MKT added new add to cart code
