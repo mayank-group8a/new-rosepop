@@ -90,6 +90,7 @@ ul.all_steps li span.number {
   font-weight: 600;
   text-align:center;
   color: #df9cac;
+      word-break: break-word;
 }
 #customize_section_right ul li.active span {
   color: rgb(var(--color-heading-1-text));
@@ -267,6 +268,7 @@ span.box_sub_title p {
 }
 .product-form .next_pervious .next:hover {
     background-color: #df9cac;
+  color: #ffffff;
 }
 .product-form .next_pervious .back:hover {
   background-color: rgb(var(--color-heading-1-text));
@@ -293,6 +295,9 @@ span.box_sub_title p {
   height: 330px; 
   margin: 20px auto; 
   position: relative; 
+        text-align: center !important;
+    padding: 100px 43px !important;
+    font-family: var(--font-heading-family);
 }
 #customize_section_right .round img { 
   position: absolute; 
@@ -470,6 +475,7 @@ div#clear_img_custom_app {
     text-decoration-color: #DF9CAC;
     text-underline-offset: 1rem;
     margin-bottom: 10px;
+  max-width: 330px;
 }
 #customize_section_right textarea:focus-visible {
     outline: none;
@@ -563,3 +569,126 @@ input.charm_latter, input.charm_latter::placeholder {
 }
 /* body.loader_process:after { position: fixed; left: 0; right: 0; top: 0; background: rgba(255, 255, 255, 0.95); height: 100%; width: 100%; content: ''; z-index: 99999; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; top: 50%; z-index: 999999; background: url({{ 'rose.gif' | assets_img_url: 'mastre' }}) no-repeat center center; width: 150px; height: 150px; background-size: 150px auto; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; margin: 0 auto; } */
+.addtocart {
+    vertical-align: middle;
+    font-size: 18px;
+    background-color: rgb(var(--color-heading-1-text));
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    transition: 0.2s easy;
+    cursor: pointer;
+  display: inline-block;
+    margin: 0 10px;
+    transition: 0.2s easy;
+    cursor: pointer;
+}
+.product-form .next_pervious .addtocart:hover {
+    background-color: #df9cac;
+  color: #ffffff;
+}
+.addtocart:hover {
+    background-color: #ffffff;
+    color: rgb(var(--color-heading-1-text));
+}
+@media screen and (max-width: 1600px) { 
+.product-title .product__title h1 {
+  font-size: 24px;
+}
+  ul.all_steps p {
+    font-size: 20px;
+  }
+  #customize_section_right h3 {
+    font-size: 20px;
+  }
+  #customize_section_right h3 {
+    font-size: 18px;
+  }
+  span.box_sub_title {
+    font-size: 16px;
+  }
+  span.box_sub_title p {
+    gont-size: 16px;
+  }
+  .btn_next, .btn_back, .addtocart {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1199px) {
+.product-title .product__title h1 {
+    font-size: 22px;
+}
+  ul.all_steps p {
+    font-size: 18px;
+}
+  ul.all_steps li span.number {
+    font-size: 14px;
+    padding: 0 8px;
+        margin-right: 10px;
+  }
+  .navigation-step li.done span.number::before {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+@media screen and (max-width: 991px) {
+  ul.all_steps p {
+    display: none;
+  }
+  ul.all_steps li.active {
+    border: 0 none;
+  }
+  ul.all_steps li {
+    margin-bottom: 10px;
+  }
+  .product__title {
+    margin-top: 1rem;
+  }
+  div#mobile_price_c {
+    display: none !important;
+}
+  .fragrance_cover li {
+        flex: 1 1 calc(33.33% - 20px);
+  }
+    #custom_image #live_svg svg {
+    width: 100%;
+    height: auto;
+}
+  ul.all_steps {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+#customize_section_right ul li {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+  .product-form .next_pervious {
+    text-align: center;
+}
+  .sticky_price {
+    font-size: 18px;
+  }
+  .btn_next, .btn_back, .addtocart {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+  #customize_section_right .rectangle {
+    width: 340px !important;
+}
+  div#clear_img_custom_app {
+    margin-right: 0 !important;
+    max-width: 100%;
+}
+  .product__info-wrapper.grid__item {
+    padding-top: 0;
+  }
+}
