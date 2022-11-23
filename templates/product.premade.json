@@ -371,6 +371,7 @@
             "title_color": "#c68792",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "description_color": "#444444",
+            "main_image": "shopify:\/\/shop_images\/step1_box_900x_f0556ca5-98f7-4971-9b2b-1dbc60ee3a32.webp",
             "circle_background": "#f5dadf",
             "circle_color": "#221e1f"
           }
@@ -382,6 +383,7 @@
             "title_color": "#c68792",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "description_color": "#444444",
+            "main_image": "shopify:\/\/shop_images\/Build_Your_Own_Step_3_UPDATED_900x_c8bde5af-5a9f-4efc-98e8-64d3a7f522d2.webp",
             "circle_background": "#f5dadf",
             "circle_color": "#221e1f"
           }
@@ -393,6 +395,7 @@
             "title_color": "#c68792",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br><\/p>\n<ul>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<\/ul>",
             "description_color": "#444444",
+            "main_image": "shopify:\/\/shop_images\/step1_box_900x_f0556ca5-98f7-4971-9b2b-1dbc60ee3a32.webp",
             "circle_background": "#f5dadf",
             "circle_color": "#000000"
           }
@@ -408,7 +411,6 @@
         "heading": "Looking for more fun? Try our Custom Pop",
         "heading_size": "h1",
         "heading_color": "#000000",
-        "main_image": "shopify:\/\/shop_images\/template_2.png",
         "link_label": "GET STARTED",
         "link": "#"
       }
