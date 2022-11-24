@@ -29,7 +29,9 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-
+{% if template contains 'product' %}
+<div class="price_product">
+  {% endif %}
 <div class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
@@ -91,3 +93,9 @@
     </span>
   {%- endif -%}
 </div>
+{% if template contains 'product' %}
+  <div class="trustspot-inline-product" data-product-sku="{{ product.id }}" ></div>
+  {% endif %}
+  {% if template contains 'product' %}
+</div>
+    {% endif %}

@@ -1,4 +1,4 @@
-ul.all_steps {
+.navigation-step ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -13,21 +13,21 @@ ul.all_steps {
     font-size: 28px;
     font-weight: 600;
 }
-ul.all_steps li {
+.navigation-step ul li {
     display: flex;
 }
-ul.all_steps p {
+.navigation-step ul p {
     font-size: 24px;
     font-weight: 600;
     color: rgb(var(--color-heading-1-text));
       margin-bottom: 10px;
     margin-top: 10px;
 }
-ul.all_steps li {
+.navigation-step ul li {
     display: flex;
     align-items: center;
 }
-ul.all_steps li span.number {
+.navigation-step ul li span.number {
   font-size: 16px;
   font-weight: 600;
   color: rgb(var(--color-heading-1-text));
@@ -163,17 +163,17 @@ ul.all_steps li span.number {
     font-family: 'Muli';
     font-weight: 500;
 }
-ul.all_steps li.active span.number {
+.navigation-step ul li.active span.number {
     background-color: #df9cac;
     color: #fff;
 }
-ul.all_steps li {
+.navigation-step ul li {
   border-bottom: 3px solid transparent;
 }
-ul.all_steps li.active {
+.navigation-step ul li.active {
  border-bottom-color: #df9cac; 
 }
-ul.all_steps li.done span.number {
+.navigation-step ul li.done span.number {
   position: relative;
   background-color: #df9cac;
       color: #df9cac;
@@ -600,7 +600,7 @@ body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; to
 .product-title .product__title h1 {
   font-size: 24px;
 }
-  ul.all_steps p {
+  .navigation-step ul p {
     font-size: 20px;
   }
   #customize_section_right h3 {
@@ -623,10 +623,10 @@ body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; to
 .product-title .product__title h1 {
     font-size: 22px;
 }
-  ul.all_steps p {
+  .navigation-step ul p {
     font-size: 18px;
 }
-  ul.all_steps li span.number {
+  .navigation-step ul li span.number {
     font-size: 14px;
     padding: 0 8px;
         margin-right: 10px;
@@ -638,13 +638,13 @@ body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; to
 
 }
 @media screen and (max-width: 991px) {
-  ul.all_steps p {
+  .navigation-step ul p {
     display: none;
   }
-  ul.all_steps li.active {
+  .navigation-step ul li.active {
     border: 0 none;
   }
-  ul.all_steps li {
+  .navigation-step ul li {
     margin-bottom: 10px;
   }
   .product__title {
@@ -660,7 +660,7 @@ body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; to
     width: 100%;
     height: auto;
 }
-  ul.all_steps {
+  .navigation-step ul {
     padding-left: 0;
   }
 }

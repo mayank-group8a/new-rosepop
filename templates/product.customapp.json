@@ -134,6 +134,7 @@
     },
     "image-with-text": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
@@ -172,6 +173,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column-0": {
           "type": "column",
@@ -218,6 +220,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "color_bg": "#fcf6f7",
         "heading": "If You Like This, You'll Love These",
@@ -250,6 +253,7 @@
     },
     "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
       "type": "pop-collection",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
         "title": "POP CLASSICS",
@@ -296,6 +300,7 @@
     },
     "cf32aa72-c238-4eda-a048-2af78967df5c": {
       "type": "logo-list",
+      "disabled": true,
       "blocks": {
         "template--14432441663568__cf32aa72-c238-4eda-a048-2af78967df5c-16685314595701c4aa-0": {
           "type": "logo",
@@ -368,6 +373,7 @@
     },
     "804eb1d0-0a4a-450f-b9d4-b8f64d06b902": {
       "type": "your-own-section",
+      "disabled": true,
       "blocks": {
         "template--14432441663568__804eb1d0-0a4a-450f-b9d4-b8f64d06b902-16685317176999066c-0": {
           "type": "column",
@@ -416,6 +422,11 @@
         "link_label": "GET STARTED",
         "link": "#"
       }
+    },
+    "4e4219d7-26fc-4be2-b133-23075ea5bf8b": {
+      "type": "product-trustspot-widget",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -425,6 +436,7 @@
     "product-recommendations",
     "441fd66c-5b0b-4b21-b103-4918960e0f5f",
     "cf32aa72-c238-4eda-a048-2af78967df5c",
-    "804eb1d0-0a4a-450f-b9d4-b8f64d06b902"
+    "804eb1d0-0a4a-450f-b9d4-b8f64d06b902",
+    "4e4219d7-26fc-4be2-b133-23075ea5bf8b"
   ]
 }

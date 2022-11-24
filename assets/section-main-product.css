@@ -1658,3 +1658,23 @@ form.installment {
 }
 
 }
+#trustspot-widget-wrapper {
+    max-width: 1400px !important;
+}
+.product__media-gallery.enable_thumbnail_slider button::before {
+    display: none;
+}
+.price_product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 991px) { 
+.price_product .trustspot-inline-product {
+    flex: 1 1 100%;
+}
+  .price_product .price {
+    flex: 1 1 100%;
+}
+}

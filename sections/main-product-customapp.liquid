@@ -62,7 +62,7 @@
   <div class="product-title">
     <div class="product__title" {{ block.shopify_attributes }}>
     <h1>{{ product.title | escape }}</h1>
-    <div class="trustspot-inline-product" data-product-sku="{{ product.id }}" ></div
+    <div class="trustspot-inline-product" data-product-sku="{{ product.id }}" ></div>
     </div>
   </div>
   </div>
@@ -800,6 +800,8 @@
   
 </div>
 <canvas width="500" height="500" style="display:none"></canvas>
+
+
   
   {% render 'product-media-modal' variant_images: variant_images %}
 
