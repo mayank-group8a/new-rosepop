@@ -400,7 +400,7 @@ a.product__text {
 }
 @media screen and (min-width: 992px) {
   .product__info-container {
-    max-width: 60rem;
+    max-width: 100%;
   }
 }
 .product__description-title {
@@ -752,12 +752,14 @@ a.product__text {
   visibility: hidden;
   opacity: 0;
   z-index: -1;
+  display: none;
 }
 
 .product-media-modal[open] {
   visibility: visible;
   opacity: 1;
   z-index: 101;
+  display: block;
 }
 
 .product-media-modal__dialog {
