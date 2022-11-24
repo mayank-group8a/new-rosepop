@@ -115,7 +115,7 @@ body .special-collections .image-with-text__grid.grid.df{
   $(".image-with-text__grid").slice(0, 4).show().addClass("df");
 		$("body").on('click touchstart', '.load-more', function (e) {
 			e.preventDefault();
-			$(".image-with-text__grid:hidden").slice(0, 4).slideDown().addClass("df");
+			$(".image-with-text__grid:hidden").slice(0, 4).addClass("df");
 			if ($(".image-with-text__grid:hidden").length == 0) {
 				$(".load-more").css('visibility', 'hidden');
 			}

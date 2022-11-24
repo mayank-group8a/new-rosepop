@@ -169,6 +169,34 @@ $(document).ready(function() {
     $('.new-featured-slider').responsiveEqualHeightGrid();
    }
 
+  $(window).on('load resize ready', function() {
+    getEqualHeightGrid();
+    setTimeout(function(){
+      getEqualHeightGrid();
+    }, 1000);
+    setTimeout(function(){
+      getEqualHeightGrid();
+    }, 2000);
+    setTimeout(function(){
+      getEqualHeightGrid();
+    }, 3000);
+    setTimeout(function(){
+      getEqualHeightGrid();
+    }, 4000);
+    setTimeout(function(){
+      getEqualHeightGrid();
+    }, 5000);
+   });
+   function getEqualHeightGrid() {
+    $('.product-grid .grid__item').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__heading').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__inner').responsiveEqualHeightGrid();
+     // $('.product-grid .grid__item .card-wrapper .card__inner .card__media').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
+   }
+
    // Pre-Made Hide/Show
 $(document).ready(function(){
     $(".add-your-message-content").hide();

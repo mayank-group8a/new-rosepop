@@ -238,6 +238,7 @@
   font-family: Muli;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 28px;
 }
 .multicolumn-card__info .rte p br {
   display: none;

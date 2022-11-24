@@ -158,7 +158,7 @@
 }
 
 .card__media .media img {
-  height: 100%;
+  height: auto !important;
   object-fit: cover;
   object-position: center center;
   width: 100%;
@@ -403,6 +403,14 @@
 .old-card-products .card__inner {
   border: 1px solid rgba(112,112,112,.2);  
 }
+.old-card-products {
+    padding: 0 35px;
+}
+@media screen and (max-width: 1199px){
+.old-card-products {
+    padding: 0 15px;
+}
+}
 @media screen and (max-width: 479px){
   .new-card-products {
     margin: 0 25px;
@@ -431,4 +439,11 @@
     font-size: 12px;
     min-height: auto;
 }
+}
+
+.card-information .price_product {
+    display: block;
+}
+.card-information .trustspot-inline-product {
+    display: none;
 }

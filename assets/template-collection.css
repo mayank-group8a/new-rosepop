@@ -169,7 +169,7 @@ span.field-currency {
   order: 5;
 }
 span#ProductCountDesktop {
-  color: #000;
+  color: rgb(var(--color-heading-1-text));
   font-family: 'Muli';
   font-weight: 600;
   margin-bottom: 15px;

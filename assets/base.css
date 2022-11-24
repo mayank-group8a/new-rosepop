@@ -1431,7 +1431,7 @@ button.shopify-payment-button__button--unbranded {
 .customer button {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  line-height: normal;
 }
 
 .button--tertiary {
@@ -3597,4 +3597,11 @@ predictive-search .search__button .icon path {
     font-size: 14px;
     font-weight: 300;
     font-family: 'Muli';
+}
+.kl-private-reset-css-Xuajs1 p span {
+    font-family: 'Muli' !important;
+    font-weight: 700 !important;
+}
+.faq div#shopify-section-footer {
+    background-color: #fcf6f7;
 }

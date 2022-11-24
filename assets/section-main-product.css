@@ -1680,3 +1680,6 @@ form.installment {
     flex: 1 1 100%;
 }
 }
+.product-media-modal__content img {
+    max-width: 1080px;
+}

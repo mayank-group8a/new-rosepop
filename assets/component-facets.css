@@ -461,7 +461,7 @@ span.active-facets__button-inner:after {
 }
 
 .active-facets__button--light .active-facets__button-inner {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
+  box-shadow: none;
 }
 
 .active-facets__button--light:hover .active-facets__button-inner {
