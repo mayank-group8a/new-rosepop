@@ -3593,3 +3593,8 @@ predictive-search .search__button .icon path {
 .menu .price_product {
     display: none;
 }
+.trustspot-inline-rating a.ts-reviews-count {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Muli';
+}

@@ -209,9 +209,12 @@
   display: block;
   background-image: url({{ 'icon-question1.svg' | file_url }});
 }
-#customize_section_right h3 span.step_info:hover .tooltip_content_c {
+    #customize_section_right h3 span.step_info:hover .tooltip_content_c {
     opacity: 1!important;
     visibility: visible!important;
+    
+    }
+#customize_section_right h3 span.step_info .tooltip_content_c {
     position: absolute;
     left: -40px;
     right: auto;
@@ -567,8 +570,8 @@ input.charm_latter, input.charm_latter::placeholder {
     padding-left: 10px;
     font-family: 'Muli';
 }
-/* body.loader_process:after { position: fixed; left: 0; right: 0; top: 0; background: rgba(255, 255, 255, 0.95); height: 100%; width: 100%; content: ''; z-index: 99999; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
-body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; top: 50%; z-index: 999999; background: url({{ 'rose.gif' | assets_img_url: 'mastre' }}) no-repeat center center; width: 150px; height: 150px; background-size: 150px auto; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; margin: 0 auto; } */
+body.loader_process:after { position: fixed; left: 0; right: 0; top: 0; background: rgba(255, 255, 255, 0.95); height: 100%; width: 100%; content: ''; z-index: 99999; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; top: 50%; z-index: 999999; background: url({{ 'rose.gif' | assets_img_url: 'mastre' }}) no-repeat center center; width: 150px; height: 150px; background-size: 150px auto; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; margin: 0 auto; }
 .addtocart {
     vertical-align: middle;
     font-size: 18px;

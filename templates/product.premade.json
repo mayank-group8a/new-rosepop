@@ -350,7 +350,7 @@
         "desktopInit": false,
         "desktopShow": 5,
         "desktopArrows": true,
-        "desktopDots": true,
+        "desktopDots": false,
         "tabInit": true,
         "tabShow": 3,
         "tabArrows": true,
