@@ -3491,8 +3491,11 @@ h3.title.h2 {
     padding-left: 0.7rem;
 }
   .list-menu li .header__menu-item {
-    font-size: 11px;
+    font-size: 12px;
 }
+  .product-list-grid span.product-card__title {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 992px) { 
   h2.title.h1 {
@@ -3587,4 +3590,6 @@ predictive-search .search__button .icon path {
       color: rgb(var(--color-foreground));
   font-size: 16px;
 }
-
+.menu .price_product {
+    display: none;
+}

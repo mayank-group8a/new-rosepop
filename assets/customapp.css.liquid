@@ -692,3 +692,36 @@ body.loader_process:before { content: ''; position: fixed; left: 0; right: 0; to
     padding-top: 0;
   }
 }
+.custom__app_header .trustspot-inline-product {
+    margin-top: 10px;
+}
+@media screen and (max-width: 1199px) {
+.product--medium:not(.product--no-media) .product__media-wrapper, .product--small:not(.product--no-media) .product__info-wrapper {
+  max-width: 100%;
+  width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2)
+}
+  .product--medium:not(.product--no-media) .product__info-wrapper {
+    max-width: 100%;
+  width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2);
+    padding-left: 0;
+  }
+  .product__media-gallery.enable_thumbnail_slider {
+    display: flex;
+    flex-direction: column;
+}
+  .product__media-gallery.enable_thumbnail_slider .slick_main_slider, .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider {
+    width: 100%;
+}
+  .product .slider-for {
+    padding-left: 1.5rem;
+}
+  .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider ul {
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+  .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
+    margin-right: 10px;
+}
+}
