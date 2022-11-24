@@ -259,7 +259,7 @@
     max-width: 27% !important;
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width:991px) {
   .multicolumn ul.multicolumn-list.grid--3-col-desktop li {
     margin-bottom: 30px;
   }

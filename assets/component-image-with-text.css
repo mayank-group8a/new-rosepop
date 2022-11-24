@@ -337,13 +337,26 @@ h4.image-with-text__text.image-with-text__text--caption {
   border: 1px solid rgb(var(--color-heading-2-text));
   border-radius: 5px;
 }
-@media screen and (max-width: 750px) {
+
+
+
+@media screen and (max-width: 991px) {
+  .image-with-text .grid .image-with-text__media-item.grid__item {
+    width: 100%;
+  }
+  .image-with-text .grid .image-with-text__text-item.grid__item {
+    width: 100%;
+  }
   .image-with-text .image-with-text__text-item .image-with-text__content {
     padding: 0;
     text-align: center;
     margin-top: 30px;
     display: flex;
     align-items: center;
+}
+.image-with-text .image-with-text__text-item .image-with-text__content * {
+  text-align: center;
+  width: 100%;
 }
 }
 
