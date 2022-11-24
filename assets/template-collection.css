@@ -288,7 +288,7 @@ a.button.create_btn {
 }
 @media screen and (max-width:767px){
 .new-card-products {
-  margin: 0 !important;
+  margin: 0 1px !important;
 }
 h4.collection_title.h4 {
   text-align: center;

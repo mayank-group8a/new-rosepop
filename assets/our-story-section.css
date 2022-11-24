@@ -53,7 +53,7 @@ height: auto;
 a.our-story-btn.line-btn {
 margin-left: 20px;
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1199px){
 .our-story-section-inner {
   display: flex;
   flex-direction: column;

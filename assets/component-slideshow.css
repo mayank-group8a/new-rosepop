@@ -260,3 +260,31 @@ slideshow-component .slideshow__text.banner__box h2.banner__heading.h1 {
   font-size: 26px;
   }
 }
+@media screen and (max-width: 1199px) { 
+.slideshow__media.banner__media.media {
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  color: rgb(var(--color-foreground));
+  list-style: none;
+  --focus-outline-padding: .5rem;
+  --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
+  --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
+  box-sizing: inherit;
+  display: block;
+  background-color: rgba(var(--color-foreground),.1);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+.slideshow__text-wrapper.banner__content {
+  height: max-content;
+  padding: 0;
+}
+}
