@@ -1672,6 +1672,9 @@ form.installment {
     justify-content: space-between;
     align-items: center;
 }
+div#live_svg {
+  text-align: center;
+}
 @media screen and (max-width: 991px) { 
 .price_product .trustspot-inline-product {
     flex: 1 1 100%;
@@ -1682,4 +1685,14 @@ form.installment {
 }
 .product-media-modal__content img {
     max-width: 1080px;
+}
+@media screen and (max-width: 767px) { 
+#customize_section_right h3 span.step_info .tooltip_content_c {
+  left: unset !important;
+  right: -80px !important;
+}
+#customize_section_right .remove_btn_monogram {
+  position: unset !important;
+  margin: 10px 0 !important;
+}
 }
