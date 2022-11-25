@@ -18,6 +18,7 @@ section.faq_outer.page-width h2.title.h1 {
 }
 .accordion.question svg {
     max-width: 15px;
+    height: 15px !important;
     height: max-content;
 }
 .accordion.question svg:nth-child(2) {
@@ -31,6 +32,7 @@ section.faq_outer.page-width h2.title.h1 {
 }
 .accordion.question h4.ques {
     margin-left: 20px;
+    display: block;
 }
 .panel.answer {
     margin-left: 35px;

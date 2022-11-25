@@ -540,3 +540,11 @@ noscript .localization-selector.link {
     text-underline-offset: 0.3rem;
     color: rgb(var(--color-heading-2-text));
 }
+@media screen and (max-width: 767px) {
+.footer-block__details-content .list-menu__item--link {
+  display: inline-block;
+}
+.shopify-section .footer-block__newsletter p {
+  text-align: left;
+}
+}
