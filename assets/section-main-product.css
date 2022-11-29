@@ -1595,7 +1595,7 @@ button.product-form__submit.button:hover {
 }
 @media screen and (max-width: 1279px) {
   .product__title h1 {
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
   }
@@ -1611,7 +1611,7 @@ button.product-form__submit.button:hover {
 }
 @media screen and (max-width: 992px) { 
   .product__title h1 {
-    font-size: 26px;
+    font-size: 18px;
   }
     .product__info-wrapper.grid__item {
     padding-left: 0;
@@ -1620,7 +1620,7 @@ button.product-form__submit.button:hover {
 }
 @media screen and (max-width: 767px) { 
   .product__title h1 {
-    font-size: 24px;
+    font-size: 18px;
   }
   .product__info-wrapper .price {
     font-size: 22px;

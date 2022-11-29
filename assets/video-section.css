@@ -28,7 +28,6 @@
 }
 .mp4Video video#banner-video {
   width: 100%;
-  max-width: 1050px;
   margin: 0 auto;
   display: block;
 }

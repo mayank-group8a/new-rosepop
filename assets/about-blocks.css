@@ -127,6 +127,11 @@ h2.about-blocks-heading.title.h1 {
     height: 250px;
     }
 }
+@media screen and (max-width:767px){
+.rose-about-img {
+  display: none;
+}
+}
 @media screen and (max-width:479px){
 .rose-about-img img {
     max-width: 165px;

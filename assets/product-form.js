@@ -51,6 +51,11 @@ if (!customElements.get('product-form')) {
             return;
           }
 
+          if (response.status !== 422) {
+            var gtag_price = parseFloat(response.price / 100).toFixed(2);
+            gtag_report_conversion('',gtag_price)
+          }
+
           this.error = false;
           const quickAddModal = this.closest('quick-add-modal');
           if (quickAddModal) {

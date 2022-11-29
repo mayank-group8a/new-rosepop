@@ -1,15 +1,18 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    <meta name="facebook-domain-verification" content="5720j5kr3zl1hi77q6flqht5y78qpp" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{ 'new-fonts.css' | asset_url | stylesheet_tag }}
-    <link rel="canonical" href="{{ canonical_url }}">
+    {%- if canonical_url != blank  -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     {%- if settings.favicon != blank -%}
@@ -33,7 +36,7 @@
 
     {% render 'meta-tags' %}
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
@@ -242,19 +245,66 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  <link href="https://trustspot.io/index.php/api/pub/product_widget_css/7919/widget.css" rel="stylesheet" type="text/css"/>
-  <script>trustspot_key='65282279c05b1823c005dd12cb09a2346fd79839a3822ebaaabaacebb9bfc8031d18ea7575e3c9e138a34d654b99221a96fd00a2246fb31194a0d87fd94a209c';</script>
-  <script src="https://trustspot.io/assets/js/trustspot_product_reviews.js"></script>
-  <script>
-    function gtag_report_conversion(url,price,iteam) {
-    console.log(price);
-}
-  </script>
   
-   <!-- BEGIN PRIVY WIDGET CODE -->
-<script type='text/javascript'> var _d_site = _d_site || '929A26CD10E197B6653CD16E'; </script>
-<script src='https://widget.privy.com/assets/widget.js'></script>
-<!-- END PRIVY WIDGET CODE --> 
+    <link href="https://trustspot.io/index.php/api/pub/product_widget_css/7919/widget.css" rel="stylesheet" type="text/css"/>
+    <script>trustspot_key='65282279c05b1823c005dd12cb09a2346fd79839a3822ebaaabaacebb9bfc8031d18ea7575e3c9e138a34d654b99221a96fd00a2246fb31194a0d87fd94a209c';</script>
+    <script src="https://trustspot.io/assets/js/trustspot_product_reviews.js"></script>
+
+  
+    <!-- Global site tag (gtag.js) - Google Ads: 714333271 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-714333271"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-714333271');
+      gtag('config', 'AW-437212000');
+      gtag('config', 'AW-753684101');
+    </script>
+    
+    <!-- MKT added tracking code -->
+    <script>
+    function gtag_report_conversion(url,price) {
+      console.log("Add to cart event call");
+      console.log("Price: "+ price);
+      var callback = function () {
+        /*if (typeof(url) != 'undefined') {
+          window.location = url;
+        }*/
+      };
+      /*
+      gtag('event', 'conversion', {
+          'send_to': 'AW-714333271/7ePFCIGeo8ABENe4z9QC',
+          'value': price,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      */
+      return false;
+    }
+    </script>
+    <!-- MKT added tracking code -->
+
+    <meta name="google-site-verification" content="dob3xWUUyVlte1EA-T0ehe5UZll4pmR8GPMgpOhmVtE" />
+    <meta name="google-site-verification" content="LtEfaLVUT5vZ0tN23yScdG35U3UOLE7Yl7BFHZIyxx8" />
+
+    <!-- Tik Tok Tracking code MKT-->
+    <script>
+    (function() {
+      var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+      ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=BRR3CG9CQKSDMNI6O1EG';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ta,s);
+    })();
+    </script>
+    <!-- Tik Tok Tracking code MKT-->
+    
+    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"21015721"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>  
+  
+    <!-- BEGIN PRIVY WIDGET CODE -->
+    <script type='text/javascript'> var _d_site = _d_site || '929A26CD10E197B6653CD16E'; </script>
+    <script src='https://widget.privy.com/assets/widget.js'></script>
+    <!-- END PRIVY WIDGET CODE --> 
   
   </head>
 
@@ -314,10 +364,27 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-<!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+    <!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
     {% render 'hextom_usb_main', product: product, customer: customer %}
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
 
+    <script src="https://cdn.attn.tv/rosepops/dtag.js"></script>
+
+    <!--BeginCFFPersistentCartCart-->
+    {% if customer %}
+    <script>
+        window.cffCustomer = {
+            name: '{{customer.name}}',
+            email: '{{customer.email}}',
+            hasAccount: '{{customer.has_account}}',
+            id: '{{customer.id}}'
+        };
+    </script>
+    {% endif %}
     
+    <script>
+        window.cffPCLiquidPlaced = true
+    </script>
+    <!--EndCFFPersistentCartCart-->    
   </body>
 </html>
