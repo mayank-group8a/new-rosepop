@@ -27,6 +27,12 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+  .shopify-section-header-hidden {
+    transform: translateY(0%) !important;
+  }
+  div#my_sticky_header {
+    z-index: 11;
+}
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -676,7 +682,7 @@
     }
 
     connectedCallback() {
-      this.header = document.getElementById('shopify-section-header');
+      this.header = document.getElementById('my_sticky_header');
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;

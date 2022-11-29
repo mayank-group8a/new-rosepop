@@ -69,10 +69,27 @@
         <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--2-col-tablet grid--4-col-desktop {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              {%- case block.type -%}
+                {%- when 'link_list' or 'social_media' -%}
+              <details id="Details-menu-drawer-menu-item-{{ forloop.index }}" class="my_details">
+                {%- endcase -%}
               {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                  {%- case block.type -%}
+                    {%- when 'link_list' or 'social_media' -%}
+                      <summary>
+                    {%- endcase -%}
+                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}
+                {%- case block.type -%}
+                  {%- when 'link_list' or 'social_media' -%}
+                    {% render 'icon-plus' %}
+                    {% render 'icon-minus' %}
+                  {%- endcase -%}
+              </h2>
               {%- endif -%}
-
+            {%- case block.type -%}
+              {%- when 'link_list' or 'social_media' -%}
+              </summary>
+              {%- endcase -%}
               {%- case block.type -%}
                 {%- when 'text' -%}
                   <div class="footer-block__details-content rte">
@@ -80,6 +97,10 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank -%}
+                      {%- case block.type -%}
+                        {%- when 'link_list' or 'social_media' -%}
+                          <div  tabindex="-1">
+                        {%- endcase -%}
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li>
@@ -95,6 +116,10 @@
                   <li class="footer-contact"><a href="tel:{{ block.settings.telephone }}" class="link link--text list-menu__item list-menu__item--link">{% render 'icon-telephone' %} {{ block.settings.telephone }}</a></li>
                   {% endif %}
                     </ul>
+                  {%- case block.type -%}
+                    {%- when 'link_list' or 'social_media' -%}
+                    </div>
+                    {%- endcase -%}
                   {%- endif -%}
                 {%- when 'newsletter' -%}
                 <div class="footer-block--newsletter">
@@ -242,6 +267,10 @@
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
                   </div>
+                {%- endcase -%}
+              {%- case block.type -%}
+                {%- when 'link_list' -%}
+                </details>
                 {%- endcase -%}
             </div>
           {%- endfor -%}
@@ -419,6 +448,63 @@
   customElements.define('localization-form', LocalizationForm);
 {% endjavascript %}
 
+<style>
+  details.my_details h2.footer-block__heading svg {
+    max-width: 15px;
+    height: 15px!important;
+    fill: rgb(var(--color-heading-2-text));
+}
+details.my_details h2.footer-block__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+details.my_details h2.footer-block__heading svg:nth-child(2) {
+  display: none;
+}
+details.my_details[open] h2.footer-block__heading svg:nth-child(1) {
+  display: none;
+}
+details.my_details[open] h2.footer-block__heading svg:nth-child(2) {
+  display: block;
+}
+  @media screen and (min-width: 749px){
+    details.my_details h2.footer-block__heading svg {
+    display: none !important;
+}
+details.my_details summary{
+  pointer-events: none;
+}
+}
+@media screen and (max-width: 749px){
+body .footer-block.grid__item {
+  margin: 0 !important;
+}
+ul.footer__list-social.list-unstyled.list-social {
+  margin-bottom: 4rem;
+}
+}
+</style>
+
+<script>
+  $(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth > 749) {
+            $('.my_details').attr('open',1);
+            console.log("opened");
+        }
+        else
+        {
+        }
+    }
+    checkScreenSize();
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.footer.name",

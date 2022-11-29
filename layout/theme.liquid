@@ -317,8 +317,10 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% section 'announcement-bar' %}
-    {% section 'header' %}
+    <div id="my_sticky_header" class="my_sticky_header shopify-section">
+      {% section 'announcement-bar' %}
+      {% section 'header' %}
+  </div>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
