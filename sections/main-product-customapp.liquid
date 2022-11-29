@@ -2651,7 +2651,8 @@ d3.select("#custom_addtocart").on("click", function(){
       var product_id = $(".product-form.product-form-product-customapp-template .product_id").val();
       console.log(product_id);
       console.log(customize_with_product_price);
-      {{ customize_final_price }}
+      console.log(customize_final_price);
+console.log(customize_with_product_price);
       if(customize_final_price != 0 || customize_final_price != ''){
         
         $.ajax({
@@ -2669,7 +2670,7 @@ d3.select("#custom_addtocart").on("click", function(){
 
               console.log("Variant ID:---"+returnval.id);
                 if(returnval.id != ''){
-                  $(".product-form.product-form-product-customapp-template.variant_id_c").val(returnval.id);
+                  $(".product-form.product-form-product-customapp-template .variant_id_c").val(returnval.id);
                   console.log('Variant successfully created!!!');
                                   
                   // MKT added new add to cart code

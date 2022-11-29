@@ -82,7 +82,12 @@
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
-                    <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+                    <a href="{{ item.url }}" class="cart-item__name h4 break">
+                {{ item.product.title | escape }}
+                <!-- **BEGIN** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+    {% render 'hextom_usb_cart', item: item %}
+    <!-- **END** Hextom USB Integration // Cart Include - DO NOT MODIFY -->
+                </a>
 
                     {%- if item.original_price != item.final_price -%}
                       <div class="cart-item__discounted-prices">
@@ -315,7 +320,74 @@
     <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
   </form>
 </cart-items>
+<!-- MKT added Jquery and CSS START-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsonlylightbox@0.5.5/css/lightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsonlylightbox@0.5.5/js/lightbox.min.js"></script>
+<script>
+  var lightbox = new Lightbox();
+  lightbox.load();
+  
+  $(".quantity__input").bind('keyup mouseup', function () {
+    setTimeout(function(){
+     console.log("QTY change function call");
+     $("#cart").submit();
+    }, 3000);
+  });
 
+// MKT added custom cart reload Start
+$( document ).ready(function() {
+  // MKT added fix if found 0.00 price in cart
+  var price_c_v_v = "1";
+  $( "#cart .cart-item td" ).each(function( index ) {
+    var price_c = $(this).find(".cart-item__price-wrapper .price").text();
+    price_c     = price_c.trim();
+    if(price_c == "$0.00"){
+      price_c_v_v = "2";
+    }
+  });
+  
+  if(price_c_v_v == "2"){
+    $("body").addClass("loader_process");
+    cartredirectfunction();
+  }else{
+    $("body").removeClass("loader_process");
+  }
+  // MKT added fix if found 0.00 price in cart
+});
+  
+function cartredirectfunction(){
+   // Get cart data
+   $.ajax({
+     url: '/cart.js',
+     dataType: 'json',
+     type: 'get',
+     success: function(itemData) {
+        console.log("Get cart data");
+        var price_var = "1";
+        $.each( itemData.items, function( i, val ) {
+          if(val.price == ''){
+             price_var = "2";
+          }
+        });
+        if(price_var == "2"){
+         // again call get cart data function.
+         cartredirectfunction();
+        }else{
+          $("body").removeClass("loader_process");
+          window.location.href = 'https://rosepops.com/cart';
+        }
+     },
+     error: function(XMLHttpRequest) {
+       var response = eval('(' + XMLHttpRequest.responseText + ')');
+       response = response.description;
+       console.log("Get Cart Error:"+response);
+     }
+   });
+}
+// MKT added custom cart reload End
+  
+</script>
+<!-- MKT added Jquery and CSS END-->
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
