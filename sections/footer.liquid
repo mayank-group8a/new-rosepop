@@ -503,6 +503,17 @@ ul.footer__list-social.list-unstyled.list-social {
         }
     }
     checkScreenSize();
+
+    $(document).on("click","details.my_details summary", function(){
+      var thiss = $(this);
+      var attr = $(this).parent("details").attr('open');
+    if (typeof attr !== 'undefined' && attr !== false) {
+    }
+    else{
+      $('.my_details').not(thiss).removeAttr('open');
+    }
+  
+    });
 });
 </script>
 {% schema %}

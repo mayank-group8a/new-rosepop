@@ -54,10 +54,42 @@
   #shopify-section-{{ section.id }}{
     background-color: {{ section.settings.color_background }}; 
   }
+  .your-own-main-image .slick-dots li {
+    width: 50px;
+    height: 50px;
+}
+.your-own-main-image .slick-dots li button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #221e1f;
+  background-color: #f5dadf;
+  font-family: 'Muli';
+}
+.your-own-main-image .slick-dots li button:before {
+  display: none;
+}
+.your-own-main-image .slick-dots li.slick-active button {
+  color: #f5dadf!important;
+  background-color: #221e1f!important;
+}
+@media screen and (max-width:991px){
+.your-own-block-counter {
+  display: none;
+}
+}
 </style>
 
 <script>
-  jQuery(document).on("click", ".your-own-block-counter-circle", function(){
+  jQuery(document).ready(function () {
+  jQuery(document).on("mouseover", ".your-own-block-counter-circle", function(){
     var currentval = jQuery(this).attr("circle");
     jQuery(".your-own-block-counter-circle").removeClass("active");
     jQuery(this).addClass("active");
@@ -69,9 +101,46 @@
       }
     });
   });
+
+  $(window).on("resize", function (e) {
+    checkScreenSizee();
+});
+
+function checkScreenSizee(){
+    var newWindowWidth = $(window).width();
+    if (newWindowWidth < 991) {
+        
+  jQuery('.your-own-main-image').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    fade: true,
+    asNavFor: '.your-own-right-inner'
+  });
+  jQuery('.your-own-right-inner').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.your-own-main-image',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: false,
+    adaptiveHeight: true,
+    arrows: false
+  });
+    }
+    else
+    {
+    }
+}
+checkScreenSizee();
+});
 </script>
 
+<script>
+   
 
+</script>
 
 {% schema %}
   {

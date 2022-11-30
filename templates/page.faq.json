@@ -67,13 +67,6 @@
             "ans": "<p>Standard POPs (without custom upgrades) will ship out within one business day of orders being placed. For more customized POPs, we aim to ship out within 2-3 business days of orders being placed.<\/p>"
           }
         },
-        "56b66a94-87b0-4813-97de-54dca85389f9": {
-          "type": "quote",
-          "settings": {
-            "ques": "Once POP'ped, can I put my roses back down if I need to?",
-            "ans": "<p>Yes you can, although this takes a bit of care. So as not to crush your roses, gently slide fingers around the roses until you feel the foam beneath them. Press down on the foam and your roses will settle back down. Pull ribbon and watch the magic happen all over again when your roses POP!<\/p>"
-          }
-        },
         "1d8de405-4951-400e-8cb1-be8cbafb611d": {
           "type": "quote",
           "settings": {
@@ -105,7 +98,6 @@
         "630cc819-5dc7-48a7-a2de-54929d3121ac",
         "c111e455-cd97-4c7a-9ebd-f139cf0ab083",
         "5bad0fbf-8ed9-4b67-8aed-6c0d2fc8ea27",
-        "56b66a94-87b0-4813-97de-54dca85389f9",
         "1d8de405-4951-400e-8cb1-be8cbafb611d",
         "7e93e042-2823-4871-ad5f-c50883088ed3",
         "64ea5372-8a58-456b-90dc-49f003122cd3"
