@@ -1,5 +1,4 @@
 {{ 'd3.v3.min.js' | asset_url | script_tag }}
-
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -67,6 +66,19 @@
   </div>
   </div>
       <div class="custom_tool_top_steps_a">
+
+
+        <div class="next_pervious{% if soldout == true %} soldout{% endif %}">
+            {% comment %}
+            {% if collection.handle contains 'build-your-rosepop' %}
+            <div class="custom-message">Include A Free Video Message and Receive Free Charms</div>
+            {% endif %}
+            {% endcomment %}
+        <div class="soldout">Sold Out</div>
+        <div class="back btn_back" style="display:none">{% comment %}<img src="{{ 'custom-prev-btn.png' | file_img_url: 'x20' }}">{% endcomment %}Back</div>
+        <div class="next btn_next">Next{% comment %}<img src="{{ 'custom-next-btn.png' | file_img_url: 'x20' }}">{% endcomment %}</div>
+        <div class="addtocart" id="custom_addtocart" style="display:none">Add to cart</div>
+       </div>
       
       {% if collection.handle contains 'build-your-rosepop' %}
       <div class="mobile-custom-message">Include A Free Video Message and Receive Free Charms</div>
@@ -83,7 +95,7 @@
         {% render 'new-media-gallery', variant_images: variant_images %}
       {% endif %}
     </div>
-    <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
+    <div class="product__info-wrapper scroll-outer product-single__meta-scroll product-single__custom_app grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div
         id="ProductInfo-{{ section.id }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"
@@ -967,61 +979,10 @@
   }
 }
 </style>
-  <script src="{{ 'jquery-min.js' | asset_url }}"></script>
-     <link rel="stylesheet" href="{{ 'slick-min.css' | asset_url }}"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="{{ 'slick-min.js' | asset_url }}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ 
 <script>
 
-  jQuery('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    fade: true,
-    asNavFor: '.slider-nav',
-    responsive: [
-    {
-        breakpoint: 1199,
-        settings: {
-          adaptiveHeight: true
-        }
-    }
-  ]
-  });
-  jQuery('.slider-nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: false,
-    centerMode: false,
-    focusOnSelect: true,
-    verticalSwiping:true,
-    arrows: true,
-    focusOnSelect: true,
-    vertical: true,
-    responsive: [
-    {
-        breakpoint: 1199,
-        settings: {
-          vertical: false,
-          slidesToShow: 3,
-        }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        vertical: false,
-        slidesToShow: 3,
-      }
-    }
-    ]
-  });
-
-</script>
-
-
-  
-<script>
 // Load custom option data
 var callbackurl = "https://customize.rosepops.com/index.php/customizerose?product_id={{product.id}}&beta=yes";
 var t = '';
@@ -1153,9 +1114,9 @@ $(document).ready(function(){
 // Next 
 $( ".next_pervious .next" ).click(function() {
 
-{% comment %}   $('html,body').animate({
+   $('html,body').animate({
     scrollTop: $(".product-single__custom_app").offset().top - 180
-  },800); {% endcomment %}
+  },800);
   
   var next_stp = $(".custom__app_header .next_pervious .next").attr("id");
   
@@ -2654,7 +2615,6 @@ d3.select("#custom_addtocart").on("click", function(){
       console.log(customize_final_price);
       console.log(customize_with_product_price);
       if(customize_final_price != 0 || customize_final_price != ''){
-        
         $.ajax({
 	        type: "post",
 	        url: "https://customize.rosepops.com/index.php/syncproduct/createvariant",
@@ -2674,10 +2634,9 @@ d3.select("#custom_addtocart").on("click", function(){
                   console.log('Variant successfully created!!!');
                                   
                   // MKT added new add to cart code
-                    
                   setTimeout(function(){
                   	$('.product-form.product-form-product-customapp-template').submit();
-                  }, 3000);   
+                  }, 5000); 
                    
                   /*$.ajax({
                        url: '/cart/add.js',
@@ -2686,7 +2645,8 @@ d3.select("#custom_addtocart").on("click", function(){
                        data: $('.product-form.product-form-product-customapp-template').serialize(),
                        success: function(itemData) {
                          console.log("Add to cart success");
-                         cartredirectfunction();
+                         //cartredirectfunction();
+                         //window.location.href = "/cart";
                        },
                        error: function(XMLHttpRequest) {
                          var response = eval('(' + XMLHttpRequest.responseText + ')');
@@ -2695,7 +2655,6 @@ d3.select("#custom_addtocart").on("click", function(){
                        }
                   });*/
                   // MKT added new add to cart code
-                  
                 }else{
                   console.log("Variant create error: "+returnval.message);
                   $("body").removeClass("loader_process");
@@ -2965,6 +2924,58 @@ $(document).ready(function(){
   
 </script>
 
+
+
+ <script src="{{ 'jquery-min.js' | asset_url }}"></script>
+ <link rel="stylesheet" href="{{ 'slick-min.css' | asset_url }}"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="{{ 'slick-min.js' | asset_url }}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  jQuery('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    responsive: [
+    {
+        breakpoint: 1199,
+        settings: {
+          adaptiveHeight: true
+        }
+    }
+  ]
+  });
+  jQuery('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    verticalSwiping:true,
+    arrows: true,
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+    {
+        breakpoint: 1199,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+        }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        vertical: false,
+        slidesToShow: 3,
+      }
+    }
+    ]
+  });
+
+</script>
 
 {% schema %}
 {

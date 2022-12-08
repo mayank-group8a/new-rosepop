@@ -110,6 +110,63 @@
                       </div>
                     {%- endif -%}
 
+
+
+                     {%- assign variant_options = 'template ' | split: ' ' -%}
+                    {%- if item.product.has_only_default_variant != true -%}
+                      {%- assign variant_options = item.options_with_values -%}
+                    {%- endif -%}
+                    {%- assign property_size = item.properties | size -%}
+
+                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
+                      {%- for option in variant_options -%}
+                      	{% if option.name != "Title" %}
+                       		 <li class="product-details__item product-details__item--variant-option{% if item.product.has_only_default_variant %} hide{% endif %}" data-cart-item-option>{{ option.name }}: {{ option.value }}</li>
+                     	{% endif %}
+                      {%- endfor -%}
+
+                      {%- comment -%}
+                        Optional, loop through custom product line items if available
+
+                        Line item properties come in as having two parts. The first part will be passed with the default form,
+                        but p.last is the actual custom property and may be blank. If it is, don't show it.
+
+                        For more info on line item properties, visit:
+                          - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
+                      {%- endcomment -%}
+
+                      {%- assign properties = 'template ' | split: ' ' -%}
+                      {%- if property_size > 0 -%}
+                        {%- assign properties = item.properties -%}
+                      {%- endif -%}
+
+                      {%- for p in properties -%}
+                        {%- unless p.last == blank -%}
+                          <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
+                            <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+                           	{%- comment -%}
+                              Check if there was an uploaded file associated
+                            {%- endcomment -%}
+                            <span data-cart-item-property-value>
+                              {%- if p.last contains '/uploads/' -%}
+                               {% if p.first == "Preview" %}
+                                  <a target="_blank" class="jslghtbx-thmb" href="{{ p.last }}" src="{{ p.last }}" data-jslghtbx download>View Image</a>
+                               {% else %}
+                              	  {% if p.first == "Video Message" %}
+                                  	<a target="_blank" class="jslghtbx-thmb" href="{{ p.last }}">{{ p.last }}</a>
+                              	  {% else %}
+                              		<a target="_blank" class="jslghtbx-thmb" href="{{ p.last }}" src="{{ p.last }}" data-jslghtbx download>View Image</a>
+                              	  {% endif %}
+                               {% endif %}
+                              {%- else -%}
+                                {{ p.last }}
+                              {%- endif -%}
+                            </span>
+                          </li>
+                        {%- endunless -%}
+                      {%- endfor -%}
+                    </ul>
+                {% comment %}
                     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                       <dl>
                         {%- if item.product.has_only_default_variant == false -%}
@@ -142,7 +199,7 @@
 
                       <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                     {%- endif -%}
-
+{% endcomment %}
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                       {%- for discount in item.discounts -%}
                         <li class="discounts__discount">
@@ -326,7 +383,6 @@
 <script>
   var lightbox = new Lightbox();
   lightbox.load();
-  
   $(".quantity__input").bind('keyup mouseup', function () {
     setTimeout(function(){
      console.log("QTY change function call");
@@ -336,23 +392,28 @@
 
 // MKT added custom cart reload Start
 $( document ).ready(function() {
-  // MKT added fix if found 0.00 price in cart
-  var price_c_v_v = "1";
-  $( "#cart .cart-item td" ).each(function( index ) {
-    var price_c = $(this).find(".cart-item__price-wrapper .price").text();
-    price_c     = price_c.trim();
-    if(price_c == "$0.00"){
-      price_c_v_v = "2";
-    }
-  });
-  
-  if(price_c_v_v == "2"){
-    $("body").addClass("loader_process");
-    cartredirectfunction();
-  }else{
-    $("body").removeClass("loader_process");
-  }
-  // MKT added fix if found 0.00 price in cart
+    setTimeout(function(){
+      $("body").addClass("loader_process");
+    }, 50);  
+
+    setTimeout(function(){
+      // MKT added fix if found 0.00 price in cart
+      var price_c_v_v = "1";
+      $( "#cart .cart-item td" ).each(function( index ) {
+        var price_c = $(this).find(".cart-item__price-wrapper .price").text();
+        price_c     = price_c.trim();
+        if(price_c == "$0.00"){
+          price_c_v_v = "2";
+        }
+      });
+      if(price_c_v_v == "2"){
+        $("body").addClass("loader_process");
+        cartredirectfunction();
+      }else{
+        $("body").removeClass("loader_process");
+      }
+      // MKT added fix if found 0.00 price in cart
+   }, 100);  
 });
   
 function cartredirectfunction(){
@@ -369,9 +430,12 @@ function cartredirectfunction(){
              price_var = "2";
           }
         });
+       console.log("price_var"+ price_var);
         if(price_var == "2"){
-         // again call get cart data function.
-         cartredirectfunction();
+          // again call get cart data function.
+          setTimeout(function(){
+             cartredirectfunction();
+          }, 500);  
         }else{
           $("body").removeClass("loader_process");
           window.location.href = 'https://rosepops.com/cart';

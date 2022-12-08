@@ -47,6 +47,21 @@ for (i = 0; i < acc.length; i++) {
            acc[i].nextElementSibling.style.display = "none"; 
    }
   }
+
+var pnl = document.getElementsByClassName("panel"); 
+var i; 
+for (i = 0; i < pnl.length; i++) {
+     pnl[i].addEventListener("click", function() {
+         this.previousElementSibling.classList.toggle("active"); 
+         var panel = this; 
+         if (panel.style.display === "block") {
+             panel.style.display = "none"; 
+         }
+         else {
+            panel.style.display = "block"; 
+        }
+     });
+     } 
    
     </script>
 {% schema %}

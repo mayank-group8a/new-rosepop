@@ -35,11 +35,13 @@ section.faq_outer.page-width h2.title.h1 {
     display: block;
 }
 .panel.answer {
-    margin-left: 35px;
+    padding-left: 35px;
 }
 .panel.answer p {
     margin-top: 0;
     line-height: 1.5;
+      margin-bottom: 0;
+    padding-bottom: 15px;
 }
 .que_and_ans {
     border-bottom: 1px solid #dfe3e8;
@@ -51,4 +53,11 @@ section.faq_outer.page-width h2.title.h1 {
     .panel.answer p {
         text-align: left;
     }
+}
+.accordion.question.active {
+    background-color: #fcf6f7;
+}
+.accordion.question.active + .panel.answer {
+    background-color: #fcf6f7;
+    box-shadow: 0 5px 5px -5px;
 }

@@ -40,6 +40,7 @@ var createSlick = () => {
                     arrows: $(this).data('slick-desktop-arrows'),
                     dots: $(this).data('slick-desktop-dots'),
                     vertical: $(this).data('slick-desktop-vertical'),
+                    speed: 2000,
                     verticalSwiping: $(this).data('slick-desktop-vertical')
                 }
             } else {
@@ -57,6 +58,7 @@ var createSlick = () => {
                     arrows: $(this).data('slick-tab-arrows'),
                     dots: $(this).data('slick-tab-dots'),
                     vertical: $(this).data('slick-tab-vertical'),
+                    speed: 2000,
                     verticalSwiping: $(this).data('slick-tab-vertical')
                 }
             } else {
@@ -74,6 +76,7 @@ var createSlick = () => {
                     arrows: $(this).data('slick-mobile-arrows'),
                     dots: $(this).data('slick-mobile-dots'),
                     vertical: $(this).data('slick-mobile-vertical'),
+                    speed: 2000,
                     verticalSwiping: $(this).data('slick-mobile-vertical')
                 }
             } else {

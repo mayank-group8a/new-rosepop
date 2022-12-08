@@ -103,3 +103,7 @@ button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
   margin-top: 30px;
 }
 }
+.new-featured-collection-inner a.button:hover {
+    background-color: #fff;
+    color: rgb(var(--color-heading-text-1));
+}

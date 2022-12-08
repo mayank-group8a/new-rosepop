@@ -381,3 +381,23 @@ td.cart-item__details .product-option a {
   margin-left: 5px;
 }
 }
+ul.product-details {
+    padding-left: 0;
+}
+ul.product-details li.product-details__item {
+    list-style: none;
+}
+ul.product-details li span.product-details__item-label {
+  font-weight: 600;
+}
+ul.product-details li a.jslghtbx-thmb {
+    box-shadow: none;
+    margin-left: 0;
+    color: rgb(var(--color-heading-text-1));
+}
+.product-details li.product-details__item.hide {
+  display: none;
+}
+.jslghtbx.jslghtbx-active {
+  z-index: 999;
+}

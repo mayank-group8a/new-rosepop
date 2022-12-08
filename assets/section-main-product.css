@@ -1530,7 +1530,7 @@ button.product-form__submit.button:hover {
   width: 100%;
   flex-direction: row-reverse;
   position: sticky;
-    top: 3rem;
+    top: 15rem;
 }
 .product__media-gallery.enable_thumbnail_slider .slick_main_slider {
   width: 84%;
@@ -1545,6 +1545,7 @@ button.product-form__submit.button:hover {
   padding: 0;
   margin-bottom: 10px;
 }
+
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li.slick-current {
   border-color: rgb(var(--color-heading-2-text));
 }
@@ -1592,6 +1593,10 @@ button.product-form__submit.button:hover {
   .product__info-wrapper .price {
     font-size: 22px;
   }
+}
+@media screen and (min-width: 1199px) {
+.product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
+  width: 100% !important;
 }
 @media screen and (max-width: 1279px) {
   .product__title h1 {
