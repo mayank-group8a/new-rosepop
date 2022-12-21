@@ -357,7 +357,7 @@
         "tabDots": true,
         "mobileInit": true,
         "mobileShow": 2,
-        "mobileArrows": true,
+        "mobileArrows": false,
         "mobileDots": true
       }
     },
