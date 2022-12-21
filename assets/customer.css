@@ -798,7 +798,7 @@ li[data-address] > h2 {
   background-color: rgb(var(--color-link));
 }
 .customer a {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(var(--color-heading-1-text));

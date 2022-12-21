@@ -49,6 +49,9 @@ line-height: 22px;
 max-width: 100%;
 }
 }
+.logo-list__logo-text {
+  font-size: 14px;
+}
 @media screen and (max-width:479px){
 .logo-list-section .logo-list .logo-list__logo {
   width: 50%;
