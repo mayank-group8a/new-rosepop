@@ -5,3 +5,19 @@
 .product-recommendations__heading {
   margin: 0 0 3rem;
 }
+
+@media screen and (max-width: 425px) {
+  .product-recommendations h2.product-recommendations__heading.text-center.title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .product-recommendations h2.product-recommendations__heading.text-center.title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .product-recommendations h2.product-recommendations__heading.text-center.title {
+    font-size: 20px;
+  }
+}

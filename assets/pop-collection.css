@@ -4,7 +4,7 @@
   }
   .pop-collection-centered {
     position: absolute;
-    top: 15%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;

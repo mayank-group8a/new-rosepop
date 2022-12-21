@@ -87,4 +87,28 @@ flex-direction: column;
 a.our-story-btn.line-btn {
 margin-left: auto;
 }
+.our-story-section-container.section-margin {
+  padding-bottom: 0;
+}
+.our-story-gif-and-des .our-story-gif {
+display: none;
+}
+.our-story-gif-and-des .our-story-gif + div p {
+margin-top: 0;
+}
+}
+.shopify-section .our-story-gif-and-des p, .shopify-section .our-story-block p {
+  font-size: 14px;
+}
+@media screen and (max-width: 479px) {
+  .our-story-block {
+    padding: 15px;
+  }
+  .our-story-block img {
+    max-width: 70px;
+  }
+  .shopify-section div .our-story-block p {
+    font-size: 14px;
+    line-height: 1.4;
+}
 }

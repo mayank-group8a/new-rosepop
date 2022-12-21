@@ -67,3 +67,10 @@
     max-width: 90%;
 }
 }
+
+@media screen and (max-width: 479px) {
+    .brand-slider-sec-section .brand-slider-sec .slick-list.draggable {
+        margin: 0 50px;
+        padding: 0 !important;
+    }
+}

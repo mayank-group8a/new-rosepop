@@ -326,6 +326,13 @@ display: block !important;
   .slideshow__text-wrapper.banner__content {
     padding: 1rem;
   }
+  .slideshow__media.banner__media.media {
+    position: unset;
+}
+  .slideshow__text-wrapper.banner__content.banner__content--top-center.page-width {
+    position: absolute;
+    top: 0;
+  }
   }
   @media screen and (min-width: 1200px) {
   slideshow-component .slideshow__text.banner__box {

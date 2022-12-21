@@ -1,109 +1,112 @@
 .new-featured-collection-inner {
-    position: relative;
-    text-align: center;
-    background-color: #C68792;
-    height: 100%;
-  overflow: hidden;
-  }
-  .new-featured-collection-inner img {
+  position: relative;
+  text-align: center;
+  background-color: #C68792;
+  height: 100%;
+overflow: hidden;
+}
+.new-featured-collection-inner img {
+position: absolute;
+bottom: 0;
+left: 0;
+margin: auto;
+width: 100% !important;
+height: auto;
+}
+.new-featured-collection-centered {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 100% !important;
-  height: auto;
-  }
-  .new-featured-collection-centered {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-  }
-  .new-featured-collection slider-component {
-      display: flex;
-      width: 100%;
-  }
-  .new-featured-collection slider-component ul {
-      width: 75%;
-      padding: 0 20px;
-    margin-top: 0;
-  }
-  .new-featured-collection slider-component .new-featured-collection-container {
-      width: 25%;
-  }
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.new-featured-collection slider-component {
+    display: flex;
+    width: 100%;
+}
+.new-featured-collection slider-component ul {
+    width: 75%;
+    padding: 0 20px;
+  margin-top: 0;
+}
+.new-featured-collection slider-component .new-featured-collection-container {
+    width: 25%;
+}
 button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
-  content: "";
+content: "";
 }
 .new-featured-slider .slick-track {
-  height: 100%;
+height: 100%;
 }
 @media screen and (min-width: 1199px) and (max-width: 1366px) {
-  .new-featured-collection slider-component .new-featured-collection-container {
-    width: 26%;
-  }
-  .new-featured-collection slider-component ul {
-    width: 74%;
-    padding: 0 20px;
-    margin-top: 0;
-  }
-  }
-@media screen and (max-width: 1199px){
-    .new-featured-collection-inner {
-      height: 100%;
-  }
-    .new-featured-collection-inner img {
-      height:auto;
-  }
 .new-featured-collection slider-component .new-featured-collection-container {
-  width: 32%;
+  width: 26%;
 }
 .new-featured-collection slider-component ul {
-  width: 68%;
+  width: 74%;
+  padding: 0 20px;
+  margin-top: 0;
 }
-  }
+}
+@media screen and (max-width: 1199px){
+  .new-featured-collection-inner {
+    height: 100%;
+}
+  .new-featured-collection-inner img {
+    height:auto;
+}
+.new-featured-collection slider-component .new-featured-collection-container {
+width: 32%;
+}
+.new-featured-collection slider-component ul {
+width: 68%;
+}
+.new-featured-collection.section-margin {
+padding-top: 0;
+}
+}
 
 @media screen and (max-width: 991px){
-  .new-featured-collection-centered {
-    position: absolute;
-    top: 30%;
-  }
-  .new-featured-collection slider-component .new-featured-collection-container {
-    width: 34%;
+.new-featured-collection-centered {
+  position: absolute;
+  top: 30%;
+}
+.new-featured-collection slider-component .new-featured-collection-container {
+  width: 34%;
 }
 .new-featured-collection slider-component ul {
-  width: 66%;
+width: 66%;
 }
 }
 
 @media screen and (max-width: 767px){
 .new-featured-collection slider-component .new-featured-collection-container, .new-featured-collection slider-component ul {
-  width: 50%;
+width: 50%;
 }
-  .new-featured-collection-inner img {
-    position:relative;
-  }
-  .new-featured-collection-inner {
-    background-color: transparent;
-  }
+.new-featured-collection-inner img {
+  position:relative;
+}
+.new-featured-collection-inner {
+  background-color: transparent;
+}
 }
 
 @media screen and (max-width: 479px){
 .new-featured-collection slider-component {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 .new-featured-collection slider-component .new-featured-collection-container, .new-featured-collection slider-component ul {
-  width: 100%;
+width: 100%;
 }
 .new-featured-collection slider-component ul {
-  padding: 0;
+padding: 0;
 }
 .new-featured-collection slider-component ul {
-  margin-top: 30px;
+margin-top: 30px;
 }
 }
 .new-featured-collection-inner a.button:hover {
-    background-color: #fff;
-    color: rgb(var(--color-heading-text-1));
+  background-color: #fff;
+  color: rgb(var(--color-heading-text-1));
 }
