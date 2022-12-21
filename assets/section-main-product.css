@@ -1598,6 +1598,7 @@ button.product-form__submit.button:hover {
 .product__media-gallery.enable_thumbnail_slider .slick_thumb_slider li {
   width: 100% !important;
 }
+}
 @media screen and (max-width: 1279px) {
   .product__title h1 {
     font-size: 18px;
