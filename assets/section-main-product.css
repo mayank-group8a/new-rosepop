@@ -1465,13 +1465,13 @@ a.product__text {
   min-height: 35px;
 }
 .product-form__input.product-form__quantity quantity-input.quantity button {
-  margin-left: 15px;
+  margin-left: 10px;
   border: 1px solid rgb(var(--color-heading-2-text));
 }
 .product-form__input.product-form__quantity quantity-input.quantity input {
   display: flex;
-  width: calc(4.5rem / var(--font-body-scale));
-  margin-left: 15px;
+  width: calc(3.4rem / var(--font-body-scale));
+  margin-left: 10px;
   border: 1px solid rgb(var(--color-heading-2-text));
 }
 .product-form__input.product-form__quantity quantity-input.quantity::before, .product-form__input.product-form__quantity quantity-input.quantity::after{
@@ -1480,7 +1480,8 @@ a.product__text {
 a#show_your_message {
   margin-bottom: 1rem;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 0 2rem;
 }
 .product-single .add-your-message-content {
   padding-top: 30px;
@@ -1518,8 +1519,9 @@ button.product-form__submit.button {
   background-color: #DF9CAC;
   border-color: #DF9CAC;
   color: rgb(var(--color-heading-1-text));
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 5px;
+  padding: 0 2rem;
 }
 button.product-form__submit.button:hover {
   background-color: rgba(var(--color-button),var(--alpha-button-background));
@@ -1673,10 +1675,10 @@ form.installment {
     display: none;
 }
 .price_product {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    /* flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
 div#live_svg {
   text-align: center;
@@ -1701,4 +1703,7 @@ div#live_svg {
   position: unset !important;
   margin: 10px 0 !important;
 }
+}
+.trustspot.trustspot-main-widget {
+  margin-top: 30px;
 }

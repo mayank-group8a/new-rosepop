@@ -4,10 +4,16 @@
   }
   .pop-collection-centered {
     position: absolute;
-    top: 85%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
+  }
+  .pop-collection-centered .button {
+    background-color: #DF9CAC;
+  }
+  .pop-collection-centered .button:hover {
+  background-color: rgba(var(--color-button),var(--alpha-button-background));
   }
   .pop-collection slider-component {
       display: flex;

@@ -181,8 +181,8 @@
 }
 
 .new-card-products .card__heading {
-  padding-top: 50px;
-      padding-bottom: 35px;
+  padding-top: 20px;
+      padding-bottom: 20px;
       padding-left: 15px;
     padding-right: 15px;
     height: 110px;
@@ -220,8 +220,8 @@
 }
 
 .new-card-products .card__information {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .quick-add button {
@@ -427,7 +427,7 @@
     font-size: 18px;
   }
   .new-card-products .card__heading {
-    padding: 30px 5px 20px;
+    padding: 20px 5px 20px;
   }
   .new-card-products .card__information {
     padding-bottom: 20px;

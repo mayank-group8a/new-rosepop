@@ -2037,7 +2037,7 @@
  }
  
  .quantity__button {
-   width: calc(4.5rem / var(--font-body-scale));
+   width: calc(3.4rem / var(--font-body-scale));
    flex-shrink: 0;
    font-size: 1.8rem;
    border: 0;
@@ -2670,10 +2670,17 @@
  
  .mega-nav>.header__menu-item:hover span {
    text-decoration: underline;
-     text-underline-offset: 3.3rem;
+     text-underline-offset: 1.3rem;
      text-decoration-thickness: 3px;
      text-decoration-color: rgb(var(--color-heading-2-text));
  }
+
+ .header__menu-item:hover span {
+    text-decoration: underline;
+    text-underline-offset: 1.3rem;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(var(--color-heading-2-text));
+}
  
  details[open] > .header__menu-item {
  /*   text-decoration: underline; */
@@ -3210,7 +3217,7 @@
      border-radius: 100%;
      background-color: #221e1f;
      display: inline-block;
-     margin-bottom: 30px;
+     margin-bottom: 0px;
      top: -20px;
  }
  @media screen and (max-width: 1200px) {

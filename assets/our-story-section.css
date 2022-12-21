@@ -1,8 +1,9 @@
 .our-story-section-inner {
   display: flex;
+  align-items: center;
 }
 .our-story-block img {
-  max-width: 100px;
+  max-width: 80px;
   width: 100%;
   height: auto;
 }
@@ -19,7 +20,7 @@
 }
 .our-story-block {
   width: 50%;
-  padding: 25px;
+  padding: 15px;
   text-align: center;
 }
 .our-story-block p {
