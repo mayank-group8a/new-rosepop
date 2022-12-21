@@ -107,7 +107,7 @@
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-0": {
           "type": "heading",
           "settings": {
-            "heading": "JOHN DOE",
+            "heading": "ELISA FREILICH",
             "title_color": "#c68792",
             "heading_size": "h2"
           }
@@ -124,7 +124,7 @@
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br\/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br\/>mollit anim id est laborum.<\/p><p><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br\/>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br\/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br\/>dolor in reprehenderit in voluptate.<\/p>",
+            "text": "<p>My hubby treated me to a beautiful preserved rose arrangement which was perfect for me since, well, let’s just say I’m “Green Thumb Challenged”.<\/p><p><\/p><p>Completely in love with my roses, I thought I’d found my new go to gift for all occasions. But as I scoured the internet, I found that eternity roses would take an eternity to pay off! <\/p><p>”There has to be a way to make preserved roses more affordable for everyone,” thought I. And thought... And thought...And thought...<\/p><p>Until was born the Rosepops™ patent-pending POP-up packaging! Now preserved roses can ship easily and affordably! Not to mention that, well heck, they pop up! <\/p><p>What’s more, is that every POP has a place for a personal message, eliminating the need for overpriced, under-appreciated greeting cards.<\/p><p>Now POP’pers and POP’ees nationwide are joining the Rosepops™ Family and Hubby and I couldn’t be happier!  <\/p><p>Fair warning, though fellow rose lovers, Rosepops™ are so delightfully unique that once you POP, you might not stop. Happy POP’ping! <\/p>",
             "description_color": "#444444",
             "text_style": "body"
           }
@@ -155,9 +155,9 @@
         "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Component_4_1.png",
-            "title": "POP CULTURE",
-            "text": "<p>Throwing away dying roses is about as gratifying as throwing away a paycheck. And while silk is lovely, it is best left for fashion and not artificial flowers. The Rosepops mission was to offer long-lasting roses and even longer lasting memories, without the usual hefty preserved petal price tags. Through our patent-<br\/>pending POP-up packaging, our premiere Ecuadorian Roses can be shipped safely and<br\/>economically, never compromising on quality. Our hand-crafted preserved roses arrangements can be personalized, so there is a POP for every occasion! And with free standard shipping within the United States, your loved one can know just how valued they are no matter where they are located! We want to welcome you to the<br\/>Rosepops Family, where business is blooming and Everything's Coming Up Roses... Literally<\/p>",
+            "image": "shopify:\/\/shop_images\/About_Us_2.png",
+            "title": "Our Mission",
+            "text": "<p>The Rosepops mission was to offer long-lasting roses and even longer lasting memories, without the usual hefty preserved petal price tags. Through our patent <br\/>pending packaging, our premiere Ecuadorian Roses can be shipped safely and economically, <strong>never compromising on quality<\/strong>. Our hand-crafted preserved roses arrangements can be personalized, so there is a POP for every occasion! And with free standard shipping within the United States, your loved one can know just how valued they are no matter where they are located! <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -165,8 +165,8 @@
         "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Component_4_1.png",
-            "title": "OUR ROSES AND WHY THEYARE POP STARS",
+            "image": "shopify:\/\/shop_images\/image_composite_1.png",
+            "title": "OUR ROSES",
             "text": "<p>Our roses come from a beautiful and spacious Ecuadorian garden, situated at high altitude, with 20 hectares of gorgeous variety. Highly specialized, all natural techniques are used by our growers in taking care of the water, observing the climate and knowing the ground. These perfected practices result in uniquely beautiful roses of the utmost quality. We are proud to say that our Rose farms work exclusively with non-toxic ingredients, ensuring that our unique processes do not pose any threat to humans or the environment.<\/p>",
             "link_label": "",
             "link": ""
@@ -175,9 +175,9 @@
         "template--14435587129424__3dd70039-a5d1-476d-81f7-ea34eeefb401-16687053565b03346e-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Component_4_1.png",
-            "title": "A MOM-AND-POP APPROACHTO A GROWING POP SENSATION",
-            "text": "<p>At Rosepops, we delight in the details and are always excited about the journey that lays ahead. We want you to share our enthusiasm and are therefore determined to make your Rosepops experience one that will make you want to keep on POP'ping. Whena new idea pops up, we make it happen. We also welcome POPulation explosions such as bulk custom orders--corporate, personal or matrimonial. Just POP us an email to inquire.. Sign up for our email list today and stay tuned for new product lines, announcements and more!<\/p>",
+            "image": "shopify:\/\/shop_images\/About_Us_1.png",
+            "title": "OUR APPROACH",
+            "text": "<p>At Rosepops, we delight in the details and are always excited about the journey that lays ahead. We want you to share our enthusiasm and are therefore determined to make your Rosepops experience one that will make you want to keep on POP'ping. When a new idea pops up, we make it happen. We also welcome POPulation explosions such as bulk custom orders--corporate, personal or matrimonial. Just POP us an email to inquire. Sign up for our email list today and stay tuned for new product lines, announcements and more!<\/p>",
             "link_label": "",
             "link": ""
           }

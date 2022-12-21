@@ -119,6 +119,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
+    "favicon": "shopify:\/\/shop_images\/shutterstock_694765270_e9709db9-4d5b-4bf1-b479-8e3ed85d9110.png",
     "currency_code_enabled": false,
     "sections": {
       "announcement-bar": {
@@ -127,8 +128,8 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "New Arrivals: Lorem ipsum dolor sit amet, consectetur adipiscing elit  <a href=\"#\">Shop Now<\/a>",
-              "mob_text": "Welcome to our store",
+              "text": "Happy Holidays! 20% Off Sitewide with code HOLIDAYS20",
+              "mob_text": "20% Off Sitewide with code HOLIDAYS20",
               "text_alignment": "center",
               "link": ""
             }
@@ -136,8 +137,8 @@
           "f193e259-b98b-4fbc-98f3-bafd411fa88e": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our",
-              "mob_text": "Welcome to our store",
+              "text": "Free Shipping on Orders $75",
+              "mob_text": "Free Shipping on Orders $75",
               "text_alignment": "center",
               "link": ""
             }

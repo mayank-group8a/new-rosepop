@@ -2921,7 +2921,22 @@ $(document).ready(function(){
   });
 });
 //MKT Record a personal video message end 
-  
+
+  $(document).on("click", '.uploade_videoWrap .pop_close', function(event) { 
+    $('.uploade_videoWrap .shown').hide();
+    $('.uploade_videoWrap .shown .video-show').hide();
+    $('.uploade_videoWrap .shown .video-show #video').html('');
+  });
+  $(document).on("click", '.uploade_videoWrap a.videoPopup', function(event) { 
+    event.preventDefault();
+    var previewLink = $('.uploade_videoWrap a.videoPopup');
+    var videoLink = previewLink.attr('href');
+    console.log(videoLink);
+    $('.uploade_videoWrap .shown').show();
+    $('.uploade_videoWrap .shown .video-show').show();
+    $('.uploade_videoWrap .shown .video-show #video').html(`<div class="videoWRap"><iframe src="https://www.youtube.com/embed/${videoLink}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoLink}&amp;showinfo=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>`);
+  });
+    
 </script>
 
 

@@ -65,9 +65,9 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "DELIVERY INFORMATION",
+            "heading": "DELIVERY & SHIPPING INFORMATION",
             "icon": "none",
-            "content": "",
+            "content": "<p>All POPs are handmade to order within 1-2 business days of order placement and will ship with FedEx 2 Day Shipping once all the finishing touches have been made. <\/p><p><\/p><p>We do not ship out on Saturday or Sunday. Orders placed on these days will ship out on the first subsequent Monday. <\/p><p><\/p><p>Orders that ship out on Thursdays will be shipped for a Saturday delivery wherever FedEx permits; Sunday deliveries unavailable.<\/p>",
             "page": ""
           }
         },
@@ -369,7 +369,7 @@
           "settings": {
             "title": "SELECT YOUR SIZE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "<p>From a single rose to an over the top arrangement of 18 roses, every size makes a statement.<\/p>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/step1_box_900x_f0556ca5-98f7-4971-9b2b-1dbc60ee3a32.webp",
             "circle_background": "#f5dadf",
@@ -381,7 +381,7 @@
           "settings": {
             "title": "SELECT YOUR ROSE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "<p>Picked at peak bloom from our Ecuadorian farms, our roses boast vivid color, velvety texture, and unparalleled delicate silhouettes.<\/p>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/Build_Your_Own_Step_3_UPDATED_900x_c8bde5af-5a9f-4efc-98e8-64d3a7f522d2.webp",
             "circle_background": "#f5dadf",
@@ -393,7 +393,7 @@
           "settings": {
             "title": "SELECT YOUR UPGRADE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br><\/p>\n<ul>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<\/ul>",
+            "description": "<p>So many options! From custom fragrances to monograms and personalized photos and charms. We offer a host of ways to make your arrangement more personal. <br><\/p>\n<ul>\n<li>Rose Color<\/li>\n<li>Box Color & Style<\/li>\n<li>Fragrance<\/li>\n<li>Monogram<\/li>\n<li>Video Message<\/li>\n<li>Message<\/li>\n<li>Charm<\/li>\n<li>Personal Photo<\/li>\n<\/ul>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/step1_box_900x_f0556ca5-98f7-4971-9b2b-1dbc60ee3a32.webp",
             "circle_background": "#f5dadf",
@@ -408,7 +408,7 @@
       ],
       "settings": {
         "color_background": "#ffffff",
-        "heading": "Looking for more fun? Try our Custom Pop",
+        "heading": "Looking for more fun? Design Your Own",
         "heading_size": "h1",
         "heading_color": "#000000",
         "link_label": "GET STARTED",
@@ -418,21 +418,21 @@
     "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
       "type": "pop-collection",
       "settings": {
-        "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
-        "title": "POP CLASSICS",
-        "text_color": "#c68792",
-        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",
-        "description_color": "#221e1f",
+        "image": "shopify:\/\/shop_images\/Product_Page.png",
+        "title": "THE CLASSICS COLLECTION",
+        "text_color": "#121212",
+        "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black or soft flirty boxes house our classic rose colors in sophisticated style. <\/p>",
+        "description_color": "#121212",
         "link_label": "SHOP COLLECTION",
         "link": "#",
         "section_style": "secondary_section_style",
         "heading_size": "h2",
-        "collection": "2020-holiday-pops",
+        "collection": "the-classics",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
-        "view_all_style": "solid",
+        "view_all_style": "outline",
         "enable_desktop_slider_slick": true,
         "autoplay": true,
         "autorotate_speed": 3,
