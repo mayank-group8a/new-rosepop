@@ -198,7 +198,7 @@ $(document).ready(function() {
      $('.product-grid .grid__item .card-wrapper .card__heading').responsiveEqualHeightGrid();
      $('.product-grid .grid__item .card-wrapper .card__inner').responsiveEqualHeightGrid();
      // $('.product-grid .grid__item .card-wrapper .card__inner .card__media').responsiveEqualHeightGrid();
-     $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
+    //  $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
    }
 
    // Pre-Made Hide/Show

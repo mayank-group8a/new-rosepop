@@ -1451,9 +1451,10 @@ a.product__text {
 }
 .product-form__quantity .form__label {
   color: rgb(var(--color-heading-1-text));
-  font-size: 18px;
+  font-size: 14px;
   font-family: var(--font-heading-family);
   font-weight: 600;
+  margin-bottom: 0;
 }
 .product-form__input.product-form__quantity {
   display: flex;
@@ -1461,8 +1462,8 @@ a.product__text {
 }
 .product-form__input.product-form__quantity quantity-input.quantity {
   width: max-content;
-  height: 35px;
-  min-height: 35px;
+  height: 30px;
+  min-height: 30px;
 }
 .product-form__input.product-form__quantity quantity-input.quantity button {
   margin-left: 10px;
@@ -1480,7 +1481,7 @@ a.product__text {
 a#show_your_message {
   margin-bottom: 1rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0 2rem;
 }
 .product-single .add-your-message-content {
@@ -1519,7 +1520,7 @@ button.product-form__submit.button {
   background-color: #DF9CAC;
   border-color: #DF9CAC;
   color: rgb(var(--color-heading-1-text));
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 5px;
   padding: 0 2rem;
 }
@@ -1640,7 +1641,10 @@ button.product-form__submit.button:hover {
     text-align: center;
   }
   .product-social-media .footer__list-social.list-social:only-child {
-    justify-content: center;
+    justify-content: left;
+  }
+  .product-social-media .link.list-social__link {
+    padding: 0.7rem 0.7rem;
   }
 }
 .product .price__container {
