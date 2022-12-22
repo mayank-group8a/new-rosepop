@@ -154,6 +154,7 @@
         "tabShow": 3,
         "tabArrows": true,
         "tabDots": false,
+        "mobileInit": true,
         "mobileShow": 1,
         "mobileArrows": true,
         "mobileDots": false,
@@ -168,44 +169,24 @@
     "520f2c83-36c2-4e37-b1f6-73609ec90fad": {
       "type": "brand-slider",
       "blocks": {
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0": {
+        "24038979-8a40-45c7-af20-b7f4af34476d": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/buzzfeed.png",
+            "image": "shopify:\/\/shop_images\/UsWeekly.png",
             "image_width": 100,
             "link": "",
-            "title": "BYRDIE TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "title": "CAN'T GO WRONG",
+            "Logo_list_heading": "<p>For the Flower Lover You can't go wrong with flowers for Valentine's Day, but you can go very, very right with this unique, ultra-customizable Valentine's Day box. These preserved roses last such a long time, and they pop up from inside the box for an element of fun! See it: Get the <a href=\"https:\/\/shareasale.com\/r.cfm?b=1531159&u=1826497&m=96901&urllink=rosepops%2Ecom%2Fcollections%2Fthe%2Dvalentine%2Dcollection%2Fproducts%2Fcupids%2Dcrocodile%2Dthree%2Ds%2Da%2Dcharm&afftrack=SHOPValentinesDay2021%7Cxid:fr1671647887485dje\">Cupid's Crocodile Three's a Charm box<\/a> (originally starting at $95) for just <a href=\"https:\/\/shareasale.com\/r.cfm?b=1531159&u=1826497&m=96901&urllink=rosepops%2Ecom%2Fcollections%2Fthe%2Dvalentine%2Dcollection%2Fproducts%2Fcupids%2Dcrocodile%2Dthree%2Ds%2Da%2Dcharm&afftrack=SHOPValentinesDay2021%7Cxid:fr1671647887486gcg\">$81<\/a> with code VALENTINE15 at Rosepops for a limited time! <a href=\"https:\/\/www.usmagazine.com\/shop-with-us\/pictures\/valentines-day-gift-guide-13-ultra-thoughtful-gifts-2021\/\" target=\"_blank\" title=\"https:\/\/www.usmagazine.com\/shop-with-us\/pictures\/valentines-day-gift-guide-13-ultra-thoughtful-gifts-2021\/\">Read More<\/a><\/p>"
           }
         },
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1": {
+        "0fd93b30-29b9-4901-9df4-b74ab71694f2": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/theknot.png",
+            "image": "shopify:\/\/shop_images\/HGTV_US_Logo_2015.png",
             "image_width": 100,
             "link": "",
-            "title": "THE KNOT TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
-          }
-        },
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-2": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/byrdie.png",
-            "image_width": 100,
-            "link": "",
-            "title": "BYRDIE TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
-          }
-        },
-        "8a96cf30-c006-49ab-9890-7e7217ce8c7a": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/elitedaily.png",
-            "image_width": 100,
-            "link": "",
-            "title": "ELITE DAILY TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "title": "Finest Ecuadorian roses",
+            "Logo_list_heading": "<p><a href=\"https:\/\/rosepops.com\/\">Rosepops<\/a> specializes in handmade, 100-percent authentic rose arrangements. Working with the finest Ecuadorian roses, Rosepops roses have been organically preserved to last for up to a year — no water needed. And you can top off this thoughtful, long-lasting gift with a personal message that will be printed inside the lid of your Rosepop box. &lcub;<a href=\"https:\/\/shareasale.com\/r.cfm?b=999999&u=2815215&m=96901&afftrack=HGTV--%7Cxid:fr1671640922653gef&urllink=rosepops.com%2Fcollections%2Fthe-pastels%2Fproducts%2Flilac-fourever\"><strong>Lilac Fourever Rosepops<\/strong><\/a>&rcub; <a href=\"https:\/\/www.hgtv.com\/shopping\/gift-guides\/best-flower-delivery-services-that-ship-quickly\" title=\"https:\/\/www.hgtv.com\/shopping\/gift-guides\/best-flower-delivery-services-that-ship-quickly\">Read More<\/a><\/p>"
           }
         },
         "93f886be-c788-495c-90f9-99d965f154ae": {
@@ -214,18 +195,8 @@
             "image": "shopify:\/\/shop_images\/mens-journal.png",
             "image_width": 100,
             "link": "",
-            "title": "MEN'S JOUORNAL TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
-          }
-        },
-        "24038979-8a40-45c7-af20-b7f4af34476d": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/UsWeekly.png",
-            "image_width": 100,
-            "link": "",
-            "title": "US WEEKLY TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "title": "BEST PRICE",
+            "Logo_list_heading": "<p>‘Forever’ Roses Are the Most Popular Flower Gift This Year – Here’s How to Get Them at the Best Price. Want something smaller to compliment the other gifts you got her this Valentine’s? Then look no further than this box that may be small but has quite the pop, with the 3 flowers in a heart-shaped box giving her all she needs to know you love her. Get It: Pick up <a href=\"https:\/\/shareasale.com\/r.cfm?b=999999&u=1978857&m=96901&afftrack=MensJournal-tlorenzo-CTA-COMMERCE-SHOPRosepopsValentinesDayJanuary2022-DATE1-21-2022%7Cxid:fr1671642102631iej&urllink=rosepops.com%2Fcollections%2Flove-pops%2Fproducts%2Fthe-sweet-as-a-kiss\">The Sweet as a Kiss<\/a> (<a href=\"https:\/\/shareasale.com\/r.cfm?b=999999&u=1978857&m=96901&afftrack=MensJournal-tlorenzo-CTA-COMMERCE-SHOPRosepopsValentinesDayJanuary2022-DATE1-21-2022%7Cxid:fr1671642102631dfh&urllink=rosepops.com%2Fcollections%2Flove-pops%2Fproducts%2Fthe-sweet-as-a-kiss\">$100<\/a>) at Rosepops. <a href=\"https:\/\/www.mensjournal.com\/style\/forever-roses-are-the-most-popular-flower-gift-this-year-heres-how-to-get-them-at-the-best-price\/the-sweet-as-a-kiss\/\" target=\"_blank\" title=\"https:\/\/www.mensjournal.com\/style\/forever-roses-are-the-most-popular-flower-gift-this-year-heres-how-to-get-them-at-the-best-price\/the-sweet-as-a-kiss\/\">Read More<\/a><\/p>"
           }
         },
         "112f037b-0d8e-4b9d-9d36-31d452fdcaaf": {
@@ -234,8 +205,28 @@
             "image": "shopify:\/\/shop_images\/scarymommy.png",
             "image_width": 100,
             "link": "",
-            "title": "SCARY MOMMY TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "title": "ROSES THAT LAST AN ENTIRE YEAR",
+            "Logo_list_heading": "<p>Want to get her (or him) a bouquet of roses that last an entire year? They’re on the pricey side, but it’s something she\/he’s likely never seen before. We’re so accustomed to getting a bouquet of pretty flowers, but the thing is, they die after a couple days. And $15-40 for flowers that don’t even last a week is a scam, TBH. Which is why we’re vouching for Rosepops, which preserve flowers (they look and feel just like fresh flowers, it’s legit magical) which come in a customized box with a customized message. A+ for originally, and A+ for sweetness. <a href=\"https:\/\/www.scarymommy.com\/spotted\/romantic-gifts\" target=\"_blank\" title=\"https:\/\/www.scarymommy.com\/spotted\/romantic-gifts\">Read More<\/a><\/p>"
+          }
+        },
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theknot.png",
+            "image_width": 100,
+            "link": "",
+            "title": "THE MOST ROMENTIC V-DAY GIFT",
+            "Logo_list_heading": "<p>Rosepops makes gifting preserved flowers easy (and there are options to suit budgets big and small). This single rose is one of the most romantic V-Day gifts on our list because the flower will look freshly picked for up to a year or more. It comes in a glittery gold box finished with a sparkly \"KISS\" bow pin. Worried about how your rose will fare in transit? The company's cleverly designed boxes keep flowers safe and secure inside—they only pop up once opened. Get 20% off your purchase through the month of February with our exclusive code THEKNOT20. <a href=\"https:\/\/www.theknot.com\/content\/valentine-gift-guide\" target=\"_blank\" title=\"https:\/\/www.theknot.com\/content\/valentine-gift-guide\">Read More<\/a><\/p>"
+          }
+        },
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/buzzfeed.png",
+            "image_width": 100,
+            "link": "",
+            "title": "ACTUALLY DO LAST",
+            "Logo_list_heading": "<p>Check out Rosepop flowers that'll last for up to a year! I've received them and can vouch that they actually do last (mine are three months old and still look brand-new).<\/p>"
           }
         },
         "f5e7b4aa-289f-4b9e-8ee9-358e802aa7c9": {
@@ -244,20 +235,41 @@
             "image": "shopify:\/\/shop_images\/Huffpost.png",
             "image_width": 100,
             "link": "",
-            "title": "IHUFFPOSTI TITLE HERE",
-            "Logo_list_heading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br\/>tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "title": "ALL-NATURAL PRESERVATIVE",
+            "Logo_list_heading": "<p>Yeah, flowers are a big part of Valentine's Day, but you have to clean up the petals in the days after the holiday. Not so with <a href=\"https:\/\/rosepops.com\/\">Rosepops,<\/a> which use an all-natural preservative to keep them looking fresh for months. That should give you plenty of time to passively-aggressively remind your valentine that you do understand some basics of romance. <a href=\"https:\/\/www.huffpost.com\/entry\/weird-valentines-day-gifts-2021_n_60104867c5b61cb9534ee903\" target=\"_blank\" title=\"https:\/\/www.huffpost.com\/entry\/weird-valentines-day-gifts-2021_n_60104867c5b61cb9534ee903\">Read More<\/a><\/p>"
+          }
+        },
+        "c2f5f83e-7c6f-417b-9044-d25c02baad88": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Digital_Trends_logo.png",
+            "image_width": 100,
+            "link": "",
+            "title": "Include a personalized message for your Valentine",
+            "Logo_list_heading": "<p>Rosepops is a preserved rose delivery service that sends arranged roses in customized boxes. The roses are real and are able to last long with natural preservation techniques including a wax on the base of the rose. You can include a personalized message for your Valentine in your rose box arrangement and she’ll have a lovely set of roses to enjoy for a long time. <a href=\"https:\/\/www.digitaltrends.com\/dtdeals\/best-flower-delivery-deals\/\" title=\"https:\/\/www.digitaltrends.com\/dtdeals\/best-flower-delivery-deals\/\">Read More<\/a><\/p>"
+          }
+        },
+        "3e948a0b-c282-43ef-9b84-0e74cf2f182e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/womans-day-logo-vector.png",
+            "image_width": 100,
+            "link": "",
+            "title": "Beautiful mini rose",
+            "Logo_list_heading": "<p><strong>Rosepops <\/strong>The One Up <a href=\"https:\/\/go.redirectingat.com\/?id=74968X1525089&url=https%3A%2F%2Frosepops.com%2Fcollections%2Fbest-sellers%2Fproducts%2Fthe-one-up-custom-app&xcust=%5Butm_source%7C%5Butm_campaign%7C%5Butm_medium%7C%5Bgclid%7C%5Bmsclkid%7C%5Bfbclid%7C%5Brefdomain%7Cwww.google.com%5Bcontent_id%7C92498dd3-3f9e-4834-b6b8-cfcd4d23307d%5Bcontent_product_id%7C17badfac-47ec-4040-9f05-53d7266566b7%5Bproduct_retailer_id%7Cda8e47a1-6a85-4d37-ae94-16dc97305c3e&sref=https%3A%2F%2Fwww.womansday.com%2Frelationships%2Fdating-marriage%2Fg1414%2Fvalentines-day-gifts-women%2F%3Fslide%3D9&xs=1\"><strong>$32 AT ROSEPOPS.COM<\/strong><\/a><\/p><p>Though this beautiful mini rose may seem pricey for its size, that's because it's naturally preserved to last up to a year. <strong>&lcub;The One Up&rcub; <\/strong><a href=\"https:\/\/www.womansday.com\/relationships\/dating-marriage\/g1414\/valentines-day-gifts-women\/?slide=9\" title=\"https:\/\/www.womansday.com\/relationships\/dating-marriage\/g1414\/valentines-day-gifts-women\/?slide=9\">Read More<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0",
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1",
-        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-2",
-        "8a96cf30-c006-49ab-9890-7e7217ce8c7a",
-        "93f886be-c788-495c-90f9-99d965f154ae",
         "24038979-8a40-45c7-af20-b7f4af34476d",
+        "0fd93b30-29b9-4901-9df4-b74ab71694f2",
+        "93f886be-c788-495c-90f9-99d965f154ae",
         "112f037b-0d8e-4b9d-9d36-31d452fdcaaf",
-        "f5e7b4aa-289f-4b9e-8ee9-358e802aa7c9"
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-1",
+        "template--14432441663568__520f2c83-36c2-4e37-b1f6-73609ec90fad-166869972895876edd-0",
+        "f5e7b4aa-289f-4b9e-8ee9-358e802aa7c9",
+        "c2f5f83e-7c6f-417b-9044-d25c02baad88",
+        "3e948a0b-c282-43ef-9b84-0e74cf2f182e"
       ],
       "settings": {
         "color_bg": "#ffffff",
@@ -369,7 +381,7 @@
           "settings": {
             "title": "SELECT YOUR SIZE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "<p>From a single rose to an over the top arrangement of 18 roses, every size makes a statement.<\/p>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/template_2.png",
             "circle_background": "#f5dadf",
@@ -381,7 +393,7 @@
           "settings": {
             "title": "SELECT YOUR ROSE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "<p>Picked at peak bloom from our Ecuadorian farms, our roses boast vivid color, velvety texture, and unparalleled delicate silhouettes.<\/p>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/step1_box_900x_f0556ca5-98f7-4971-9b2b-1dbc60ee3a32.webp",
             "circle_background": "#f5dadf",
@@ -393,7 +405,7 @@
           "settings": {
             "title": "SELECT YOUR UPGRADE",
             "title_color": "#c68792",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.<br><\/p>\n<ul>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<li>Lorem ipsum dolor sit<\/li>\n<\/ul>",
+            "description": "<p>So many options! From custom fragrances to monograms and personalized photos and charms. We offer a host of ways to make your arrangement more personal. <br><\/p>\n<ul>\n<li>Rose Color<\/li>\n<li>Box Color & Style<\/li>\n<li>Fragrance<\/li>\n<li>Monogram<\/li>\n<li>Video Message<\/li>\n<li>Message<\/li>\n<li>Charm<\/li>\n<li>Personal Photo<\/li>\n<\/ul>",
             "description_color": "#444444",
             "main_image": "shopify:\/\/shop_images\/Build_Your_Own_Step_3_UPDATED_900x_c8bde5af-5a9f-4efc-98e8-64d3a7f522d2.webp",
             "circle_background": "#f5dadf",
@@ -412,7 +424,7 @@
         "heading_size": "h1",
         "heading_color": "#000000",
         "link_label": "GET STARTED",
-        "link": "#"
+        "link": "shopify:\/\/collections\/build-your-rosepop"
       }
     },
     "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
@@ -424,7 +436,7 @@
         "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",
         "description_color": "#221e1f",
         "link_label": "SHOP COLLECTION",
-        "link": "#",
+        "link": "shopify:\/\/collections\/shop-all-premade",
         "section_style": "secondary_section_style",
         "heading_size": "h2",
         "collection": "2020-holiday-pops",

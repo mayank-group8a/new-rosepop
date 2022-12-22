@@ -230,7 +230,7 @@
         "new_featured_collection_description": "<p>Indulge in our popular selections they'll cherish for an entire year.<\/p>",
         "text_color": "#e5e5e5",
         "link_label": "SHOP NOW",
-        "link": "#",
+        "link": "shopify:\/\/collections\/best-sellers",
         "section_style": "primary_section_style",
         "heading_size": "h2",
         "collection": "best-sellers",
@@ -375,7 +375,7 @@
         "heading_size": "h1",
         "heading_color": "#000000",
         "link_label": "GET STARTED",
-        "link": "#"
+        "link": "shopify:\/\/collections\/build-your-rosepop"
       }
     },
     "923a3f87-fcf6-4e4c-8c77-8df9c1a3b019": {
