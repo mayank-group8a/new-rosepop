@@ -211,7 +211,7 @@
                     disabled
                   >
                     {% if view_product %}
-                      <a href="{{card_product.url}}" class="button create_btn">Create</a>
+                      <a href="{{card_product.url}}" class="button create_btn">Start Designing</a>
                     {% else %}
                   <button
                     id="{{ product_form_id }}-submit"
@@ -254,7 +254,7 @@
             {%- else -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
                 {% if view_product %}
-                  <a href="{{card_product.url}}" class="button create_btn">Create</a>
+                  <a href="{{card_product.url}}" class="button create_btn">Start Designing</a>
                 {% else %}
                 <button
                   id="{{ product_form_id }}-submit"
