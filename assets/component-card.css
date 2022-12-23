@@ -404,7 +404,7 @@
   border: 1px solid rgba(112,112,112,.2);  
 }
 .old-card-products {
-    padding: 0 35px;
+    padding: 0 20px;
 }
 @media screen and (max-width: 1199px){
 .old-card-products {

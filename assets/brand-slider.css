@@ -88,3 +88,8 @@
   color:rgb(var(--color-heading-2-text));
   border-color: rgb(var(--color-heading-1-text));
 }
+@media screen and (max-width:767px){
+  .product .brand-slider-sec-section {
+    padding: 0 20px;
+}
+}

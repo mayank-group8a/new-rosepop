@@ -3089,7 +3089,7 @@
    border-radius: 5px;
  }
  .site-nav__childlist-item.site-nav__childlist-item-banner {
-     border: 1px solid #C68792;
+/*      border: 1px solid #C68792; */
      border-radius: 5px;
      margin: 0 15px;
    text-align: center;
@@ -3677,7 +3677,15 @@ details.my_details h2.footer-block__heading {
   max-width: 70%;
   margin: auto;
 }
+   .product-recommendations {
+     padding-top: 0;
+   }
  }
 .brand-content {
     padding: 0 15px;
+}
+@media screen and (max-width: 749px) {
+ul.footer__list-social.list-unstyled.list-social {
+    margin-bottom: 2rem !important;
+}
 }

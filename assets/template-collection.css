@@ -185,7 +185,7 @@ span#ProductCountDesktop {
   flex-direction: column;
   align-items: flex-start;
   padding: 5px 15px;
-  border: 1px solid #DF9CAC;
+/*   border: 1px solid #DF9CAC; */
 }
 .facet-filters__field .facet-filters__label label {
   font-family: 'Muli';

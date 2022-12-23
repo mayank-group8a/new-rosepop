@@ -112,3 +112,17 @@ margin-top: 0;
     line-height: 1.4;
 }
 }
+.our-story-section-inner a {
+    color: rgb(var(--color-heading-1-text));
+    text-decoration: none;
+    font-family: Muli;
+    border-bottom: 2px solid rgb(var(--color-heading-2-text));
+    font-size: 16px;
+    font-weight: bold;
+    transition: ease all 0.2s;
+  text-transform: uppercase;
+}
+.our-story-section-inner a:hover {
+    color: rgb(var(--color-heading-2-text));
+    border-bottom-color: rgb(var(--color-heading-1-text));
+}
