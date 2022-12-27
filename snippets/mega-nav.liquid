@@ -2,7 +2,9 @@
 <header-menu>
     <details class="mega-nav">
       <summary class="header__menu-item list-menu__item link focus-inset">
-        <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+        <a class="link--text" href="{{ link.url }}">
+          <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+        </a>
         {% render 'icon-downward-arrow' %}
       {% comment %}
         {% render 'icon-caret' %}

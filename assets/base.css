@@ -3689,3 +3689,12 @@ ul.footer__list-social.list-unstyled.list-social {
     margin-bottom: 2rem !important;
 }
 }
+summary a.link--text {
+    text-decoration: none;
+}
+.list-menu li a.header__menu-item span {
+    text-decoration: none;
+}
+.facets__item label span {
+  text-transform: capitalize;
+}
