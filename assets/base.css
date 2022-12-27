@@ -3698,3 +3698,10 @@ summary a.link--text {
 .facets__item label span {
   text-transform: capitalize;
 }
+body.gradient.pop-quiz.page h3 img {
+  display: inline-block;
+  vertical-align: middle;
+}
+body.gradient.pop-quiz.page iframe {
+  max-width: 100%;
+}
