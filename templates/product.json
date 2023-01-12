@@ -179,6 +179,16 @@
             "Logo_list_heading": "<p>For the Flower Lover You can't go wrong with flowers for Valentine's Day, but you can go very, very right with this unique, ultra-customizable Valentine's Day box. These preserved roses last such a long time, and they pop up from inside the box for an element of fun! See it: Get the <a href=\"https:\/\/shareasale.com\/r.cfm?b=1531159&u=1826497&m=96901&urllink=rosepops%2Ecom%2Fcollections%2Fthe%2Dvalentine%2Dcollection%2Fproducts%2Fcupids%2Dcrocodile%2Dthree%2Ds%2Da%2Dcharm&afftrack=SHOPValentinesDay2021%7Cxid:fr1671647887485dje\">Cupid's Crocodile Three's a Charm box<\/a> (originally starting at $95) for just <a href=\"https:\/\/shareasale.com\/r.cfm?b=1531159&u=1826497&m=96901&urllink=rosepops%2Ecom%2Fcollections%2Fthe%2Dvalentine%2Dcollection%2Fproducts%2Fcupids%2Dcrocodile%2Dthree%2Ds%2Da%2Dcharm&afftrack=SHOPValentinesDay2021%7Cxid:fr1671647887486gcg\">$81<\/a> with code VALENTINE15 at Rosepops for a limited time! <a href=\"https:\/\/www.usmagazine.com\/shop-with-us\/pictures\/valentines-day-gift-guide-13-ultra-thoughtful-gifts-2021\/\" target=\"_blank\" title=\"https:\/\/www.usmagazine.com\/shop-with-us\/pictures\/valentines-day-gift-guide-13-ultra-thoughtful-gifts-2021\/\">Read More<\/a><\/p>"
           }
         },
+        "a0d1c30f-9cf5-4c5f-95ec-9cded2a16cb6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new-yourk-post.png",
+            "image_width": 160,
+            "link": "",
+            "title": "Best Valentine’s Day Gifts to Buy for All Your Loved Ones in 2023",
+            "Logo_list_heading": "<p>While traditional roses are great and all, Rosepops is unique in that it delivers preserved roses for your S.O. to enjoy.<a href=\"https:\/\/nypost.com\/article\/best-valentines-day-gifts-ideas-2023\/\" target=\"_blank\" title=\"https:\/\/nypost.com\/article\/best-valentines-day-gifts-ideas-2023\/\">Read More<\/a><\/p>"
+          }
+        },
         "0fd93b30-29b9-4901-9df4-b74ab71694f2": {
           "type": "logo",
           "settings": {
@@ -262,6 +272,7 @@
       },
       "block_order": [
         "24038979-8a40-45c7-af20-b7f4af34476d",
+        "a0d1c30f-9cf5-4c5f-95ec-9cded2a16cb6",
         "0fd93b30-29b9-4901-9df4-b74ab71694f2",
         "93f886be-c788-495c-90f9-99d965f154ae",
         "112f037b-0d8e-4b9d-9d36-31d452fdcaaf",
@@ -361,15 +372,15 @@
         "pauseOnHover": false,
         "desktopInit": false,
         "desktopShow": 5,
-        "desktopArrows": true,
+        "desktopArrows": false,
         "desktopDots": true,
         "tabInit": true,
         "tabShow": 3,
         "tabArrows": true,
         "tabDots": true,
         "mobileInit": true,
-        "mobileShow": 2,
-        "mobileArrows": true,
+        "mobileShow": 3,
+        "mobileArrows": false,
         "mobileDots": true
       }
     },
@@ -420,7 +431,7 @@
       ],
       "settings": {
         "color_background": "#ffffff",
-        "heading": "Looking for more fun? Try our Custom Pop",
+        "heading": "Design Your Own",
         "heading_size": "h1",
         "heading_color": "#000000",
         "link_label": "GET STARTED",
@@ -430,7 +441,7 @@
     "441fd66c-5b0b-4b21-b103-4918960e0f5f": {
       "type": "pop-collection",
       "settings": {
-        "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_6.png",
+        "image": "shopify:\/\/shop_images\/Product_Page_Mobile.png",
         "title": "POP CLASSICS",
         "text_color": "#c68792",
         "new_featured_collection_description": "<p>Explore this \"can't go wrong'\" collection for that perfect gift that is bound to delight. Rich black boxes house our classic rose colors in sophisticated style. Curated charms and custom monograms enhance these perfect POPs.<\/p>",

@@ -270,7 +270,7 @@ a.button.create_btn {
   display: flex;
   width: max-content;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 @media screen and (min-width: 750px){
 .facets-vertical-form {
@@ -320,5 +320,7 @@ a.load-more_btn {
 }
 a.button.create_btn {
   font-size: 12px;
+  width: calc(100% - 20px);
+  padding: 0;
 }
 }

@@ -89,6 +89,14 @@ a.pop-collection-btn {
   padding: 0;
 }
 }
+@media screen and (max-width:767px){
+.pop-collection button.slick-prev.slick-arrow {
+  top: 40% !important;
+}
+.pop-collection button.slick-next.slick-arrow {
+  top: 40% !important;
+}
+}
 @media screen and (max-width:479px){
 .pop-collection slider-component ul .grid__item {
 width: 100%;

@@ -3,7 +3,7 @@
     {% if page.title != blank %}
     {{page.title}}
     {% else %}
-    {{collection.title}}
+    {{collection.title | capitalize}}
     {% endif %}
   </h2>
 {% if template != 'index' %}
@@ -70,12 +70,24 @@
 #shopify-section-{{ section.id }}{
   background-color: {{ section.settings.color_bg }};
 }
+ .shop-all-premade #shopify-section-{{ section.id }}{
+  background-image: url({{ section.settings.image | img_url: 'master' }});
+/*         background-position: center center; */
+    padding: 46px 0;
+    background-repeat: no-repeat;
+}
+    @media screen and (max-width:767px){
+     .shop-all-premade #shopify-section-{{ section.id }}{
+        background-position: -200px center;
+}
+  }
 h2.breadcrumb-title.h2 {
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
   font-family: "IP-Script-Casual";
   padding-top: 30px;
+      text-transform: capitalize;
 }
 span.page-title {
   text-decoration: underline;
@@ -103,7 +115,12 @@ span.separator {
               "id": "title_color",
               "label": "Title color",
               "default": "#000"
-          }
+          },
+      {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Shop all banner"
+        }
     ],
     "presets": [
       {

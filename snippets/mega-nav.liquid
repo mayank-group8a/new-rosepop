@@ -2,9 +2,13 @@
 <header-menu>
     <details class="mega-nav">
       <summary class="header__menu-item list-menu__item link focus-inset">
+        {% unless link.url == '#javascript:void(0)' %}
         <a class="link--text" href="{{ link.url }}">
+          {% endunless %}
           <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+          {% unless link.url == '#javascript:void(0)' %}
         </a>
+            {% endunless %}
         {% render 'icon-downward-arrow' %}
       {% comment %}
         {% render 'icon-caret' %}

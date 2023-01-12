@@ -3688,6 +3688,9 @@ details.my_details h2.footer-block__heading {
 ul.footer__list-social.list-unstyled.list-social {
     margin-bottom: 2rem !important;
 }
+  div#product-widget-review-result {
+    min-height: 100px !important;
+}
 }
 summary a.link--text {
     text-decoration: none;
@@ -3704,4 +3707,38 @@ body.gradient.pop-quiz.page h3 img {
 }
 body.gradient.pop-quiz.page iframe {
   max-width: 100%;
+}
+.review-heading {
+      font-family: IP-Script-Casual;
+    text-align: center;
+  padding-top: 15px;
+}
+.menu-drawer__menu li:last-of-type .site-nav__childlist-item.site-nav__childlist-item-banner {
+    display: none;
+}
+.trustspot-inline-category {
+    text-align: center;
+    padding-top: 5px;
+  display: block;
+}
+.trustspot-inline-category {
+  padding-bottom: 10px;
+}
+.trustspot-inline-category .ts-reviews-rating i::before {
+  font-size: 12px;
+}
+.trustspot-inline-category .trustspot-inline-cat .ts-star {
+  font-size: 12px;
+}
+.slideshow__slide {
+    position: relative;
+}
+.slideshow__slide > a {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+}
+.facets-wrapper label.facet-checkbox.facet-checkbox--disabled {
+    display: none;
 }

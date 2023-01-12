@@ -306,7 +306,7 @@
   
   </head>
 
-  <body class="gradient {{ page.handle}} {% unless template.name == 'account' or template.name == 'login' or template.name == 'register' %}{{ template.name }}{% endunless %}">
+  <body class="gradient {{ page.handle}} {% if template.name == 'collection' %}{{ collection.handle }}{% endif %}{% if template.name == 'product' %}{{ template.name }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>

@@ -539,7 +539,7 @@
                         <textarea maxlength="144" class="pplr_text pplr_monogram inputkeylayout" name="properties[Message]" id="LossWord1"></textarea>
                       </div>
                       <div class="message-content">
-                    <div id="clear_img_c">Clear</div>
+                    
                     {% comment %}
                     <p class="key_layout_sub_custom">+ An Emoji (Optional)</p>
                     {% endcomment %}
@@ -567,9 +567,12 @@
                       <span onclick="addthistoinput_custom('😑')" data-value="😑">😑</span>
                       <span onclick="addthistoinput_custom('😮')" data-value="😮">😮</span>
                   </div>
+                    <div class="clear_submit_btn">
+                    <div id="clear_img_c">Clear</div>
                     <a id="submit_your_message" class="button button--primary">
                       <span>Submit</span>
                     </a>
+                    </div>
                   </div>
                     </div>
 
@@ -1110,15 +1113,19 @@
 }
 
 .add-your-message-content div #clear_img_c {
-  position: absolute;
-  top: -60px;
-  bottom: auto;
   margin: auto;
-  display: block;
-  left: 5px;
-  font-size: 24px;
-  color: #a0666f;
-  cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: rgb(var(--color-heading-1-text));
+    text-decoration-color: #DF9CAC;
+    text-underline-offset: 1rem;
+      cursor: pointer;
+}
+.add-your-message-content div #clear_img_c:hover {
+     color: rgb(var(--color-heading-2-text));
+    text-decoration-color: rgb(var(--color-heading-1-text));
 }
 .add-your-message-content div.message-content {
   position: relative;
@@ -1132,6 +1139,34 @@ a#submit_your_message {
 .add-your-message-content {
   margin-top: 30px;
 }
+      .add-your-message-content div.clear_submit_btn {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0 10px;
+}
+    @media screen and (max-width: 1199px) { 
+    .add-your-message-content div.message-content {
+    margin-top: 20px;
+    width: 100%;
+    }
+    .add-your-message-content div.clear_submit_btn {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    }
+        @media screen and (max-width: 991px) { 
+    .add-your-message-content div.message-content {
+    margin-top: 0;
+    width: 37%;
+    }
+    .add-your-message-content div.clear_submit_btn {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    }
 @media screen and (max-width: 767px) { 
 .add-your-message-content div.message-content {
   margin-top: 70px;
@@ -1154,7 +1189,13 @@ a#submit_your_message {
     margin-left: 0;
     margin-bottom: 0;
   }
+    .add-your-message-content div.clear_submit_btn {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
+}
+
 </style>
 
 

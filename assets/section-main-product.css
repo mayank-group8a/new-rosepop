@@ -1624,7 +1624,7 @@ button.product-form__submit.button:hover {
   }
     .product__info-wrapper.grid__item {
     padding-left: 0;
-      padding-top: 30px;
+      padding-top: 0px;
 }
 }
 @media screen and (max-width: 767px) { 
@@ -1710,4 +1710,42 @@ div#live_svg {
 }
 .trustspot.trustspot-main-widget {
   margin-top: 30px;
+}
+.custom-product .product__media-gallery.enable_thumbnail_slider {
+    position: sticky;
+    top: 15rem;
+    display: block;
+    width: 100%;
+}
+.custom-product .customproduct-wrap.enable_thumbnail_slider {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    position: sticky;
+    top: 15rem;
+}
+.custom-product .customproduct-wrap .slick_main_slider .slider-for {
+    padding-bottom: 30px;
+}
+.custom-product .product-social-media .footer__list-social.list-social:only-child {
+    width: 100%;
+    justify-content: center;
+    padding-left: 16%;
+}
+.custom-product .product-social-media {
+    display: block;
+}
+@media screen and (max-width: 1199px) {
+  .custom-product .customproduct-wrap.enable_thumbnail_slider{
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-product .product-social-media {
+    display: block;
+    float: left;
+    width: 100%;
+}
+  .custom-product .product-social-media .footer__list-social.list-social:only-child {
+    padding-left: 0;
+  }
 }

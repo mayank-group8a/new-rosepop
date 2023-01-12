@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__informations">
           
           <div class="card-information">
             {%- if show_vendor -%}
@@ -197,9 +197,30 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
+  <div class="trustspot-inline-category" data-product-sku="{{ card_product.id }}"></div>
           </div>
+
         </div>
-        {%- if show_quick_add -%}
+        
+        <div class="card__badge {{ settings.badge_position }}">
+          {%- if card_product.available == false -%}
+            <span
+              id="Badge-{{ section_id }}-{{ card_product.id }}"
+              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+            >
+              {{- 'products.product.sold_out' | t -}}
+            </span>
+          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            <span
+              id="Badge-{{ section_id }}-{{ card_product.id }}"
+              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+            >
+              {{- 'products.product.on_sale' | t -}}
+            </span>
+          {%- endif -%}
+        </div>
+      </div>
+  {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
             {%- if card_product.variants.size == 1 -%}
@@ -257,6 +278,8 @@
                 {% if view_product %}
                   <a href="{{card_product.url}}" class="button create_btn">Start Designing</a>
                 {% else %}
+                  <a href="{{card_product.url}}" class="button create_btn">Start Designing</a>
+                  {% comment %}
                 <button
                   id="{{ product_form_id }}-submit"
                   type="submit"
@@ -279,6 +302,7 @@
                     </svg>
                   </div>
                 </button>
+                  {% endcomment %}
               {% endif %}
               </modal-opener>
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
@@ -303,24 +327,6 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        <div class="card__badge {{ settings.badge_position }}">
-          {%- if card_product.available == false -%}
-            <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-            >
-              {{- 'products.product.sold_out' | t -}}
-            </span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-            >
-              {{- 'products.product.on_sale' | t -}}
-            </span>
-          {%- endif -%}
-        </div>
-      </div>
     </div>
   </div>
 {%- else -%}

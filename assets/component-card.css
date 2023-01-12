@@ -171,7 +171,7 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: rgb(var(--color-heading-2-text));
   text-transform: uppercase;

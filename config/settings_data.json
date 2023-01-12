@@ -111,7 +111,7 @@
     "social_facebook_link": "https:\/\/www.facebook.com\/therosepops\/",
     "social_pinterest_link": "",
     "social_instagram_link": "https:\/\/www.instagram.com\/therosepops\/",
-    "social_tiktok_link": "",
+    "social_tiktok_link": "https:\/\/tiktok.com\/@therosepops",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
@@ -121,19 +121,12 @@
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/shutterstock_694765270_e9709db9-4d5b-4bf1-b479-8e3ed85d9110.png",
     "currency_code_enabled": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_8a2dc8bc-b83a-4f7e-9a76-0bad5e4c2761.png",
+    "checkout_logo_size": "large",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Happy Holidays! 20% Off Sitewide with code HOLIDAYS20",
-              "mob_text": "20% Off Sitewide with code HOLIDAYS20",
-              "text_alignment": "center",
-              "link": ""
-            }
-          },
           "f193e259-b98b-4fbc-98f3-bafd411fa88e": {
             "type": "announcement",
             "settings": {
@@ -145,14 +138,13 @@
           }
         },
         "block_order": [
-          "announcement-bar-0",
           "f193e259-b98b-4fbc-98f3-bafd411fa88e"
         ],
         "settings": {
           "announcementmessage": true,
           "announcementhome_page_only": false,
           "color_scheme": "accent-1",
-          "announcementmessage_slider": true,
+          "announcementmessage_slider": false,
           "announcementarrows": true,
           "announcementsliderLoop": true,
           "announcementautoplay": true,
@@ -340,7 +332,7 @@
               "content_url1": "shopify:\/\/pages\/the-rose",
               "contentShow2": true,
               "content_tile_2": "FAQ",
-              "content2": "Our customer service team is dedicated to providing our customers with the best possible Rosepops experience. Contact us at <a href=\"mailto:customerservice@rosepops.com\">customerservice@rosepops.com<\/a> with any questions or concerns. We’d love to hear from you!",
+              "content2": "Our customer service team is dedicated to providing our customers with the best possible experience. Contact <a href=\"mailto:customerservice@rosepops.com\">customerservice@rosepops.com<\/a> with any questions. We’d love to hear from you!",
               "content_button_label2": "Read More",
               "content_url2": "shopify:\/\/pages\/faq",
               "bannerShow": true,

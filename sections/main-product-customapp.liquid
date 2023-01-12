@@ -26,6 +26,11 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    @media screen and (max-width: 767px) {
+    .custom-app > section {
+      overflow-x: hidden;
+    }
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -87,7 +92,7 @@
     </div>
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet grid--1-col-tablet-down{% else %}product--no-media{% endif %}">
 
-    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+    <div class="grid__item custom-product product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
           {% unless section.settings.gallery_layout == 'enable_thumbnail_slider' %}
       {% render 'product-media-gallery', variant_images: variant_images %}
       {% endunless %}
@@ -791,6 +796,7 @@
   </div>
 
 <input type="hidden" name="product_price" id="product_price" value="{{ product.variants[0].price | money_without_currency}}"/>
+<div class="sticky_cart_wrapper">
 <div class="sticky_cart">
   <div class="summary" style="display:none">
     <ul class="summary_list">
@@ -809,7 +815,7 @@
       <div class="next btn_next">Next {% comment %}<img src="{{ 'custom-next-btn.png' | file_img_url: 'x20' }}">{% endcomment %}</div>
       <div class="addtocart" id="custom_addtocart" style="display:none">Add to cart</div>
   </div>
-  
+  </div>
 </div>
 <canvas width="500" height="500" style="display:none"></canvas>
 
@@ -2996,7 +3002,7 @@ $(document).ready(function(){
 {
   "name": "t:sections.main-product.name",
   "tag": "section",
-  "class": "section",
+  "class": "section custom-app",
   "blocks": [
     {
       "type": "@app"

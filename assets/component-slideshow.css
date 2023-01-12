@@ -339,3 +339,11 @@ display: block !important;
        padding: 0;
   }
 }
+
+
+@media(max-width: 767px){
+	.banner--mobile-bottom .slideshow__text.banner__box {
+	    justify-content: flex-start;
+	    padding: 2rem 3.5rem;
+	}
+}

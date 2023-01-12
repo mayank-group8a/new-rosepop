@@ -194,11 +194,16 @@ $(document).ready(function() {
    function getEqualHeightGrid() {
     $('.product-grid .grid__item').responsiveEqualHeightGrid();
     $('.product-grid .grid__item .card-wrapper').responsiveEqualHeightGrid();
-     $('.product-grid .grid__item .card-wrapper .card').responsiveEqualHeightGrid();
-     $('.product-grid .grid__item .card-wrapper .card__heading').responsiveEqualHeightGrid();
-     $('.product-grid .grid__item .card-wrapper .card__inner').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper .card').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper .card__heading').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper .card__inner').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__content .trustspot-inline-category').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper .card__content .card__informations').responsiveEqualHeightGrid();
+     // $('.product-grid .grid__item .card-wrapper .card__content .quick-add').responsiveEqualHeightGrid();
+     // $('.product-grid .grid__item .card-wrapper .card__content .card__informations .trustspot-inline-category').responsiveEqualHeightGrid();
      // $('.product-grid .grid__item .card-wrapper .card__inner .card__media').responsiveEqualHeightGrid();
-    //  $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
+
    }
 
    // Pre-Made Hide/Show
@@ -646,3 +651,14 @@ $(document).ready(function(){
         return false;
     });
 });
+$('.product__accordion details').on('click',function(){
+      $(this).attr('open');
+      $(this).parent('.product__accordion').siblings().find('details').removeAttr('open');
+    });
+
+
+    $(document).on("click", "a.load-more_btn", function(){
+      loadMoreProducts();
+      trustspot_init();
+      getEqualHeightGrid();
+    });

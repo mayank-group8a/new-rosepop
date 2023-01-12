@@ -16,7 +16,7 @@
     .section-{{ section.id }}.brand-slider-sec__link:hover .brand-slider-sec__logo-image {
       opacity: 100%;
     }
-    .multi_logo button.slick-prev.slick-arrow {
+/*     .multi_logo button.slick-prev.slick-arrow {
       background-image: url('{{ 'line-arrow.svg' | file_url }}');
       background-color: #000;
       height: 40px;
@@ -39,7 +39,7 @@
       transform: translate(0, -50%) rotate(180deg);
       border-radius: 100%;
       right: 5px;
-    }
+    } */
     {%- for block in section.blocks -%}
       .section-{{ section.id }} .brand-slider-sec__logo-{{ forloop.index }} .brand-slider-sec__logo-image {
         max-width: {{ block.settings.image_width }}px;
@@ -76,7 +76,7 @@
     <div class="brand-slider-sec brand-slider-nav">
       {% for block in section.blocks %}
         {%- if block.settings.link != blank -%}
-          <a class="brand-slider-sec__logo brand-slider-sec__logo-{{ forloop.index }} brand-slider-sec__link" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+          <a target="_blank" class="brand-slider-sec__logo brand-slider-sec__logo-{{ forloop.index }} brand-slider-sec__link" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
           {%- else -%}
             <div class="brand-slider-sec__logo brand-slider-sec__logo-{{ forloop.index }}" {{ block.shopify_attributes }}>
             {%- endif -%}
@@ -147,12 +147,13 @@
       arrows: false,
       dots: false,
       fade: true,
+      adaptiveHeight: false,
       asNavFor: '.brand-slider-nav',
       responsive: [
       {
           breakpoint: 1024,
           settings: {
-            adaptiveHeight: true
+            adaptiveHeight: false
           }
       }
     ]

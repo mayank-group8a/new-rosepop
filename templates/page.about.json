@@ -25,6 +25,13 @@
             "text": "Rosepops are a breeze to ship! FREE standard shipping on all orders over $75 & affordable Rose options ensure that Rosepops can POPulate homes everywhere!"
           }
         },
+        "07f2b216-06c5-4f61-bb26-c848b1b1664f": {
+          "type": "text",
+          "settings": {
+            "title": "Patented",
+            "text": "Our POP up packaging was designed to ensure your roses live their longest and best lives possible. Rosepops' packaging trade secret is patented, ensuring that each POP is the cream of the crop!"
+          }
+        },
         "a987752e-7705-4808-96f1-22d17e5a6a12": {
           "type": "text",
           "settings": {
@@ -59,24 +66,17 @@
             "title": "It’s a POP Sensation!",
             "text": "Sending and receiving a Rosepop ensures instant POP star status! Order now to see why Rospops is topping the POP charts in Preserved Roses!"
           }
-        },
-        "07f2b216-06c5-4f61-bb26-c848b1b1664f": {
-          "type": "text",
-          "settings": {
-            "title": "Patent Pending",
-            "text": "Our POP up packaging was designed to ensure your roses live their longest and best lives possible. Rosepops' packaging trade secret is patent pending, ensuring that each POP is the cream of the crop!"
-          }
         }
       },
       "block_order": [
         "fc062461-e24e-4c2b-a6b0-7537e73317d8",
         "2b36a14e-526b-4661-88be-9cbf95bb6600",
+        "07f2b216-06c5-4f61-bb26-c848b1b1664f",
         "a987752e-7705-4808-96f1-22d17e5a6a12",
         "57c5d569-ac4c-4cec-b382-1ad2e9e5345d",
         "32899a2e-2223-4c9c-abef-f155d4f9f3a1",
         "cee0576a-fc45-4ae8-af34-1d52018c871d",
-        "7e3592a8-8862-46cb-9e62-aad154d13df0",
-        "07f2b216-06c5-4f61-bb26-c848b1b1664f"
+        "7e3592a8-8862-46cb-9e62-aad154d13df0"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/big-rose_c39300f4-174b-4a59-ae00-f649686b5420.webp",
@@ -124,7 +124,7 @@
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1": {
           "type": "text",
           "settings": {
-            "text": "<p>My hubby treated me to a beautiful preserved rose arrangement which was perfect for me since, well, let’s just say I’m “Green Thumb Challenged”.<\/p><p><\/p><p>Completely in love with my roses, I thought I’d found my new go to gift for all occasions. But as I scoured the internet, I found that eternity roses would take an eternity to pay off! <\/p><p>”There has to be a way to make preserved roses more affordable for everyone,” thought I. And thought... And thought...And thought...<\/p><p>Until was born the Rosepops™ patent-pending POP-up packaging! Now preserved roses can ship easily and affordably! Not to mention that, well heck, they pop up! <\/p><p>What’s more, is that every POP has a place for a personal message, eliminating the need for overpriced, under-appreciated greeting cards.<\/p><p>Now POP’pers and POP’ees nationwide are joining the Rosepops™ Family and Hubby and I couldn’t be happier!  <\/p><p>Fair warning, though fellow rose lovers, Rosepops™ are so delightfully unique that once you POP, you might not stop. Happy POP’ping! <\/p>",
+            "text": "<p>My hubby treated me to a beautiful preserved rose arrangement which was perfect for me since, well, let’s just say I’m “Green Thumb Challenged”.<\/p><p><\/p><p>Completely in love with my roses, I thought I’d found my new go to gift for all occasions. But as I scoured the internet, I found that eternity roses would take an eternity to pay off! <\/p><p>”There has to be a way to make preserved roses more affordable for everyone,” thought I. And thought... And thought...And thought...<\/p><p>Until was born the Rosepops™ patented POP-up packaging! Now preserved roses can ship easily and affordably! Not to mention that, well heck, they pop up! <\/p><p>What’s more, is that every POP has a place for a personal message, eliminating the need for overpriced, under-appreciated greeting cards.<\/p><p>Now POP’pers and POP’ees nationwide are joining the Rosepops™ Family and Hubby and I couldn’t be happier!  <\/p><p>Fair warning, though fellow rose lovers, Rosepops™ are so delightfully unique that once you POP, you might not stop. Happy POP’ping! <\/p>",
             "description_color": "#444444",
             "text_style": "body"
           }
@@ -136,6 +136,7 @@
         "template--14435587129424__fa98609a-9731-4491-b440-82ec2d18a591-1668705347a7bb9c78-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Elisa_Freilich_Headshot.png",
         "color_bg": "#fcf6f7",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -157,7 +158,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/About_Us_2.png",
             "title": "Our Mission",
-            "text": "<p>The Rosepops mission was to offer long-lasting roses and even longer lasting memories, without the usual hefty preserved petal price tags. Through our patent <br\/>pending packaging, our premiere Ecuadorian Roses can be shipped safely and economically, <strong>never compromising on quality<\/strong>. Our hand-crafted preserved roses arrangements can be personalized, so there is a POP for every occasion! And with free standard shipping within the United States, your loved one can know just how valued they are no matter where they are located! <\/p>",
+            "text": "<p>The Rosepops mission was to offer long-lasting roses and even longer lasting memories, without the usual hefty preserved petal price tags. Through our patented packaging, our premiere Ecuadorian Roses can be shipped safely and economically, <strong>never compromising on quality<\/strong>. Our hand-crafted preserved roses arrangements can be personalized, so there is a POP for every occasion! And with free standard shipping within the United States, your loved one can know just how valued they are no matter where they are located! <\/p>",
             "link_label": "",
             "link": ""
           }

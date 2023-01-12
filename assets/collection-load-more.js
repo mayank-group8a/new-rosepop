@@ -2,7 +2,15 @@ var products_on_page = $('.products-on-page');
 var next_url = products_on_page.data('next-url');
 var load_more_btn = $('.load-more_btn');
 var load_more_spinner = $('.load-more_spinner');
-
+function getEqualHeightGrid() {
+    $('.product-grid .grid__item').responsiveEqualHeightGrid();
+    $('.product-grid .grid__item .card-wrapper').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__heading').responsiveEqualHeightGrid();
+     $('.product-grid .grid__item .card-wrapper .card__inner').responsiveEqualHeightGrid();
+     // $('.product-grid .grid__item .card-wrapper .card__inner .card__media').responsiveEqualHeightGrid();
+    //  $('.product-grid .grid__item .card-wrapper .card__content').responsiveEqualHeightGrid();
+   }
 function loadMoreProducts() {
 if(!products_on_page){
   var products_on_page = $('.products-on-page');
@@ -35,5 +43,7 @@ if(!next_url){
     next_url = new_url;
     $(".products-on-page").attr("data-next-url", next_url);
     products_on_page.append(new_products.html());
+    trustspot_init();
+    getEqualHeightGrid();
   })
 }
