@@ -3742,3 +3742,28 @@ body.gradient.pop-quiz.page iframe {
 .facets-wrapper label.facet-checkbox.facet-checkbox--disabled {
     display: none;
 }
+
+/* @media screen and (min-width: 991px){
+  .shop-collection ul li {
+    height: max-content !important;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper {
+    height: max-content !important;
+    padding: 0 100px;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper .card.card--standard.card--media {
+    height: max-content !important;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper .card.card--standard.card--media .card__inner {
+    height: max-content !important;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper .card.card--standard.card--media .card__inner .card__content {
+    height: max-content !important;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper .card.card--standard.card--media .card__content {
+    height: max-content !important;
+  }
+  .shop-collection ul li .card-wrapper.product-card-wrapper .card.card--standard.card--media .card__content .card__heading {
+    height: max-content !important;
+  }
+} */
